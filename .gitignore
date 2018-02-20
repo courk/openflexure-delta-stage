@@ -1,0 +1,14 @@
+# Don't take stl files - I'm going to do this one properly!
+*.stl
+# Do allow them in the stl folder though
+
+# Ignore gcode files
+*.g
+*.gcode
+
+# Ignore VIM swap files
+*.swp
+*~
+
+# Ignore zip files in the documentation dir
+docs/*.zip
