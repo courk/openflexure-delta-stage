@@ -40,6 +40,10 @@ module lever(){
     }
 }
 
+module lever_swept(){
+    hull() for(a=[-1,1]*asin(flex_a)) rotate([a,0,0]) lever();
+}
+
 module lever_flexures(){
     // The flexures that form the main hinge for the leg
     w = leg_strut_l; // width of strut part
@@ -73,6 +77,14 @@ module leg(){
     // Tie the outer bits together - some of these ties may need to be snipped later.
     translate([0,15,4]) cube([ow, 2, dz], center=true);
     for(p=[0.25,0.5,0.75]) translate([0, zflex[0]/2 + (1-p)*(lever_l-zflex[0]), flex_z2*p]) cube([ow, 2, dz], center=true);
+}
+
+module leg_swept(){
+    hull() for(d=[-1,1]) translate([0,lever_l,d*lever_l*flex_a]){
+        rotate([-d*asin(flex_a), 0, 0]) for(e=[-1,1]){
+            smatrix(xz=flex_a*e) translate([0,-lever_l,0]) leg();
+        }
+    }
 }
 
 module stage_flexures(h=zflex[2], z=flex_z2+dz){
@@ -119,13 +131,55 @@ module moving_stage(){
         hull() stage_edges();
     }
 }
+
+module leg_and_lever_clearance(){
+    // A convex space big enough for the leg and lever to move in
+    minkowski(){
+        hull(){
+            leg_swept();
+            lever_swept();
+        }
+        translate([0,0,-d]) cylinder(h=2,r=zflex[1]);
+    }
+}
+
+intersection(){
+    difference(){
+        union(){
+            // casing around the leg&lever
+            each_lever() minkowski(){
+                leg_and_lever_clearance();
+                cylinder(r1=wall_t,r2=0.5, h=0.9);
+            }
+            // casing for the actuator
+            each_lever() translate([0,nut_y,0]) screw_seat_shell(h=actuator_h+actuator_travel);
+            // join the casings up, by adding a big block in the middle.
+            hull() each_lever() intersection(){
+                translate([-999,0,0]) cube([999*2,15,999]);
+                leg_and_lever_clearance();
+            }
+        }
+        // hollow out space for the levers and legs and actuators
+        each_lever() leg_and_lever_clearance(); //hole for the leg&lever
+        each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);
+        // hollow out space in the centre
+        hull() each_lever() reflect([1,0,0]){
+            translate([leg_strut_l/2, -10,-99]) cylinder(h=999,r=5);
+        }
+    }
+    cylinder(r=999, h=flex_z2-20, $fn=4); //ensure it doesn't go below the bottom
+}
+
+
 each_lever(){
     leg();
     lever_flexures();
     lever();
+    translate([0,nut_y,0]) actuator_column(actuator_h);
 }
 moving_stage();
-//stage_flexures();
+
+
 module mechanism_void(){
     //cut-out in the centre of the casing for the mechanism
     difference(){

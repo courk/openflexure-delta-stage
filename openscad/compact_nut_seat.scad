@@ -96,7 +96,7 @@ module nut_trap_and_slot(r, slot, squeeze=0.9, trap_h=-1){
         
 }
 
-module actuator_column(h, tilt=0, lever_tip=3, flip_nut_slot=false, join_to_casing=false, no_voids=false){
+module actuator_column(h, tilt=0, lever_tip=3, flip_nut_slot=false, join_to_casing=true, no_voids=false){
     // An "actuator column", a nearly-vertical tower, with a nut trap and hooks
     // for elastic bands at the top, usually attached to a flexure at the bottom.
     // There's often one of these inside the casing under an adjustment screw/gear
@@ -186,7 +186,7 @@ module nut_seat_silhouette(r=ss_outer()[1]/2, dx=ss_outer()[0]-ss_outer()[1], of
 }
 
 module nut_seat_void(h=1, tilt=0, center=true){
-    // Inside of the actuator column housing (should be subtracted
+    // Inside of the actuator column housing (should be subtracted)
     // h is the height of the top (excluding nut hole)
     // center=true will cause it to punch through the bottom.
     // This ensures enough clearance to let the actuator column move.

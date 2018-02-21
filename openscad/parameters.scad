@@ -28,7 +28,8 @@ zflex = [6, 1.5, 0.75]; //dimensions of flexure
 flex_a = 0.1; //angle through which flexures are bent, radians
 dz = 0.5; //thickness before a bridge is printable-on
 
-actuator_h = 26; //height of actuator columns (~screw length)
+actuator_h = 30; //height of actuator columns (~screw length)
+actuator_travel = (nut_y - zflex[1]/2)*flex_a;
 
 wall_t = 1.6;
 d=0.05;
