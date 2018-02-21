@@ -34,8 +34,8 @@ module lever(){
     // This part connects to the actuator column
     difference(){
         cbr = column_base_radius(); // from compact_nut_seat.scad
-        translate([-cbr/2, lever_l+zflex[1], 0]) 
-            cube([cbr, nut_y+zflex[1]/2+d - lever_l-zflex[1], 6]);
+        translate([-cbr, lever_l+zflex[1], 0]) 
+            cube([cbr*2, nut_y+zflex[1]/2+d - lever_l-zflex[1], 6]);
         translate([0,nut_y,0]) actuator_end_cutout();
     }
 }
@@ -135,7 +135,7 @@ module moving_stage(){
 module leg_and_lever_clearance(){
     // A convex space big enough for the leg and lever to move in
     minkowski(){
-        hull(){
+        union(){
             leg_swept();
             lever_swept();
         }
@@ -165,6 +165,9 @@ intersection(){
         // hollow out space in the centre
         hull() each_lever() reflect([1,0,0]){
             translate([leg_strut_l/2, -10,-99]) cylinder(h=999,r=5);
+        }
+        hull() rotate(60) each_lever(){
+            translate([0, stage_r-10*2,45]) cylinder(h=999,r=10);
         }
     }
     cylinder(r=999, h=flex_z2-20, $fn=4); //ensure it doesn't go below the bottom
