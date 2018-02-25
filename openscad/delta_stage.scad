@@ -9,6 +9,7 @@ long-ish travel in 3D.
 use <utilities.scad>;
 use <compact_nut_seat.scad>;
 include <parameters.scad>;
+use <../../openflexure_microscope/openscad/z_axis.scad>;
 
 module lever(){
     // The levers go from the centre to the actuator columns
@@ -142,8 +143,15 @@ module leg_and_lever_clearance(){
         translate([0,0,-d]) cylinder(h=2,r=zflex[1]);
     }
 }
+module motor_and_small_gear_clearance(h=actuator_h+actuator_travel){
+    // Cylinders for the small gear and the motor
+    gear_pos = [0, nut_y-20, h+2];
+    motor_pos = gear_pos + [0, 7.8, 10];
+    translate(gear_pos) cylinder(d=17, h=999);
+    translate(motor_pos) cylinder(d=29, h=999);
+}
 
-intersection(){
+module casing(){
     difference(){
         union(){
             // casing around the leg&lever
@@ -152,7 +160,7 @@ intersection(){
                 cylinder(r1=wall_t,r2=0.5, h=0.9);
             }
             // casing for the actuator
-            each_lever() translate([0,nut_y,0]) screw_seat_shell(h=actuator_h+actuator_travel);
+            each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
             hull() each_lever() intersection(){
                 translate([-999,0,0]) cube([999*2,15,999]);
@@ -162,153 +170,50 @@ intersection(){
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
         each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);
+        // clearance for gears and motors
+        each_lever() motor_and_small_gear_clearance();
         // hollow out space in the centre
-        hull() each_lever() reflect([1,0,0]){
-            translate([leg_strut_l/2, -10,-99]) cylinder(h=999,r=5);
-        }
-        hull() rotate(60) each_lever(){
-            translate([0, stage_r-10*2,45]) cylinder(h=999,r=10);
-        }
-    }
-    cylinder(r=999, h=flex_z2-20, $fn=4); //ensure it doesn't go below the bottom
-}
-
-
-each_lever(){
-    leg();
-    lever_flexures();
-    lever();
-    translate([0,nut_y,0]) actuator_column(actuator_h);
-}
-moving_stage();
-
-
-module mechanism_void(){
-    //cut-out in the centre of the casing for the mechanism
-    difference(){
-        sequential_hull(){
+        difference(){
             union(){
-                cube(stage + [2,2,0]*(xy_bottom_travel + zflex[1] + zflex[0] + 0.5), center=true);
-                translate([0,z_stage_base_y-zflex[1]-z_lever+d,0]) 
-                        cube([stage[0],2*d,stage[2]*2], center=true);
-            }
-            translate([0,0,shelf_z1]) union(){
-                cube(stage + [2,2,0]*(zflex[1] + zflex[0] + 1.0), center=true); 
-                translate([0,-stage[1]/2-zflex[1]-z_lever+d,0]) 
-                        cube([stage[0],2*d,d], center=true);
-            }
-            translate([0,0,shelf_z2]) 
-                    cube(stage + [2,2,0]*(zflex[1] + zflex[0] + 1.0 + xy_travel)
-                         + [0,0,stage[2]+z_travel*2+6], center=true); 
-        }
-        
-        // take a chunk out to allow for Z actuator reinforcement
-       translate([0,z_actuator_pivot_y, 0]) mirror([0,1,0]) hull(){
-            w = 2*(z_actuator_pivot_y - pushstick[0]/sqrt(2) - xy_bottom_travel*sqrt(2)) - 1;
-            //w = z_actuator_pivot_w;
-            translate([-w/2,0,-d]) cube([w, wall_t, shelf_z2]);
-            translate([-w/2 + 8,0,-d]) cube([w-8*2, wall_t+6, shelf_z2]);
-        }
-    }
-}
-
-module casing_outline(cubic=true){
-    // Once the mechanism void is subtracted, this makes a minimal wall around the structure.
-    // NB you need to chop off the top and bottom too.
-    if(cubic){
-        s = xy_bottom_travel + zflex[1] + zflex[0] + 0.5 + wall_t;
-        translate([-stage[0]/2-s, z_anchor_bottom_y-wall_t, 0])
-                cube(stage + [2*s,s + (-z_anchor_bottom_y-stage[1]/2) + wall_t,shelf_z2]);
-    }else{
-        minkowski(){
-            hull() mechanism_void();
-            cylinder(r=wall_t, h=d, center=true, $fn=8);
-        }
-    }
-}
-module casing_outline_top(){
-    // 2D object for the top of the casing
-    projection(cut=true) translate([0,0,-casing_top + d]) difference(){
-        casing_outline();
-        mechanism_void();
-    }
-}
-
-module casing(mechanism_void=true){
-    // This is the cuboidal casing and actuator housings.  It's the
-    // main structural component.
-    difference(){
-        union(){
-            //minimal wall around the mechanism (will be hollowed out later)
-            casing_outline();
-            
-            //NB the arguments here are repeated below
-            //covers and screw seats for the XY actuators
-            each_pushstick() translate([0,pushstick[1]-zflex[1],0]) actuator_shroud_shell(shelf_z1, pw, xy_actuator_pivot_w, xy_lever*xy_reduction, tilted=true, extend_back=pushstick[1]-10);
-            //cover and screw seat for the Z actuator
-            translate([0,z_actuator_pivot_y,0]) actuator_shroud_shell(z_pushstick_z+pushstick[2]+1, z_actuator_pivot_w, pw, z_lever*z_reduction, tilted=false, extend_back=wall_t);
-            
-            //Mounting bolts
-            for(bolt_pos=mounting_bolts){
-                hull(){
-                    translate(bolt_pos) cylinder(r=10,h=8);
-                    cylinder(r=20, h=18);
+                hull() each_lever() reflect([1,0,0]){
+                    translate([leg_strut_l/2, -10,-99]) cylinder(h=999,r=5);
+                }
+                hull() rotate(60) each_lever(){
+                    translate([0, stage_r-10*2,45]) cylinder(h=999,r=10);
                 }
             }
-        }
-        // limit the wall in Z
-        translate([0,0,shelf_z2 + stage[2] - z_travel]) cylinder(r=999,h=999,$fn=8);
-        translate([0,0,-99]) cylinder(r=999,h=99,$fn=8);
-        // mounting bolt holes        
-        for(bolt_pos=mounting_bolts) translate(bolt_pos+[0,0,3]){
-            sequential_hull(){
-                translate([0,0,0]) cylinder(r=6,h=d);
-                translate([0,0,8]) cylinder(r=6,h=d);
-                translate([0,0,250]+bolt_pos) cylinder(r=6,h=d);
+            // make the objective mount by not hollowing it out
+            rotate(60) hull() repeat([0,99,0],2){
+                translate([0,0,-d]) objective_mount();
             }
-            cylinder(r=6/2*1.1,h=999,center=true);
         }
-        
-        // make it a wall not a block - clearance for the mechanism
-        if(mechanism_void){
-            mechanism_void();
-        
-            //inside of covers and screw seats for the XY actuators
-            each_pushstick() translate([0,pushstick[1]-zflex[1],0]) actuator_shroud_core(shelf_z1, pw, xy_actuator_pivot_w, xy_lever*xy_reduction, tilted=true, extend_back=pushstick[1]-10, anchor=true);
-            //cover and screw seat for the Z actuator
-            translate([0,z_actuator_pivot_y,0]) actuator_shroud_core(z_pushstick_z+pushstick[2]+1, z_actuator_pivot_w, pw, z_lever*z_reduction, tilted=false, extend_back=flex_a*(z_pushstick_z+pushstick[2]+1)+0.5, anchor=true);
-            //clearance for the Z pushstick
-            translate([-pw/2-1.5,0,z_pushstick_z-3]) cube([pw+3,z_actuator_pivot_y+d, pushstick[2]+3+3]);
+        // screw for the objective mount
+        rotate(60) translate(objective_mount_screw()-[0,0,7]) rotate([-90,0,0]){
+            hull() repeat([0,-15,0],2) cylinder(d=3.3,h=60,center=true);
+            hull() repeat([0,-15,0],2) cylinder(r=3.3,h=99);
         }
-        
-        inter_shelf_spaghetti_slots(); //access ports to clean up poor bridging inside
+        mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
+        translate([0,0,flex_z2-20]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
     }
 }
 
-// Overall structure
 module main_body(){
-    difference(){
-        union(){
-            xy_table();
-        }
-        
+    each_lever(){
+        leg();
+        lever_flexures();
+        lever();
+        translate([0,nut_y,0]) actuator_column(actuator_h);
     }
-    // Casing (also provides a lot of the structural integrity)
-//    casing();
-        
-    
-}//*/
+    moving_stage();
+    casing();
+}
 
+main_body();
+
+rotate(60) objective_mount();
 
 module thick_section(h, z=0, center=false){
     linear_extrude(h, center=center) #projection(cut=true){
         translate([0,0,-z]) children();
     }
 } 
-
-difference(){
-    //main_body();
-    //rotate([0,90,0]) cylinder(r=999,h=999,$fn=8);
-}
-
-//base();
