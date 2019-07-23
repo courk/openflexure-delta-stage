@@ -1,18 +1,16 @@
-# OpenFlexure Block Stage
-A 3D Printable high-precision 3 axis translation stage.
+# OpenFlexure Delta Stage
+A 3D Printable high-precision 3 axis delta-bot translation stage.
 
 This project is a 3D printable design that enables very fine (sub-micron) mechanical positioning of a small moving stage, with surprisingly good mechanical stability.  It follows on from the [OpenFlexure Microscope](https://github.com/rwb27/openflexure_microscope) which is discussed in a [paper in Review of Scientific Instruments](http://dx.doi.org/10.1063/1.4941068) (open access).
 
-## Kits and License
-This project is open-source and is released under the CERN open hardware license.  You can buy a kit of the microscope from [WaterScope](http://www.waterscope.org/).  Currently, only microscope kits are listed, but if you send an email it should be possible to get this stage as a custom order.
+## License
+This project is open-source and is released under the CERN open hardware license.  There is not yet any accompanying software, but if that changes please consider it GPL.  Any documentation contained in this project is licensed CC-BY International 4.0.  We are working on selling kits through OpenFlexure Industries, though we're not yet taking orders - however this will stay a fully open-source project.
 
 ## Printing/building it yourself
-To build the stage, download the [STL files](./stl/) and print them.  Don't just print everything from the STL folder,
-as currently it contains some parts that must be printed multiple times, and other parts
-that are redundant.  The readme in that folder should point you in the right direction.
+To build the stage, you'll currently need to compile ``delta_stage.scad`` and print the model that it builds.  In the future, we intend to include all the bits you need - but at the moment it's just three of the tilted feet from the openflexure microscope.  You may fit an OpenFlexure microscope optics module (high-res version) to turn the deltabot stage into a microscope, if you want.
 
-Instructions for this stage are currently work-in-progress.  However, the assembly of the actuators is exactly the same as for the OpenFlexure Microscope, which has [online instructions](http://rwb27.github.io/openflexure_microscope/docubricks/current_master_version.html).  Instead of separate feet, this design has a single baseplate, which is just glued onto the bottom of the main body of the stage.  Once the actuators are assembled as per those instructions, you just need to mount whatever you're going to translate onto the stage using the 8 M3 "self tapping" holes (tapping them with a tap wrench can help get the screw started).  There's a "moving stage" part that makes it a drop-in replacement for the ThorLabs/Newport XYZ fibre alignment stages, if that is of interest.
+Instructions for this stage are currently work-in-progress.  However, the assembly of the actuators is exactly the same as for the OpenFlexure Microscope, which has [online instructions](https://openflexure.org/projects/microscope/).
 
 ## Get Involved
-It's already useful if you get involved by raising [issues](https://github.com/rwb27/openflexure_block_stage/issues) if there are things that aren't clear, and anyone who might want to help write better instructions would be very welcome.  Ideally it should be in DocuBricks format, but Markdown/Wiki is a lot better than nothing.  Improvements to the code, or even just sharing parameters you used (if you customised it) and how well it worked would be great.  If you've built one, please post a photo and any comments - you could use the wiki, or [raise an issue tagged "build report"](https://github.com/rwb27/openflexure_block_stage/issues/new?labels=build%20report).
+It's already useful if you get involved by raising issues if there are things that aren't clear, and anyone who might want to help write better instructions would be very welcome.  Improvements to the code, or even just sharing parameters you used (if you customised it) and how well it worked would be great.  If you've built one, please post a photo and any comments - you could use the wiki, or raise an issue and we'll tag it as a "build report".
 
