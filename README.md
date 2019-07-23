@@ -7,7 +7,9 @@ This project is a 3D printable design that enables very fine (sub-micron) mechan
 This project is open-source and is released under the CERN open hardware license.  There is not yet any accompanying software, but if that changes please consider it GPL.  Any documentation contained in this project is licensed CC-BY International 4.0.  We are working on selling kits through OpenFlexure Industries, though we're not yet taking orders - however this will stay a fully open-source project.
 
 ## Printing/building it yourself
-To build the stage, you'll currently need to compile ``delta_stage.scad`` and print the model that it builds.  In the future, we intend to include all the bits you need - but at the moment it's just three of the tilted feet from the openflexure microscope.  You may fit an OpenFlexure microscope optics module (high-res version) to turn the deltabot stage into a microscope, if you want.
+To build the stage, you'll currently need to clone the repository and compile ``delta_stage.scad`` and print the model that it builds.  In the future, we intend to include all the bits you need - but at the moment it's just three of the tilted feet from the openflexure microscope.  You may fit an OpenFlexure microscope optics module (high-res version) to turn the deltabot stage into a microscope, if you want.
+
+To clone the repository, please note that we use "submodules" so you may need to run ``git submodule init`` to set the repository up for the first time, if your git client doesn't take care of that automatically.
 
 Instructions for this stage are currently work-in-progress.  However, the assembly of the actuators is exactly the same as for the OpenFlexure Microscope, which has [online instructions](https://openflexure.org/projects/microscope/).
 
