@@ -6,10 +6,10 @@ This project aims to be a high-performance flexure stage, with
 long-ish travel in 3D.
 
 */
-use <utilities.scad>;
-use <compact_nut_seat.scad>;
+use <../openflexure-microscope/openscad/utilities.scad>;
+use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
 include <parameters.scad>;
-use <../../openflexure_microscope/openscad/z_axis.scad>;
+use <../openflexure-microscope/openscad/z_axis.scad>;
 
 module lever(){
     // The levers go from the centre to the actuator columns
@@ -188,7 +188,7 @@ module casing(){
             }
         }
         // screw for the objective mount
-        rotate(60) translate(objective_mount_screw()-[0,0,7]) rotate([-90,0,0]){
+        rotate(60) translate(objective_mount_screw_pos()-[0,0,7]) rotate([-90,0,0]){
             hull() repeat([0,-15,0],2) cylinder(d=3.3,h=60,center=true);
             hull() repeat([0,-15,0],2) cylinder(r=3.3,h=99);
         }
