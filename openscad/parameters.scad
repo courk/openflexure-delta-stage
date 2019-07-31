@@ -36,3 +36,6 @@ d=0.05;
 
 // Mounting stuff
 mounting_bolts = [[-1,0,0],[0,-1,0],[1,0,0]]*25*1*1.41; //bolt to the bench
+
+// Feet
+feet_endstops = false;
