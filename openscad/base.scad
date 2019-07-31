@@ -12,9 +12,6 @@ module base_projection(){
             cylinder(r1=wall_t, r2=0.5, h=0.9);
         }
 
-        // casing for the actuator
-        each_lever() translate([0, nut_y, -49]) screw_seat_shell(h=actuator_h + 99);
-
         // join the casings up, by adding a big block in the middle.
         hull() each_lever() intersection(){
             translate([-999,0,0]) cube([999*2,15,999]);
@@ -23,9 +20,19 @@ module base_projection(){
     }
 }
 
+module feet_projection() {
+    projection(cut=true){
+        // casing for the actuator
+        each_lever() translate([0, nut_y, -49]) screw_seat_shell(h=actuator_h + 99);
+    }  
+}
+
 module base_extrusion() {
     linear_extrude(height=50) {
-        base_projection();
+        union() {
+            feet_projection();
+            base_projection();
+        }
     }
 }
 
@@ -38,6 +45,11 @@ module base() {
         }
         translate([0, 0, t]) base_extrusion();
     }
+
+    linear_extrude(height=40) {
+        feet_projection();
+    }
+    
 }
 
 base();
