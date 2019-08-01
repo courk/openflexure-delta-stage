@@ -63,7 +63,7 @@ module leg(){
     
     // Start with the bridges between the sides, at top and bottom
     for(p=[[-d, zflex[1], flex_z2], 
-           [-d, lever_l-zflex[0], 0]]) reflect([1,0,0]) translate(p){
+            [-d, lever_l-zflex[0], 0]]) reflect([1,0,0]) translate(p){
         cube([w/2+d, zflex[0], 4]); //strut
         cube([iw/2+2*d, zflex[0], zflex[2]]); //flexure
     }
@@ -173,26 +173,45 @@ module casing(){
         each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);
         // clearance for gears and motors
         each_lever() motor_and_small_gear_clearance();
+
         // hollow out space in the centre
         difference(){
-            union(){
-                hull() each_lever() reflect([1,0,0]){
-                    translate([leg_strut_l/2, -10,-99]) cylinder(h=999,r=5);
+            union() {
+                // Through-to-bottom cutout
+                intersection() {
+                    hull() each_lever(){
+                        translate([0, stage_r, -99]) cylinder(h=999,r=wall_t);
+                    }
+                    hull() rotate(60) each_lever(){
+                        translate([0, stage_r/2, -99]) cylinder(h=999,r=wall_t);
+                    }
                 }
-                hull() rotate(60) each_lever(){
-                    translate([0, stage_r-10*2,45]) cylinder(h=999,r=10);
+                intersection() {
+                    top_cutout_h=(flex_z2/2)+5;
+                    hull() each_lever(){
+                        translate([0, stage_r, top_cutout_h]) cylinder(h=999,r=wall_t);
+                    }
+                    hull() rotate(60) each_lever(){
+                        translate([0, stage_r, top_cutout_h]) cylinder(h=999,r=wall_t);
+                    }
                 }
+
             }
+
+
             // make the objective mount by not hollowing it out
-            rotate(60) hull() repeat([0,99,0],2){
-                translate([0,0,-d]) objective_mount();
+            rotate(60){
+                objective_mount();
             }
         }
-        // screw for the objective mount
-        rotate(60) translate(objective_mount_screw_pos()-[0,0,7]) rotate([-90,0,0]){
-            hull() repeat([0,-15,0],2) cylinder(d=3.3,h=60,center=true);
-            hull() repeat([0,-15,0],2) cylinder(r=3.3,h=99);
+        
+
+        // bolt slot access slot
+        rotate(60) hull(){
+            translate([0, objective_mount_back_y-wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+            translate([0, objective_mount_back_y-wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
         }
+
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
         translate([0,0,flex_z2-20]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
     }
@@ -209,9 +228,9 @@ module main_body(){
     casing();
 }
 
-main_body();
-
-rotate(60) objective_mount();
+exterior_brim(r=5) {
+    main_body();
+}
 
 module thick_section(h, z=0, center=false){
     linear_extrude(h, center=center) #projection(cut=true){
