@@ -6,7 +6,6 @@ This project aims to be a high-performance flexure stage, with
 long-ish travel in 3D.
 
 */
-include <../openflexure-microscope/openscad/microscope_parameters.scad> //Generic microscope params
 include <parameters.scad> //Delta-stage params
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;

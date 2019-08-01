@@ -36,7 +36,7 @@ mounting_bolts = [[-1,0,0],[0,-1,0],[1,0,0]]*25*1*1.41; //bolt to the bench
 
 // Objective mount
 objective_mount_y = 18; // y position of clip for optics
-objective_mount_back_y = stage_r+wall_t; //back of objective mount
+objective_mount_back_y = stage_r + wall_t; //back of objective mount
 objective_mount_nose_w = 6; // width of the pointy end of the mount
 
 sample_z = 65; // height of the top of the stage
@@ -45,6 +45,8 @@ z_flexures_z2 = min(sample_z - 12, 35); // " upper "
 
 // Feet
 feet_endstops = false;
+foot_height=feet_endstops?15:15; //the endstops need a bit of extra height (or not)
+endstop_extra_ringheight=feet_endstops?1:0;
 
 // Base
 base_height = 50;
