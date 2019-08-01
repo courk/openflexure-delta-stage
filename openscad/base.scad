@@ -28,7 +28,7 @@ module feet_projection() {
 }
 
 module base_extrusion() {
-    linear_extrude(height=50) {
+    linear_extrude(height=base_height) {
         union() {
             feet_projection();
             base_projection();
@@ -36,20 +36,55 @@ module base_extrusion() {
     }
 }
 
-module base() {
-    t=2;
+module base_hollow(wall_thickness=2, cutout_tollerance=1) {
     difference(){
+        // Base extrusion, but with an outer wall wall_thickness thick
         minkowski(){
             base_extrusion();
-            cylinder(r=t,h=1);
+            cylinder(r=wall_thickness+cutout_tollerance,h=1);
         }
-        translate([0, 0, t]) base_extrusion();
+
+        // Base extrusion, but with an outer wall cutout_tollerance thick
+        translate([0, 0, wall_thickness]) minkowski(){
+            base_extrusion();
+            //cylinder(r=cutout_tollerance,h=1);
+        }
+        
     }
 
-    linear_extrude(height=40) {
-        feet_projection();
-    }
-    
 }
 
-base();
+module foot_stands(cutout_tollerance=1) {
+    minkowski() {
+        // Extrusion of the feet projection
+        linear_extrude(height=base_height-foot_height) {
+            feet_projection();
+        }
+
+        // Outer wall cutout_tollerance thick
+        cylinder(r=cutout_tollerance,h=1);
+    }
+}
+
+module base() {
+    union(){
+        foot_stands(cutout_tollerance=base_cutout_tollerance);
+        base_hollow(cutout_tollerance=base_cutout_tollerance);
+    }
+}
+
+module window_cubes(window_width=25) {
+    frame_height=5;
+    rotate([0, 0, 60]) each_lever() translate([-window_width/2, 0, frame_height]) cube([window_width, base_height, base_height-(2*frame_height)]);
+
+    each_lever() translate([-50, (window_width/2)+frame_height, frame_height]) cube([99, window_width, base_height-(2*frame_height)]);
+}
+
+module base_windowed() {
+    difference() {
+        base();
+        window_cubes();
+    }
+}
+
+base_windowed();
