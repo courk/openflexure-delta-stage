@@ -46,7 +46,7 @@ module base_hollow(wall_thickness=2, cutout_tollerance=1) {
         // Base extrusion, but with an outer wall cutout_tollerance thick
         translate([0, 0, wall_thickness]) minkowski(){
             base_extrusion();
-            //cylinder(r=cutout_tollerance,h=1);
+            cylinder(r=cutout_tollerance,h=1);
         }
         
     }
