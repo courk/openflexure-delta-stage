@@ -7,9 +7,9 @@ long-ish travel in 3D.
 
 */
 include <parameters.scad> //Delta-stage params
+use <z_axis.scad>;
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
-use <../openflexure-microscope/openscad/z_axis.scad>;
 
 module lever(){
     // The levers go from the centre to the actuator columns
