@@ -72,11 +72,13 @@ module base() {
     }
 }
 
-module window_cubes(window_width=25) {
+module window_cubes(window_width=30) {
     frame_height=5;
+    // Flat face windows
     rotate([0, 0, 60]) each_lever() translate([-window_width/2, 0, frame_height]) cube([window_width, base_height, base_height-(2*frame_height)]);
 
-    each_lever() translate([-50, (window_width/2)+frame_height, frame_height]) cube([99, window_width, base_height-(2*frame_height)]);
+    // Side windows
+    each_lever() translate([-50, (window_width+frame_height)/2, frame_height]) cube([99, window_width/2, base_height-(2*frame_height)]);
 }
 
 module base_windowed() {
