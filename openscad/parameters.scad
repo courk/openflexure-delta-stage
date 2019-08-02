@@ -4,10 +4,10 @@
 version_numstring = "0.0.0";
 
 // Set the overall geometry
-leg_strut_l = 25; // inner width of the legs
+leg_strut_l = 30; // inner width of the legs
 stage_r = 25; // distance from the centre to the edge of the stage
 flex_z1 = 0; // height of lower flexures
-flex_z2 = 80; // height of upper flexures
+flex_z2 = 75; // height of upper flexures
 
 // Thickness of legs
 leg_t = 5;
