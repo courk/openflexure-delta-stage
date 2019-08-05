@@ -4,10 +4,10 @@
 version_numstring = "0.0.0";
 
 // Set the overall geometry
-leg_strut_l = 30; // inner width of the legs
+leg_strut_l = 35; // inner width of the legs
 stage_r = 25; // distance from the centre to the edge of the stage
 flex_z1 = 0; // height of lower flexures
-flex_z2 = 75; // height of upper flexures
+flex_z2 = 70; // height of upper flexures
 
 // Thickness of legs
 leg_t = 5;
@@ -49,5 +49,5 @@ foot_height=feet_endstops?15:15; //the endstops need a bit of extra height (or n
 endstop_extra_ringheight=feet_endstops?1:0;
 
 // Base
-base_height = 50;
+base_height = 30;
 base_cutout_tollerance = 1;
