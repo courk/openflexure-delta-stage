@@ -147,7 +147,7 @@ module motor_and_small_gear_clearance(h=actuator_h+actuator_travel){
     // Cylinders for the small gear and the motor
     gear_pos = [0, nut_y-20, h+2];
     motor_pos = gear_pos + [0, 7.8, 10];
-    translate(gear_pos) cylinder(d=17, h=999);
+    translate(gear_pos) cylinder(d=20, h=999);
     translate(motor_pos) cylinder(d=29, h=999);
 }
 
@@ -207,8 +207,8 @@ module casing(){
 
         // bolt slot access slot
         rotate(60) hull(){
-            translate([0, objective_mount_back_y-wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
-            translate([0, objective_mount_back_y-wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+            translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
         }
 
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
@@ -227,7 +227,7 @@ module main_body(){
     casing();
 }
 
-exterior_brim(r=5) {
+exterior_brim(r=0) {
     main_body();
 }
 
