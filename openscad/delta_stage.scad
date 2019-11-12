@@ -106,6 +106,13 @@ module each_lever(){
         
     }
 }
+module each_mounting_hole(){
+    // Repeat 3 times, in between the levers (i.e. 60 degrees out).
+    for(a=[0,120,240]){
+        rotate(a+60) translate([0,mounting_hole_r,0]) children();
+        
+    }
+}
     
 
 module stage_edges(h=5-2*dz, z=flex_z2+2*dz){
@@ -213,6 +220,9 @@ module casing(){
 
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
         translate([0,0,flex_z2-20]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
+
+        // mounting holes (screw through from bottom)
+        each_mounting_hole() trylinder_selftap(nominal_d=3, h=40, center=true);
     }
 }
 
@@ -230,9 +240,13 @@ module main_body(){
 exterior_brim(r=0) {
     main_body();
 }
+//casing();
 
 module thick_section(h, z=0, center=false){
     linear_extrude(h, center=center) #projection(cut=true){
         translate([0,0,-z]) children();
     }
 } 
+
+// Best to put echo statements here, so they only happen once...
+echo("Radius of mounting holes is", mounting_hole_r);

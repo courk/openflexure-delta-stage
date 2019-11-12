@@ -32,7 +32,11 @@ wall_t = 1.6;
 d=0.05;
 
 // Mounting stuff
-mounting_bolts = [[-1,0,0],[0,-1,0],[1,0,0]]*25*1*1.41; //bolt to the bench
+// Mounting holes should be 60 degrees out from the legs (i.e. in between)
+// If you extend the line of the solid anchor part in the middle (where each leg
+// joins the casing) out sideways, to the middle of the vertical part of the
+// leg, then take the midpoint of the line joining each pair, that's the hole)
+mounting_hole_r = sin(30)*stage_r + sin(60)*(leg_strut_l/2+zflex[1]+leg_t/2);
 
 // Objective mount
 objective_mount_y = 18; // y position of clip for optics
