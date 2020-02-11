@@ -240,7 +240,6 @@ module main_body(){
 exterior_brim(r=0) {
     main_body();
 }
-//casing();
 
 module thick_section(h, z=0, center=false){
     linear_extrude(h, center=center) #projection(cut=true){
