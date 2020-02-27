@@ -11,7 +11,7 @@
 
 date-created: 2020-02-26
 
-date-updated: 2020-02-26
+date-updated: 2020-02-27
 
 manifest-author:
   name: Julian Stirling
@@ -45,13 +45,13 @@ contact:
   email: rwb34@bath.ac.uk
   social:
     - platform: Twitter
-      user-handle: @OpenFlexure
+      user-handle: "@OpenFlexure"
 
 contributors:                              # recommended
-  -name: Joel Collins
+  - name: Joel Collins
     affiliation: University of Bath
     email: jc2450@bath.ac.uk
-  -name: Julian Stirling
+  - name: Julian Stirling
     affiliation: University of Bath
     email: j.stirling@bath.ac.uk
 
