@@ -10,6 +10,7 @@ include <parameters.scad> //Delta-stage params
 use <z_axis.scad>;
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
+use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
 
 module lever(){
     // The levers go from the centre to the actuator columns
@@ -158,6 +159,19 @@ module motor_and_small_gear_clearance(h=actuator_h+actuator_travel){
     translate(motor_pos) cylinder(d=29, h=999);
 }
 
+// Cut out hole for reflection illuminator
+module fl_cube_cutout(){
+    // size of cutout for fl cube
+    top_cutout_w = stage_r/2 + 2*wall_t;
+    bottom_cutout_w = illuminator_width() + 2;
+
+    // Create a trapezoid with min width (cube_width) at top
+    hull() {
+        translate([-(bottom_cutout_w)/2, -49, -0.5]) cube([bottom_cutout_w, 49, 1]);
+        translate([-top_cutout_w/2, -49, 20]) cube([top_cutout_w, 49, 1]);
+    }
+}
+
 module casing(){
     difference(){
         union(){
@@ -206,23 +220,29 @@ module casing(){
 
 
             // make the objective mount by not hollowing it out
-            rotate(60){
+            translate([0, 0, -5]) {
                 objective_mount();
             }
         }
         
 
         // bolt slot access slot
-        rotate(60) hull(){
-            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
-            translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+        translate([0, 0, -5]) hull(){
+            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=20);
+            translate([0, objective_mount_y+wall_t, z_flexures_z2-0]) rotate([-90,0,0]) cylinder(d=6.5,h=20);
         }
+        
+        fl_cube_cutout();
 
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
         translate([0,0,flex_z2-20]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
 
         // mounting holes (screw through from bottom)
-        each_mounting_hole() trylinder_selftap(nominal_d=3, h=40, center=true);
+        each_mounting_hole() {
+            trylinder_selftap(nominal_d=3, h=40, center=true);
+            translate([15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
+            translate([-15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
+        }
     }
 }
 
