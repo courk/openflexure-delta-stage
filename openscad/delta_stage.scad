@@ -162,15 +162,18 @@ module motor_and_small_gear_clearance(h=actuator_h+actuator_travel){
 // Cut out hole for reflection illuminator
 module fl_cube_cutout(){
     // size of cutout for fl cube
-    top_cutout_w = stage_r/2 + 2*wall_t;
-    bottom_cutout_w = illuminator_width() + 2;
+    top_cutout_w = stage_r/2 + 2*wall_t; // As big as we can get at height 'wall_h' without bridging a corner
+    mid_cutout_w = illuminator_width() + 1;
+    bottom_cutout_w = illuminator_width() + 4;
 
     // Create a trapezoid with min width (cube_width) at top
     hull() {
         translate([-(bottom_cutout_w)/2, -49, -0.5]) cube([bottom_cutout_w, 49, 1]);
+        translate([-(mid_cutout_w)/2, -49, 10]) cube([mid_cutout_w, 49, 1]); // Highest we usually need
         translate([-top_cutout_w/2, -49, 20]) cube([top_cutout_w, 49, 1]);
     }
 }
+
 
 module casing(){
     difference(){
@@ -257,7 +260,7 @@ module main_body(){
     casing();
 }
 
-exterior_brim(r=0) {
+exterior_brim(r=4) {
     main_body();
 }
 
