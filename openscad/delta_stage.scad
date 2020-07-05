@@ -174,6 +174,13 @@ module fl_cube_cutout(){
     }
 }
 
+module objective_mounting_screw_access(){
+    // access hole for the objective mounting screw
+    translate([0,objective_mount_back_y+wall_t, z_flexures_z2/2]) hull(){
+        rotate([-81,0,24]) cylinder(h=999, d=8, $fn=16);
+        translate([0,0,6]) rotate([-90,0,0]) cylinder(h=d, d=4, $fn=16);
+    }
+}
 
 module casing(){
     difference(){
@@ -227,13 +234,16 @@ module casing(){
                 objective_mount();
             }
         }
-        
+
 
         // bolt slot access slot
         translate([0, 0, -5]) hull(){
             translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=20);
             translate([0, objective_mount_y+wall_t, z_flexures_z2-0]) rotate([-90,0,0]) cylinder(d=6.5,h=20);
         }
+
+        //access for objective screw
+        objective_mounting_screw_access();
         
         fl_cube_cutout();
 
@@ -260,7 +270,7 @@ module main_body(){
     casing();
 }
 
-exterior_brim(r=4) {
+exterior_brim(r=0) {
     main_body();
 }
 
