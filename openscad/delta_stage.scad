@@ -181,10 +181,10 @@ module casing(){
         union(){
             // casing around the leg&lever
             difference (){
-            each_lever() minkowski(){
-                leg_and_lever_clearance();
-                cylinder(r1=wall_t,r2=0.5, h=0.9);
-            }
+                each_lever() minkowski(){
+                    leg_and_lever_clearance();
+                    cylinder(r1=wall_t,r2=0.5, h=0.9);
+                }
                 translate([0,0,casing_height]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
             }
             // casing for the actuator
@@ -196,12 +196,12 @@ module casing(){
                 hull(){
                 rotate(60) translate([0,0,7])hull()each_illumination_arm_screw() mirror([0,0,1]) cylinder(r=5,h=7);
                 rotate(60)translate([0, stage_r,0])cube([stage_r/2,1,1], center = true);
+                }
             }
-        }
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
-        each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);
+        each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);        
         // clearance for gears and motors
         each_lever() motor_and_small_gear_clearance();
 
@@ -230,16 +230,17 @@ module casing(){
 
 
             // make the objective mount by not hollowing it out
-            translate([0, 0, -5]) {
+            rotate(60){
                 objective_mount();
             }
         }
 
 
+
         // bolt slot access slot
-        translate([0, 0, -5]) hull(){
-            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=20);
-            translate([0, objective_mount_y+wall_t, z_flexures_z2-0]) rotate([-90,0,0]) cylinder(d=6.5,h=20);
+        rotate(60) hull(){
+            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+            translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
         }
 
         
