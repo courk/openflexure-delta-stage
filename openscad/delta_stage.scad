@@ -178,16 +178,18 @@ module casing(){
     difference(){
         union(){
             // casing around the leg&lever
+            difference (){
             each_lever() minkowski(){
                 leg_and_lever_clearance();
                 cylinder(r1=wall_t,r2=0.5, h=0.9);
             }
+                translate([0,0,casing_height]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
+            }
             // casing for the actuator
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
-            hull() each_lever() intersection(){
-                translate([-999,0,0]) cube([999*2,15,999]);
-                leg_and_lever_clearance();
+            cylinder(r=casing_radius, h=casing_height, $fn=6);    
+            //add a condenser mount 
             }
         }
         // hollow out space for the levers and legs and actuators
@@ -202,19 +204,18 @@ module casing(){
                 // Through-to-bottom cutout
                 intersection() {
                     hull() each_lever(){
-                        translate([0, stage_r, -99]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r-3, -99]) cylinder(h=999,r=wall_t);
                     }
                     hull() rotate(60) each_lever(){
-                        translate([0, stage_r/2, -99]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r/2-3, -99]) cylinder(h=999,r=wall_t);
                     }
                 }
                 intersection() {
-                    top_cutout_h=(flex_z2/2)+5;
                     hull() each_lever(){
-                        translate([0, stage_r, top_cutout_h]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
                     }
                     hull() rotate(60) each_lever(){
-                        translate([0, stage_r, top_cutout_h]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
                     }
                 }
 
@@ -238,7 +239,7 @@ module casing(){
         fl_cube_cutout();
 
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
-        translate([0,0,flex_z2-20]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
+
 
         // mounting holes (screw through from bottom)
         each_mounting_hole() {

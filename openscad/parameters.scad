@@ -52,6 +52,10 @@ feet_endstops = false;
 foot_height=feet_endstops?15:15; //the endstops need a bit of extra height (or not)
 endstop_extra_ringheight=feet_endstops?1:0;
 
+//Casing 
+casing_height = flex_z2-24; //the maximum height of the lever casing and 'joining together' casing
+casing_radius = nut_y; //the outside radius of the hexagon used to join the casing together
+
 // Base
 base_height = 30;
 base_cutout_tollerance = 1;
