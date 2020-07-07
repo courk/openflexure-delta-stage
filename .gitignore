@@ -15,3 +15,6 @@ docs/*.zip
 
 # Ignore built files
 builds/
+
+# Ignore python virtualenvironment
+.venv/
