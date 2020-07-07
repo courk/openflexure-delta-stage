@@ -129,17 +129,23 @@ module stage_edges(h=5-2*dz, z=flex_z2+2*dz){
 module moving_stage(){
     // the moving stage is printed suspended between the legs.
     // we start by joining the legs together
-    stage_flexures();
+    difference(){
+        union(){
+            stage_flexures();
     
-    // start to join the flexure bridges together
-    intersection(){
-        hull() stage_flexures(h=999);
-        stage_edges();
-    }
-    // continue building up the bridges between the legs
-    intersection(){
-        stage_flexures(h=999);
-        hull() stage_edges();
+            // start to join the flexure bridges together
+            intersection(){
+                hull() stage_flexures(h=999);
+                stage_edges();
+            }
+            // continue building up the bridges between the legs
+            intersection(){
+                stage_flexures(h=999);
+                hull() stage_edges();
+            }
+        }
+        //mounting holes for stage
+        each_lever() translate([0,-zflex[0]/2,flex_z2+4*dz]) repeat([leg_strut_l/2,0,0],3,center=true) trylinder_selftap(3,h=999);
     }
 }
 
