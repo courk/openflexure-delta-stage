@@ -249,8 +249,9 @@ module casing(){
             translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
         }
 
-        
-        fl_cube_cutout();
+        if (reflection_illumination){
+            fl_cube_cutout();
+        }
 
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
 
