@@ -4,15 +4,18 @@ The delta stage is a 3D printed x-y-z translation stage. As the optics do not mo
 
 {{BOM}}
 
+
 ## Main steps
 
-1. [.](Printing-the-components.md){step}  
-1. [.](Assembling-the-actuators.md){step} 
+1. [.](printing_the_components.md){step}  
+1. [.](assembling_the_actuators.md){step} 
 
 ### Optional steps
 
-1. [.](Attaching-the-motors.md){step}  
-1. [.](Reflection-illumination.md){step}  
-1. [.](Transmission-illumination.md){step}  
-1. [.](Connecting-the-electronics.md){step}
+1. [.](attaching_the_sample_clips.md){step}
+1. [.](attaching_the_motors.md){step}  
+1. [.](reflection_illumination.md){step}  
+1. [.](transmission_illumination.md){step}  
+1. [.](connecting_the_electronics.md){step}
+1. [.](using_the_base.md){step}
 1. Once the hardware is completed, you can control your microscope using the [OpenFlexure software](https://openflexure.org/projects/microscope/install).
