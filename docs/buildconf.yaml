@@ -13,10 +13,14 @@ Email: my-email@my.domain
 
 
 #Uncomment below to add custom categories
-#CustomCategories:
-#    printedtool:
-#        Reuse: False
-#        DisplayName: Printed tools
+CustomCategories:
+    3DPrinted_tool:
+        Reuse: True
+        DisplayName: Printed tools
+    3DPrinted:
+        Reuse: False
+        DisplayName: 3D printed parts
+
 
 #Uncomment below to set a custom default category
 #DefaultCategory: printedtool
