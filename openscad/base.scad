@@ -12,10 +12,7 @@ module base_projection(){
         }
 
         // join the casings up, by adding a big block in the middle.
-        hull() each_lever() intersection(){
-            translate([-999,0,0]) cube([999*2,15,999]);
-            leg_and_lever_clearance();
-        }
+            cylinder(r=casing_radius, h=casing_height, $fn=6);    
     }
 }
 
@@ -35,40 +32,40 @@ module base_extrusion() {
     }
 }
 
-module base_hollow(wall_thickness=2, cutout_tollerance=1) {
+module base_hollow(wall_thickness=2, cutout_tolerance=1) {
     difference(){
         // Base extrusion, but with an outer wall wall_thickness thick
         minkowski(){
             base_extrusion();
-            cylinder(r=wall_thickness+cutout_tollerance,h=1);
+            cylinder(r=wall_thickness+cutout_tolerance,h=1);
         }
 
-        // Base extrusion, but with an outer wall cutout_tollerance thick
+        // Base extrusion, but with an outer wall cutout_tolerance thick
         translate([0, 0, wall_thickness]) minkowski(){
             base_extrusion();
-            cylinder(r=cutout_tollerance,h=1);
+            cylinder(r=cutout_tolerance,h=1);
         }
         
     }
 
 }
 
-module foot_stands(cutout_tollerance=1) {
+module foot_stands(cutout_tolerance=1) {
     minkowski() {
         // Extrusion of the feet projection
         linear_extrude(height=base_height-foot_height) {
             feet_projection();
         }
 
-        // Outer wall cutout_tollerance thick
-        cylinder(r=cutout_tollerance,h=1);
+        // Outer wall cutout_tolerance thick
+        cylinder(r=cutout_tolerance,h=1);
     }
 }
 
 module base() {
     union(){
-        foot_stands(cutout_tollerance=base_cutout_tollerance);
-        base_hollow(cutout_tollerance=base_cutout_tollerance);
+        foot_stands(cutout_tolerance=base_cutout_tolerance);
+        base_hollow(cutout_tolerance=base_cutout_tolerance);
     }
 }
 
