@@ -9,7 +9,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 [O-ring]: "{cat:part, note: It is also possible to use an elastic band, or to print your own with TPU}."
 [M3x25mm hex head screw]: "{cat:part}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
-[large gear]: https://build.openflexure.org/openflexure-microscope/latest/gears.stl "{cat: 3DPrinted}"
+[gear]: https://build.openflexure.org/openflexure-microscope/latest/gears.stl "{cat: 3DPrinted}"
 [band tool]: https://build.openflexure.org/openflexure-microscope/latest/actuator_assembly_tools.stl "{cat: 3DPrinted_tool, note: this file contains both the nut tool and the band tool.}"
 [nut tool]: https://build.openflexure.org/openflexure-microscope/latest/actuator_assembly_tools.stl "{cat:3DPrinted_tool},note: this file contains both the nut tool and the band tool.}"
 ![](images\Assembling_the_actuators\3D_printed_parts.jpg)
@@ -31,7 +31,7 @@ Repeat for all three acutators.
 
 ## Assemble gear {pagestep}
 
-Put a [M3x25mm hex head screw]{qty:3} into one [large gear]{qty:3}.
+Put a [M3x25mm hex head screw]{qty:3} into one [gear]{qty:3}.
 ![](images\Assembling_the_actuators\screw_and_gear.jpg)
 ![](images\Assembling_the_actuators\screw_in_gear.jpg)
 
