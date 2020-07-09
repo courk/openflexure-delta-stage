@@ -21,10 +21,10 @@ nut_y = lever_l + 12;
 motor_lugs = true;
 
 // Condenser mount
-condenser_mount = true;
+condenser_mount = false;
 
 // Reflection illumination - The hole cut out the side for the reflection illuminator
-reflection_illumination = true; 
+reflection_illumination = false; 
 
 // Flexure dimensions - good for PLA and ~0.5mm nozzle
 zflex = [6, 1.5, 0.75]; //dimensions of flexure
