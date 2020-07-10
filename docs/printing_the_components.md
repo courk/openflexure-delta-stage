@@ -8,11 +8,11 @@ These instructions show you how to print the parts and the printed tools for the
 [transmission and reflection delta stage]: models/reflection_transmission_delta_stage.stl "{cat: 3DPrinted,  note: depending on your  requried configuration}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [base]: models/base.stl "{cat: 3DPrinted}"
-[band tool]: https://build.openflexure.org/openflexure-microscope/latest/actuator_assembly_tools.stl "{cat: 3DPrinted_tool, note: this file contains both the nut tool and the band tool.}"
-[nut tool]: https://build.openflexure.org/openflexure-microscope/latest/actuator_assembly_tools.stl "{cat:3DPrinted_tool},note: this file contains both the nut tool and the band tool.}"
-[sample clip]: https://build.openflexure.org/openflexure-microscope/latest/sample_clips.stl "{cat: 3DPrinted, note: Both sample clips are in the one file.}"
-[gear]: https://build.openflexure.org/openflexure-microscope/latest/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
-[small gear]: https://build.openflexure.org/openflexure-microscope/latest/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
+[band tool]: actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
+[nut tool]: actuatortools.md#nuttool "{cat:3DPrinted_tool}"
+[sample clip]: models/sample_clips.stl "{cat: 3DPrinted, note: Both sample clips are in the one file.}"
+[gear]: models/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
+[small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 ## Main body  
 There are different options for the main body, depending on what type of illumination you want to use.
 
