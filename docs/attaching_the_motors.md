@@ -19,7 +19,7 @@ Put the [small gear]{qty:3} with its circular side down. Put one [28BYJ-48 micro
 ![](images\attaching_the_motors\motor_and_gear.jpg)
 ![](images\attaching_the_motors\gear_on_motor.jpg)
 
-This should be a tight fit, if it is not then take the gear off and place some [insulating tape]{qty:some} on the top of the gear - sticky side up. Push the shaft into the tape and through the hole.      
+This should be a tight fit, if it is not then take the gear off and place some [insulating tape]{qty:some} on the top of the gear - sticky side up. Push the shaft into the tape and through the hole.
 
 ![](images\attaching_the_motors\motor_and_gear_and_tape.jpg)
 ![](images\attaching_the_motors\gear_on_motor_and_tape.jpg)
@@ -41,5 +41,4 @@ Screw another M4 screw through the mounting hole and onto the leg.  Make sure bo
 
 Repeat for all three motors.
 
-![](images\attaching_the_motors\motor_screwed_all.jpg)
 ![](images\attaching_the_motors\motor_screwed_all_top.jpg)
