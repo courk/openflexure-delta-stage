@@ -1,6 +1,8 @@
 /*
   Useful settings/parameters for the OpenFlexure fibre stage
 */
+
+use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
 version_numstring = "0.0.0";
 
 // Set the overall geometry
@@ -60,8 +62,24 @@ endstop_extra_ringheight=feet_endstops?1:0;
 
 //Casing 
 casing_height = flex_z2-24; //the maximum height of the lever casing and 'joining together' casing
-casing_radius = nut_y; //the outside radius of the hexagon used to join the casing together
+casing_radius = nut_y; //the outside radius (to the point) of the hexagon used to join the casing together
+
+// size of cutout for fl cube
+top_cutout_w = stage_r/2 + 2*wall_t; // As big as we can get at height 'wall_h' without bridging a corner
+mid_cutout_w = illuminator_width() + 1;
+bottom_cutout_w = illuminator_width() + 4;
 
 // Base
-base_height = 30;
-base_cutout_tollerance = 1;
+
+base_height = 80;
+base_cutout_tolerance = 0.5;
+raspi_board = [56,85,16];
+casing_apothem = casing_radius*sqrt(3)/2;
+USB_ethernet_window = [raspi_board[0],100,raspi_board[2]+6];
+power_HDMI_window  = [100,45-3.5,14];
+raspi_standoff = 7;
+sangaboard = [56,68,25];
+raspi_center = [0,10,raspi_board[2]/2+raspi_standoff];
+
+sangaboard_center = raspi_center+[0,(raspi_board[1]/2-sangaboard[1]/2),(sangaboard[2]/2-raspi_board[2]/2+20)];
+sangaboard_window = [100,power_HDMI_window[1]*2/3,20];
