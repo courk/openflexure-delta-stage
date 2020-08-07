@@ -7,7 +7,8 @@ These instructions show you how to print the parts and the printed tools for the
 [reflection delta stage]: models/reflection_delta_stage.stl "{cat:3DPrinted,  note: depending on your required configuration}"
 [transmission and reflection delta stage]: models/reflection_transmission_delta_stage.stl "{cat: 3DPrinted,  note: depending on your  requried configuration}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
-[base]: models/base.stl "{cat: 3DPrinted}"
+[Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
+[simple base]: models/base.stl "{cat: 3DPrinted}"
 [band tool]: actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
 [nut tool]: actuatortools.md#nuttool "{cat:3DPrinted_tool}"
 [sample clip]: models/sample_clips.stl "{cat: 3DPrinted, note: Both sample clips are in the one file.}"
@@ -48,7 +49,11 @@ To connect the motors to the stage, you will need to print:
 
 To store the any electronic components, or just to help keep the microscope steady, you will need to print:
 
-1. The [base]{qty:0}.
+1. The [simple base]{qty:0}.
+   
+   or
+
+1. The [Raspberry Pi & Sangaboard base]{qty:0}
 
 
 
