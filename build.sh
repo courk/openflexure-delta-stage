@@ -9,6 +9,7 @@ openscad -o builds/transmission_delta_stage.stl -D 'condenser_mount = true'  ope
 openscad -o builds/reflection_transmission_delta_stage.stl -D 'condenser_mount = true' -D 'reflection_illumination = true' openscad/delta_stage.scad
 
 # common parts
+openscad -o builds/base_raspi_sangaboard.stl openscad/base_raspi_sangaboard.scad
 openscad -o builds/base.stl openscad/base.scad
 openscad -o builds/feet.stl openscad/feet.scad
 
