@@ -161,18 +161,14 @@ module leg_and_lever_clearance(){
 }
 module motor_and_small_gear_clearance(h=actuator_h+actuator_travel){
     // Cylinders for the small gear and the motor
-    gear_pos = [0, nut_y-20, h+2];
+    gear_pos = [0, nut_y-20, h];
     motor_pos = gear_pos + [0, 7.8, 10];
-    translate(gear_pos) cylinder(d=20, h=999);
+    translate(gear_pos) cylinder(d=24, h=999);
     translate(motor_pos) cylinder(d=29, h=999);
 }
 
 // Cut out hole for reflection illuminator
 module fl_cube_cutout(){
-    // size of cutout for fl cube
-    top_cutout_w = stage_r/2 + 2*wall_t; // As big as we can get at height 'wall_h' without bridging a corner
-    mid_cutout_w = illuminator_width() + 1;
-    bottom_cutout_w = illuminator_width() + 4;
 
     // Create a trapezoid with min width (cube_width) at top
     hull() {
