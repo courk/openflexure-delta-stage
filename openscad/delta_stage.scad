@@ -161,9 +161,9 @@ module leg_and_lever_clearance(){
 }
 module motor_and_small_gear_clearance(h=actuator_h+actuator_travel){
     // Cylinders for the small gear and the motor
-    gear_pos = [0, nut_y-20, h+2];
+    gear_pos = [0, nut_y-20, h];
     motor_pos = gear_pos + [0, 7.8, 10];
-    translate(gear_pos) cylinder(d=20, h=999);
+    translate(gear_pos) cylinder(d=24, h=999);
     translate(motor_pos) cylinder(d=29, h=999);
 }
 
