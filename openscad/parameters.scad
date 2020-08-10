@@ -61,7 +61,7 @@ foot_height=feet_endstops?15:15; //the endstops need a bit of extra height (or n
 endstop_extra_ringheight=feet_endstops?1:0;
 
 //Casing 
-casing_height = flex_z2-24; //the maximum height of the lever casing and 'joining together' casing
+casing_height = actuator_h+actuator_travel + 5; //flex_z2-24; //the maximum height of the lever casing and 'joining together' casing
 casing_radius = nut_y; //the outside radius (to the point) of the hexagon used to join the casing together
 
 // size of cutout for fl cube
