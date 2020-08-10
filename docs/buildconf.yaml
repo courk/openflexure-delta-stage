@@ -1,0 +1,39 @@
+#This is required if for build HTML unless index.md exists
+LandingPage: index.md
+
+# Recommended information
+Authors:
+    - My Name
+
+Affiliation: My Affiliation
+
+#License: CERN-OHL-1.2
+
+Email: my-email@my.domain
+
+
+#Uncomment below to add custom categories
+CustomCategories:
+    3DPrinted_tool:
+        Reuse: True
+        DisplayName: Printed tools
+    3DPrinted:
+        Reuse: False
+        DisplayName: 3D printed parts
+
+
+#Uncomment below to set a custom default category
+#DefaultCategory: printedtool
+
+#Uncomment below to set the title for the bill of material on a page
+#PageBOMTitle: '##For this step you will need'
+
+#Uncomment below to override the project title
+#Title: 'My project'
+
+#Uncomment below to set a custom Website root for static HTML builds
+WebsiteRoot: '/openflexure-delta-stage/'
+
+#Uncomment below to disable fussy warnings
+#Fussy: False
+
