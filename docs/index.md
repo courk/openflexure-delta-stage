@@ -27,6 +27,6 @@ There are three optional bases to choose from:
 
 1. [.](simple_base.md){step}:  Short; matches the footprint of the OpenFlexure Delta stage.  Best suited if you have small motor controllers, or just want more stability.
 2. [.](raspi_base.md){step}: Taller; Custom designed base to fit the Raspberry Pi and leaves room for a optics module. Best suited if you want to just use a Raspberry Pi for the camera and are controlling the stage by hand or with small motor controllers.
-3. [.](raspi_sangaboard_base.md.){step}: Tallest; Custom designed base to fit the Raspberry Pi and Sangaboard.  Best suited if you want the fully automated OpenFlexure Delta Stage Microscope.
+3. [.](raspi_sangaboard_base.md){step}: Tallest; Custom designed base to fit the Raspberry Pi and Sangaboard.  Best suited if you want the fully automated OpenFlexure Delta Stage Microscope.
 
 
