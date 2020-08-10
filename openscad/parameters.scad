@@ -70,16 +70,15 @@ mid_cutout_w = illuminator_width() + 1;
 bottom_cutout_w = illuminator_width() + 4;
 
 // Base
-
 base_height = 80;
 base_cutout_tolerance = 0.5;
-raspi_board = [56,85,16];
-casing_apothem = casing_radius*sqrt(3)/2;
-USB_ethernet_window = [raspi_board[0],100,raspi_board[2]+6];
-power_HDMI_window  = [100,45-3.5,14];
-raspi_standoff = 7;
-sangaboard = [56,68,25];
-raspi_center = [0,10,raspi_board[2]/2+raspi_standoff];
-
-sangaboard_center = raspi_center+[0,(raspi_board[1]/2-sangaboard[1]/2),(sangaboard[2]/2-raspi_board[2]/2+20)];
-sangaboard_window = [100,power_HDMI_window[1]*2/3,20];
+raspi_board = [56,85,16]; // The actual size of the RPi
+casing_apothem = casing_radius*sqrt(3)/2; // The apothem of the hexagon used to join up the legs
+USB_ethernet_window = [raspi_board[0],100,raspi_board[2]+6]; //The back window for the RPi
+power_HDMI_window  = [100,45-3.5,14]; //The side window for the RPi
+raspi_standoff = 7; //How high the RPi is from the base (governed by the standoff screw size)
+sangaboard = [56,68,25]; // The actual size of the Sangaboard
+raspi_center = [0,10,raspi_board[2]/2+raspi_standoff]; // Where the centre of the Raspberry Pi is in its final position
+standoff_height = 20; //The height of the standoff between the Rpi and the Sangaboard
+sangaboard_center = raspi_center+[0,(raspi_board[1]/2-sangaboard[1]/2),(sangaboard[2]/2-raspi_board[2]/2+standoff_height)]; // Where the centre of the Raspberry Pi is in its final position
+sangaboard_window = [100,power_HDMI_window[1]*2/3,20]; // The back window of Sangaboard
