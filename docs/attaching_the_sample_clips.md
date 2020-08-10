@@ -8,29 +8,29 @@ To securely hold a microscope slide on the stage, you can attach the sample clip
 [M3x8mm cap head screw]: "{cat:part}"
 [2.5mm Allen key]: "{cat:tool}"
 
-![](images\attaching_the_sample_clips\parts.jpg)
+![](images/attaching_the_sample_clips/parts.jpg)
 
 ## Method
 
 ## Insert the screws into the clips {pagestep}
 
 Push the two [M3x8mm cap head screw]{qty:2}s through the lower hole of the [sample clip]{qty:2}.
-![](images\attaching_the_sample_clips\insert_screws_into_clips.jpg)
+![](images/attaching_the_sample_clips/insert_screws_into_clips.jpg)
 
 ## Screw the sample clips onto the stage {pagestep}
 
 There are 9 holes on the top of the stage, allowing you flexibility when choosing where to place the sample clips. Screw the sample clip to the stage using a [2.5mm Allen key]{qty:1}, going through the hole at the top.  
-![](images\attaching_the_sample_clips\screwing_clips.jpg)  
+![](images/attaching_the_sample_clips/screwing_clips.jpg)  
 If it is difficult to start screwing, then you may find it useful to tap the hole with the screw first.    
-![](images\attaching_the_sample_clips\tapping_holes.jpg)  
+![](images/attaching_the_sample_clips/tapping_holes.jpg)  
 Attach the second clip in the same way.
-![](images\attaching_the_sample_clips\sample_clips_all.jpg)
+![](images/attaching_the_sample_clips/sample_clips_all.jpg)
 
 ## Clamp the slide {pagestep}
 
 Now you can gently lift up the glass clips and place your microscope slide.
-![](images\attaching_the_sample_clips\sample_clip_slide_top.jpg)
-![](images\attaching_the_sample_clips\sample_clip_slide_profile.jpg)
+![](images/attaching_the_sample_clips/sample_clip_slide_top.jpg)
+![](images/attaching_the_sample_clips/sample_clip_slide_profile.jpg)
 
 
 
