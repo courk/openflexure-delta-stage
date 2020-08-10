@@ -10,6 +10,9 @@ include <parameters.scad> //Delta-stage params
 use <z_axis.scad>;
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
+use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
+use <../openflexure-microscope/openscad/z_axis.scad>;
+use <../openflexure-microscope/openscad/illumination.scad>;
 
 module lever(){
     // The levers go from the centre to the actuator columns
@@ -126,17 +129,23 @@ module stage_edges(h=5-2*dz, z=flex_z2+2*dz){
 module moving_stage(){
     // the moving stage is printed suspended between the legs.
     // we start by joining the legs together
-    stage_flexures();
+    difference(){
+        union(){
+            stage_flexures();
     
-    // start to join the flexure bridges together
-    intersection(){
-        hull() stage_flexures(h=999);
-        stage_edges();
-    }
-    // continue building up the bridges between the legs
-    intersection(){
-        stage_flexures(h=999);
-        hull() stage_edges();
+            // start to join the flexure bridges together
+            intersection(){
+                hull() stage_flexures(h=999);
+                stage_edges();
+            }
+            // continue building up the bridges between the legs
+            intersection(){
+                stage_flexures(h=999);
+                hull() stage_edges();
+            }
+        }
+        //mounting holes for stage
+        each_lever() translate([0,-zflex[0]/2,flex_z2+4*dz]) repeat([leg_strut_l/2,0,0],3,center=true) trylinder_selftap(3,h=999);
     }
 }
 
@@ -152,31 +161,49 @@ module leg_and_lever_clearance(){
 }
 module motor_and_small_gear_clearance(h=actuator_h+actuator_travel){
     // Cylinders for the small gear and the motor
-    gear_pos = [0, nut_y-20, h+2];
+    gear_pos = [0, nut_y-20, h];
     motor_pos = gear_pos + [0, 7.8, 10];
-    translate(gear_pos) cylinder(d=20, h=999);
+    translate(gear_pos) cylinder(d=24, h=999);
     translate(motor_pos) cylinder(d=29, h=999);
+}
+
+// Cut out hole for reflection illuminator
+module fl_cube_cutout(){
+
+    // Create a trapezoid with min width (cube_width) at top
+    hull() {
+        translate([-(bottom_cutout_w)/2, -49, -0.5]) cube([bottom_cutout_w, 49, 1]);
+        translate([-(mid_cutout_w)/2, -49, 10]) cube([mid_cutout_w, 49, 1]); // Highest we usually need
+        translate([-top_cutout_w/2, -49, 20]) cube([top_cutout_w, 49, 1]);
+    }
 }
 
 module casing(){
     difference(){
         union(){
             // casing around the leg&lever
-            each_lever() minkowski(){
-                leg_and_lever_clearance();
-                cylinder(r1=wall_t,r2=0.5, h=0.9);
+            difference (){
+                each_lever() minkowski(){
+                    leg_and_lever_clearance();
+                    cylinder(r1=wall_t,r2=0.5, h=0.9);
+                }
+                translate([0,0,casing_height]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
             }
             // casing for the actuator
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
-            hull() each_lever() intersection(){
-                translate([-999,0,0]) cube([999*2,15,999]);
-                leg_and_lever_clearance();
+            cylinder(r=casing_radius, h=casing_height, $fn=6);    
+            //add a condenser mount 
+            if (condenser_mount) {
+                hull(){
+                rotate(60) translate([0,0,7])hull()each_illumination_arm_screw() mirror([0,0,1]) cylinder(r=5,h=7);
+                rotate(60)translate([0, stage_r,0])cube([stage_r/2,1,1], center = true);
+                }
             }
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
-        each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);
+        each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);        
         // clearance for gears and motors
         each_lever() motor_and_small_gear_clearance();
 
@@ -186,19 +213,18 @@ module casing(){
                 // Through-to-bottom cutout
                 intersection() {
                     hull() each_lever(){
-                        translate([0, stage_r, -99]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r-3, -99]) cylinder(h=999,r=wall_t);
                     }
                     hull() rotate(60) each_lever(){
-                        translate([0, stage_r/2, -99]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r/2-3, -99]) cylinder(h=999,r=wall_t);
                     }
                 }
                 intersection() {
-                    top_cutout_h=(flex_z2/2)+5;
                     hull() each_lever(){
-                        translate([0, stage_r, top_cutout_h]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
                     }
                     hull() rotate(60) each_lever(){
-                        translate([0, stage_r, top_cutout_h]) cylinder(h=999,r=wall_t);
+                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
                     }
                 }
 
@@ -210,7 +236,8 @@ module casing(){
                 objective_mount();
             }
         }
-        
+
+
 
         // bolt slot access slot
         rotate(60) hull(){
@@ -218,11 +245,26 @@ module casing(){
             translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
         }
 
+        if (reflection_illumination){
+            fl_cube_cutout();
+        }
+
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
-        translate([0,0,flex_z2-20]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go too high
+
 
         // mounting holes (screw through from bottom)
-        each_mounting_hole() trylinder_selftap(nominal_d=3, h=40, center=true);
+        each_mounting_hole() {
+            trylinder_selftap(nominal_d=3, h=40, center=true);
+            translate([15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
+            translate([-15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
+        }
+        // holes for mounting illumination arm
+        if(condenser_mount){
+            rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
+                trylinder_selftap(3, h=16, center=true); 
+            hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
+            }         
+        }
     }
 }
 
