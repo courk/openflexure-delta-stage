@@ -8,11 +8,11 @@ This base fits both the Raspberry Pi (Models B+, 3B, 3A+, 3B+, 4B) and the Sanga
 
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 
-[M2.5 20mm standoffs]: "{cat:part}"
+[M2.5 20mm standoffs]: standoffs.md "{cat:part}"
 [Sangaboard]: "{cat:part}"
 
 [small pliers]: "{cat:tool}"
-[nut driver]: "{cat:tool}"
+[SW5 nut driver]: "{cat:tool}"
 [M2 screwdriver]: "{cat:tool}"
 
 
@@ -30,7 +30,7 @@ Alternatively, you could drill holes in the bottom of the base to attach it to a
 
 If you haven't already [connected the camera ribbon cable and LED](./connecting_the_electronics.md), then do this now.
 
-Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5 20mm standoffs]{qty:4} through the holes of the Raspberry Pi (hand tight or using [small pliers]{qty:1} or [nut driver]{qty:1}, being careful not to over-tighten) and into the base.  You may find it easier to tap the holes with M2.5 screws before.
+Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5 20mm standoffs]{qty:4} through the holes of the Raspberry Pi (hand tight or using [small pliers]{qty:1} or [SW5 nut driver]{qty:1}, being careful not to over-tighten) and into the base.  You may find it easier to tap the holes with M2.5 screws before.
 
 ![](images/raspi_sangaboard_base/raspi_standoffs.jpg)
 ![](images/raspi_sangaboard_base/raspi_standoffs_closeup1.jpg)
