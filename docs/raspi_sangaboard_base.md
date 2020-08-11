@@ -34,13 +34,13 @@ Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5 20mm s
 
 ![](images/raspi_sangaboard_base/raspi_standoffs.jpg)
 ![](images/raspi_sangaboard_base/raspi_standoffs_closeup1.jpg)
-![](images/raspi_sangaboard_base/raspi_standoffs_closeup2.jpg)
+
 
 
 
 ### Add Sangaboard {pagestep}
 
-Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables from the Raspberry Pi have space. Screw the [M2.5 7mm screws]{qty:4} using a [M2 screwdriver]{qty:1} through the holds of the Sangaboard into the standoffs.  You might find it easier to attach all four loosely, then tighten them together.  Be careful not to over-tighten these screws.
+Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables from the Raspberry Pi have space. Screw the [M2.5 7mm screws]{qty:4} using a [M2 screwdriver]{qty:1} through the holes of the Sangaboard into the standoffs.  You might find it easier to attach all four loosely, then tighten them together.  Be careful not to over-tighten these screws.
 
 ![](images/raspi_sangaboard_base/sangaboard_screws_top.jpg)
 ![](images/raspi_sangaboard_base/sangaboard_screws_closeup1.jpg)
@@ -57,14 +57,14 @@ Coming soon: the correct order to plug in the motors.
 
 ### Connect the Sangaboard {pagestep}
 
-The Sangaboard connects to the Raspberry Pi by USB cable. There is a special cutout for the USB cable to pass through.
+The Sangaboard connects to the Raspberry Pi by USB cable. There is a special window for the USB cable to pass through.
 
 ![](images/raspi_sangaboard_base/sangaboard_USB_top.jpg)
 ![](images/raspi_sangaboard_base/sangaboard_USB.jpg)
 
 ### Attach the camera ribbon cable {pagestep}
 
-If you are using the [transmission](./transmission_illumination.md) or [reflection](./reflection_illumination.md).  Connect the ribbon cable to the camera module and attach it to the microscope as per those instructions.
+If you are using the [transmission](./transmission_illumination.md) or [reflection](./reflection_illumination.md) illumination, connect the ribbon cable to the camera module and attach it to the microscope as per those instructions.
 
 ![](images/raspi_sangaboard_base/camera_ribbon_cable.jpg)
 ![](images/raspi_sangaboard_base/optics_module_attach.jpg)
@@ -78,7 +78,7 @@ The microscope fits snuggly into the base.  Make sure the motor cables and LED c
 
 ### Attach external components {pagestep}
 
-There are cutouts around base to connect external components.  On the side there is space for USB power to the Raspberry Pi and Sangaboard and HDMI.
+There are windows around base to connect external components.  On the side there is space for USB power to the Raspberry Pi and Sangaboard and HDMI.
 
 ![](images/raspi_sangaboard_base/power_HDMI.jpg)
 
