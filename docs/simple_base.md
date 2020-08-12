@@ -1,7 +1,8 @@
 # Simple base
 
 {{BOM}}
+[simple base]: models/base.stl
 
 ## Method
 
-Coming soon...
+The delta stage just fits inside the [simple base]{qty:1}.
