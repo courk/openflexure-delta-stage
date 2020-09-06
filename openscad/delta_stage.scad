@@ -13,6 +13,7 @@ use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
 use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
 use <../openflexure-microscope/openscad/z_axis.scad>;
 use <../openflexure-microscope/openscad/illumination.scad>;
+use <../openflexure-microscope/openscad/logo.scad>;
 
 module lever(){
     // The levers go from the centre to the actuator columns
@@ -192,7 +193,7 @@ module casing(){
             // casing for the actuator
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
-            cylinder(r=casing_radius, h=casing_height, $fn=6);    
+                cylinder(r=casing_radius, h=casing_height, $fn=6);    
             //add a condenser mount 
             if (condenser_mount) {
                 hull(){
@@ -265,7 +266,14 @@ module casing(){
             hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
             }         
         }
+        logos();
     }
+}
+
+module logos(){
+    //The OSHW and OpenFlexure logos (goes on the side of the casing without the access holes)
+    rotate(30)translate([casing_apothem,8,casing_height*0.35])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
+    mirror([1,0,0])rotate(150)translate([casing_apothem+0.01,10,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_logo();
 }
 
 module main_body(){
