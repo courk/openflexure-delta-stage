@@ -31,8 +31,9 @@ build:
         - builds/*.stl
 
     only:
-      - master
+      - tags
       - merge_requests
+      - web
 
 build-docs:
     stage: docs
@@ -56,7 +57,9 @@ build-docs:
         paths:
         - public
     only:
-    - master
+      - tags
+      - merge_requests
+      - web
 
 # Deploy to builds.openflexure.org
 deploy:
