@@ -1,5 +1,6 @@
 stages:
     - build
+    - docs
     - deploy
 
 variables:
@@ -34,7 +35,7 @@ build:
       - merge_requests
 
 build-docs:
-    stage: build
+    stage: docs
     dependencies:
       - build
     image: "python:3.7"
