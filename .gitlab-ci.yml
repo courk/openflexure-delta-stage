@@ -33,10 +33,10 @@ build:
       - master
       - merge_requests
 
-pages:
+build-docs:
+    stage: build
     dependencies:
       - build
-    stage: deploy
     image: "python:3.7"
 
     before_script:
@@ -56,3 +56,43 @@ pages:
         - public
     only:
     - master
+
+# Deploy to builds.openflexure.org
+deploy:
+  stage: deploy
+  dependencies:
+    - build
+    - build-docs
+  image: ubuntu:latest
+
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY_BATH_OPENFLEXURE_BASE64" | base64 --decode)
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+  script:
+    # Install rsync if not already installed
+    - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
+
+    # Upload the builds folder to openflexure-microscope builds
+    - rsync -hrvz -e ssh public/ ci-user@openflexure.bath.ac.uk:/var/www/build/${CI_PROJECT_NAME}/${CI_COMMIT_REF_NAME} --delete
+
+    # Zip the builds folder and upload it to the openflexure-microscope build root
+    - 'which zip || ( apt-get update -y && apt-get install zip -y )'
+    - (cd public && zip -r "../${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}.zip" .)
+    - rsync -hrvz -e ssh "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}.zip" ci-user@openflexure.bath.ac.uk:/var/www/build/${CI_PROJECT_NAME}/
+
+    # Run update-latest.py on the build server
+    - ssh -t ci-user@openflexure.bath.ac.uk "/var/www/build/update-latest.py"
+
+  artifacts:
+    expire_in: 1 week
+    name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}.zip"
+    paths:
+      - "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}.zip"
+
+  only:
+    - tags
+    - web
