@@ -272,8 +272,8 @@ module casing(){
 
 module logos(){
     //The OSHW and OpenFlexure logos (goes on the side of the casing without the access holes)
-    rotate(30)translate([casing_apothem,8,casing_height*0.35])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
-    mirror([1,0,0])rotate(150)translate([casing_apothem+0.01,10,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_logo();
+    rotate(30)translate([casing_apothem+0.5,8,casing_height*0.35])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
+    mirror([1,0,0])rotate(150)translate([casing_apothem+0.5,10,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_logo();
 }
 
 module main_body(){
