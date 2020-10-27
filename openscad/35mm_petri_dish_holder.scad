@@ -1,4 +1,4 @@
-// Design for a 70mm diameter petri dish holder
+// Design for a 35mm diameter petri dish holder
 
 use <./stage_adaptor_base.scad>;
 
