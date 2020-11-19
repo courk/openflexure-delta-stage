@@ -4,9 +4,7 @@ mkdir -p builds
 
 # configurations for stages
 openscad -o builds/delta_stage.stl openscad/delta_stage.scad
-openscad -o builds/reflection_delta_stage.stl -D 'reflection_illumination = true'  openscad/delta_stage.scad
-openscad -o builds/transmission_delta_stage.stl -D 'condenser_mount = true'  openscad/delta_stage.scad
-openscad -o builds/reflection_transmission_delta_stage.stl -D 'condenser_mount = true' -D 'reflection_illumination = true' openscad/delta_stage.scad
+openscad -o builds/delta_stage_microscope.stl -D 'condenser_mount = true' -D 'reflection_illumination = true' openscad/delta_stage.scad
 
 # common parts
 openscad -o builds/base_raspi_sangaboard.stl openscad/base_raspi_sangaboard.scad
