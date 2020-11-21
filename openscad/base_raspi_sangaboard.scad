@@ -94,7 +94,11 @@ module window_cubes() {
     translate(raspi_center+[-power_HDMI_window[0]/2,raspi_board[1]/2-power_HDMI_window[1]/2-3.5,-raspi_board[2]/2+power_HDMI_window[2]/2-1]) cube(power_HDMI_window,center = true);
 
     //Vents
-    translate(raspi_center+[power_HDMI_window[0]/2,raspi_board[1]/2-power_HDMI_window[1]/2-3.5,-raspi_board[2]/2+power_HDMI_window[2]/2-1])repeat(delta=[0,power_HDMI_window[1]/14,0],N=15, center= true) cube([100,1.5,power_HDMI_window[2]],center=true)
+    translate(raspi_center+[power_HDMI_window[0]/2,raspi_board[1]/2-power_HDMI_window[1]/2-3.5,-raspi_board[2]/2+power_HDMI_window[2]/2-1])repeat(delta=[0,power_HDMI_window[1]/14,0],N=15, center= true) cube([100,1.5,power_HDMI_window[2]],center=true);
+
+    //SD card access
+    translate(raspi_center+[0,raspi_board[1]/2,-10])cube([20,20,20], center=true);
+
 
     //Sangaboard windows
     // Back window
@@ -135,6 +139,7 @@ module raspi(){
 
 module base_windowed() {
     union(){
+
         difference() {
             base();
             window_cubes();
