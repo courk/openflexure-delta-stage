@@ -14,19 +14,22 @@ The delta stage is a 3D printed x-y-z translation stage. As the optics do not mo
 1. [.](attaching_the_sample_clips.md){step}
 1. [.](attaching_the_motors.md){step}  
 1. [.](reflection_illumination.md){step}  
-1. [.](transmission_illumination.md){step}  
-1. [.](connecting_the_electronics.md){step}
+1. [.](transmission_illumination.md){step}
+1. [.](LED_grid_illumination.md){step}
+1. [.](raspi_sangaboard_base.md){step}
+
 
 ### Software
 
-1. You can control your microscope using the [OpenFlexure software](https://openflexure.org/projects/microscope/install).
-2. You will need to adjust the configuration file, so that the software knows which stage you are using. More information coming soon..
+You can control your microscope using the [OpenFlexure software](https://openflexure.org/projects/microscope/install). The geometry of the Delta Stage is different to the standard OpenFlexure Microscope.  So that the movement of the stage is correct, you will need to change the stage configuration:
 
-### Bases 
-There are three optional bases to choose from:
+1. In OpenFlexure Connect, when connected to your Delta Stage microscope, click `Settings`.
+2. Under `MICROSCOPE SETTINGS`, click `Stage`.
+3. Change the `Stage geometry` dropdown to `SangaStage (Delta)`.
+4. Click `CHANGE STAGE GEOMETRY`.
 
-1. [.](simple_base.md){step}:  Short; matches the footprint of the OpenFlexure Delta stage.  Best suited if you have small motor controllers, or just want more stability.
-2. [.](raspi_base.md){step}: Taller; Custom designed base to fit the Raspberry Pi and leaves room for a optics module. Best suited if you want to just use a Raspberry Pi for the camera and are controlling the stage by hand or with small motor controllers.
-3. [.](raspi_sangaboard_base.md){step}: Tallest; Custom designed base to fit the Raspberry Pi and Sangaboard.  Best suited if you want the fully automated OpenFlexure Delta Stage Microscope.
+### Simple Base 
 
+
+   [.](simple_base.md){step}:  Short; matches the footprint of the OpenFlexure Delta stage.
 
