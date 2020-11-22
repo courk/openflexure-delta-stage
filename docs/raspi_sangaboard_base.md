@@ -1,6 +1,6 @@
 # Raspberry Pi and Sangaboard base
 
-This base fits both the Raspberry Pi (Models B+, 3B, 3A+, 3B+, 4B) and the Sangaboard, with holes for the wires and connections and space for an optics module to move.
+This base fits both the Raspberry Pi (Models B+, 3B, 3A+, 3B+, 4B) and the Sangaboard v2, with holes for the wires and connections and space for an optics module to move.
 
 >**Warning:** Make sure your SD card is flashed with the [OS and software](index.md#Software) and inserted into your Raspberry Pi as it is not easily accessible once the base is completed.
 
