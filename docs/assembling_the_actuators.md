@@ -50,7 +50,7 @@ Insert a [brass M3 nut]{qty:3} into the slot of one of the actuators, using the 
 ![](images/assembling_the_actuators/nut_on_slot_nut_tool.jpg)
 ![](images/assembling_the_actuators/nut_in_slot.jpg)
 
-Screw the gear through the hole in the top of the actuator, through the gear that you just inserted.  Apply a small amount of [light oil]{qty:small amount} to the screw thread before it is fully tightened.
+Screw the gear through the hole in the top of the actuator, through the nut that you just inserted.  Apply a small amount of [light oil]{qty:small amount} to the screw thread before it is fully tightened.
 ![](images/assembling_the_actuators/gear_in_top_hole.jpg)
 ![](images/assembling_the_actuators/screwing_gear.jpg)
 
