@@ -5,7 +5,7 @@ If you want your stage to be automated, these instructions will show you how to 
 
 [small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [28BYJ-48 micro geared stepper motor]: "{cat: part}"
-[insultating tape]: "{cat:part}"
+[insulating tape]: "{cat:part}"
 [M4x6mm button head screw]: "{cat:part}"
 
 ![](images/attaching_the_motors/non_printed_parts.jpg)
