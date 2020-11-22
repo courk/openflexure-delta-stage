@@ -2,10 +2,8 @@
 
 These instructions show you how to print the parts and the printed tools for the OpenFlexure Delta Stage. You don't need to print all the files.  Follow the steps below to find the right files for your configuration. 
 
-[delta stage]: models/delta_stage.stl "{cat:3DPrinted, note: depending on your required configuration}"
-[transmission delta stage]: models/transmission_delta_stage.stl "{cat:3DPrinted, note: depending on your required configuration}"
-[reflection delta stage]: models/reflection_delta_stage.stl "{cat:3DPrinted,  note: depending on your required configuration}"
-[transmission and reflection delta stage]: models/reflection_transmission_delta_stage.stl "{cat: 3DPrinted,  note: depending on your  requried configuration}"
+[Delta Stage]: models/delta_stage.stl "{cat:3DPrinted}}"
+[Delta Stage Microscope]: models/reflection_transmission_delta_stage.stl "{cat: 3DPrinted}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 [simple base]: models/base.stl "{cat: 3DPrinted}"
@@ -14,48 +12,41 @@ These instructions show you how to print the parts and the printed tools for the
 [sample clip]: models/sample_clips.stl "{cat: 3DPrinted, note: Both sample clips are in the one file.}"
 [gear]: models/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
-## Main body  
-There are different options for the main body, depending on what type of illumination you want to use.
+## Main body
+There are two options for the [Main body]{output,qty:1}.
 
-1. If you want to use your own illumination, or just want the stage, you will need to print the [delta stage]{qty:choose,}.
-1. If you want to use the OpenFlexure's condenser illumination, for transmission illumination, you will need to print the [transmission delta stage]{qty:choose}.
-1. If you want to use the OpenFlexure's reflection illumination, for example for fluorescence, you will need to print the [reflection delta stage]{qty:choose}.
-1. If you want to use both transmission and reflection illumination, you will need to print [transmission and reflection delta stage]{qty:choose}.
+1. If you just want the stage, you will need to print the [Delta Stage]{qty:1}.
+2. If you want to use the Delta Stage Microscope, you will need to print [Delta Stage Microscope]{qty:1}.
 
 ## Actuators
 To control the movement of the stage, you will need to print:
 
-1. The three [feet]{qty:0}.
-1. The three [gear]{qty:0}s.
+1. The three [feet].
+2. The three [gear]s.
 
 ## Printed tools  
 To assist with the fiddlier parts, you will need to print out these tools:
 
-1. The [band tool]{qty:0}.
-1. The [nut tool]{qty:0}.
+1. The [band tool].
+2. The [nut tool].
 
 ## Sample clips
 To secure a microscope slide to the stage, you will need to print:
 
-1. The two [sample clip]{qty:0}s.
+1. The two [sample clip]s.
 
 ## Motors
 
 To connect the motors to the stage, you will need to print:
 
-1. The three [small gear]{qty:0}s.
+1. The three [small gear]s.
 
 ## Base
 
-To store the any electronic components, or just to help keep the microscope steady, you will need to print:
+The base{output,qty:1} keeps the microscope steady. Choose which one you want to print:
 
-1. The [simple base]{qty:0}.
-   
+1. The [simple base].
+
    or
 
-1. The [Raspberry Pi & Sangaboard base]{qty:0}
-
-
-
-
-
+2. The [Raspberry Pi & Sangaboard base].

@@ -3,7 +3,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 {{BOM}}
 
-[delta stage]: models/delta_stage.stl "{cat:3DPrinted}"
+[Delta stage]: models/delta_stage.stl "{cat:3DPrinted}"
 [M3 washer]: "{cat:part}"
 [light oil]: "{cat:part}"
 [O-ring]: "{cat:part}"
@@ -19,14 +19,14 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 ## Cut the ties {pagestep}
 
-For printing stability, on the [delta stage]{qty:0} there are two plastic ties in every actuator.  Cut these out, either using a craft knife or small wire cutters.  
+For printing stability, on the [Main body](fromstep){Qty:1} there are two plastic ties in every actuator.  Cut these out, either using a craft knife or small wire cutters.  
 
 ![](images/assembling_the_actuators/ties.jpg)
 ![](images/assembling_the_actuators/cutter_ties.jpg)
 ![](images/assembling_the_actuators/knife_ties.jpg)
 ![](images/assembling_the_actuators/no_ties.jpg)
 
-Repeat for all three acutators.
+Repeat for all three actuators.
 ![](images/assembling_the_actuators/no_ties_all.jpg)
 
 ## Assemble gear {pagestep}

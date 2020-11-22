@@ -31,6 +31,3 @@ Attach the second clip in the same way.
 Now you can gently lift up the glass clips and place your microscope slide.
 ![](images/attaching_the_sample_clips/sample_clip_slide_top.jpg)
 ![](images/attaching_the_sample_clips/sample_clip_slide_profile.jpg)
-
-
-
