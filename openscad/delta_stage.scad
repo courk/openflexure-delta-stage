@@ -175,6 +175,7 @@ module fl_cube_cutout(){
         translate([-(bottom_cutout_w)/2, -49, -0.5]) cube([bottom_cutout_w, 49, 1]);
         translate([-(mid_cutout_w)/2, -49, 10]) cube([mid_cutout_w, 49, 1]); // Highest we usually need
         translate([-top_cutout_w/2, -49, 20]) cube([top_cutout_w, 49, 1]);
+        translate([0,-49,20])cylinder_with_45deg_top(r = top_cutout_w/2, h = 49);
     }
 }
 
