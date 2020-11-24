@@ -193,13 +193,6 @@ module casing(){
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
             cylinder(r=casing_radius, h=casing_height, $fn=6);    
-            //add a condenser mount 
-            if (condenser_mount) {
-                hull(){
-                rotate(60) translate([0,0,7])hull()each_illumination_arm_screw() mirror([0,0,1]) cylinder(r=5,h=7);
-                rotate(60)translate([0, stage_r,0])cube([stage_r/2,1,1], center = true);
-                }
-            }
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
@@ -240,10 +233,7 @@ module casing(){
 
 
         // bolt slot access slot
-        rotate(60) hull(){
-            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
-            translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
-        }
+        objective_bolt_access();
 
         if (reflection_illumination){
             fl_cube_cutout();
@@ -258,13 +248,31 @@ module casing(){
             translate([15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
             translate([-15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
         }
+module objective_bolt_access(){
+        rotate(60) hull(){
+            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+            translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+        }
+}
+
+module condenser_mount(){
+    difference(){
+        hull(){
+            rotate(60) translate([0,0,7])hull()each_illumination_arm_screw() mirror([0,0,1]) cylinder(r=5,h=7);
+            rotate(60)translate([0,casing_apothem-0.5,0.5])cube([stage_r/2,1,1], center = true);
+        }
         // holes for mounting illumination arm
-        if(condenser_mount){
-            rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
+        rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
+            trylinder_selftap(3, h=16, center=true); 
                 trylinder_selftap(3, h=16, center=true); 
+            trylinder_selftap(3, h=16, center=true); 
             hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
+        }
             }         
         }
+        // bolt slot access
+        objective_bolt_access();
+         
     }
 }
 
@@ -277,6 +285,7 @@ module main_body(){
     }
     moving_stage();
     casing();
+    if (transmission_illumination) condenser_mount();
 }
 
 exterior_brim(r=0) {
