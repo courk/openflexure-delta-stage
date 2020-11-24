@@ -213,7 +213,10 @@ module casing(){
 
             // make the objective mount by not hollowing it out
             rotate(60){
-                objective_mount();
+                union(){
+                    objective_mount();
+                    translate([-stage_r/2,casing_apothem-17.5,0])cube([stage_r,17.5,casing_height]);
+                }
             }
         }
 
