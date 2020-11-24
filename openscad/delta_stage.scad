@@ -237,7 +237,9 @@ module casing(){
             trylinder_selftap(nominal_d=3, h=40, center=true);
             translate([15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
             translate([-15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
-        }
+        }       
+    }
+}
 module objective_bolt_access(){
         rotate(60) hull(){
             translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
@@ -254,11 +256,7 @@ module condenser_mount(){
         // holes for mounting illumination arm
         rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
             trylinder_selftap(3, h=16, center=true); 
-                trylinder_selftap(3, h=16, center=true); 
-            trylinder_selftap(3, h=16, center=true); 
             hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
-        }
-            }         
         }
         // bolt slot access
         objective_bolt_access();
@@ -287,7 +285,7 @@ exterior_brim(r=0) {
 }
 
 module thick_section(h, z=0, center=false){
-    linear_extrude(h, center=center) #projection(cut=true){
+    linear_extrude(h, center=center) projection(cut=true){
         translate([0,0,-z]) children();
     }
 } 
