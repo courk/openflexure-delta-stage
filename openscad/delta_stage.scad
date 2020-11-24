@@ -202,26 +202,12 @@ module casing(){
 
         // hollow out space in the centre
         difference(){
-            union() {
-                // Through-to-bottom cutout
-                intersection() {
-                    hull() each_lever(){
-                        translate([0, stage_r-3, -99]) cylinder(h=999,r=wall_t);
-                    }
-                    hull() rotate(60) each_lever(){
-                        translate([0, stage_r/2-3, -99]) cylinder(h=999,r=wall_t);
-                    }
-                }
-                intersection() {
-                    hull() each_lever(){
-                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
-                    }
-                    hull() rotate(60) each_lever(){
-                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
-                    }
-                }
-
+                
+            intersection(){
+                rotate(30)cylinder(h = 999, r = casing_radius-wall_t, $fn = 3);
+                cylinder(h = 999, r = casing_radius-wall_t, $fn = 6);
             }
+
 
 
             // make the objective mount by not hollowing it out
