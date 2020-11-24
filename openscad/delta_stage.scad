@@ -266,13 +266,17 @@ module condenser_mount(){
     }
 }
 
-module main_body(){
+module legs(){
     each_lever(){
         leg();
         lever_flexures();
         lever();
         translate([0,nut_y,0]) actuator_column(actuator_h);
-    }
+    } 
+}
+
+module main_body(){
+    legs();
     moving_stage();
     casing();
     if (transmission_illumination) condenser_mount();
