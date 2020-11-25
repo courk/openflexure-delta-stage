@@ -251,7 +251,7 @@ module condenser_mount(){
     difference(){
         hull(){
             rotate(60) translate([0,0,7])hull()each_illumination_arm_screw() mirror([0,0,1]) cylinder(r=5,h=7);
-            rotate(60)translate([0,casing_apothem-0.5,0.5])cube([stage_r/2,1,1], center = true);
+            rotate(60)translate([0,stage_r,0.5])cube([stage_r/2,1,1], center = true);
         }
         // holes for mounting illumination arm
         rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
