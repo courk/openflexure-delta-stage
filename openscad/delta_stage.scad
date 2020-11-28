@@ -8,6 +8,7 @@ long-ish travel in 3D.
 */
 include <parameters.scad> //Delta-stage params
 use <z_axis.scad>;
+use <delta_stage_logo.scad>;
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
 use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
@@ -239,7 +240,8 @@ module casing(){
 
         mirror([0,0,1]) cylinder(r=999, h=999, $fn=4); //ensure it doesn't go below the bottom
 
-
+        //add logos to the side
+        logos();
         // mounting holes (screw through from bottom)
         each_mounting_hole() {
             trylinder_selftap(nominal_d=3, h=40, center=true);
@@ -266,14 +268,13 @@ module condenser_mount(){
             trylinder_selftap(3, h=16, center=true); 
             hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
         }
-        logos();
     }
 }
 
 module logos(){
     //The OSHW and OpenFlexure logos (goes on the side of the casing without the access holes)
-    rotate(30)translate([casing_apothem+0.5,8,casing_height*0.35])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
-    mirror([1,0,0])rotate(150)translate([casing_apothem+0.5,10,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_logo();
+    rotate(30)translate([casing_apothem+0.3,8,casing_height*0.35])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
+    mirror([1,0,0])rotate(150)translate([casing_apothem+0.3,4,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
 }
 
 module main_body(){
