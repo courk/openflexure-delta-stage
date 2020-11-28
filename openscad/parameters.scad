@@ -23,7 +23,7 @@ nut_y = lever_l + 12;
 motor_lugs = true;
 
 // Condenser mount
-condenser_mount = false;
+transmission_illumination = false;
 
 // Reflection illumination - The hole cut out the side for the reflection illuminator
 reflection_illumination = false; 
