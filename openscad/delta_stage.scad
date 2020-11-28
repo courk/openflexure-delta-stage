@@ -212,14 +212,10 @@ module casing(){
 
         // hollow out space in the centre
         difference(){
-                
             intersection(){
                 rotate(30)cylinder(h = 999, r = casing_radius-wall_t, $fn = 3);
                 cylinder(h = 999, r = casing_radius-wall_t, $fn = 6);
             }
-
-
-
             // make the objective mount by not hollowing it out
             rotate(60){
                 union(){
@@ -227,6 +223,7 @@ module casing(){
                     translate([-stage_r/2,casing_apothem-17.5,0])cube([stage_r,17.5,casing_height]);
                 }
             }
+            
         }
 
 
@@ -304,4 +301,4 @@ module thick_section(h, z=0, center=false){
 } 
 
 // Best to put echo statements here, so they only happen once...
-echo("Radius of mounting holes is", mounting_hole_r);
+//echo("Radius of mounting holes is", mounting_hole_r);
