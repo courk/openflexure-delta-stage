@@ -176,6 +176,7 @@ module fl_cube_cutout(){
         translate([-(bottom_cutout_w)/2, -49, -0.5]) cube([bottom_cutout_w, 49, 1]);
         translate([-(mid_cutout_w)/2, -49, 10]) cube([mid_cutout_w, 49, 1]); // Highest we usually need
         translate([-top_cutout_w/2, -49, 20]) cube([top_cutout_w, 49, 1]);
+        translate([0,-49,20])cylinder_with_45deg_top(r = top_cutout_w/2, h = 49);
     }
 }
 
@@ -210,41 +211,27 @@ module casing(){
 
         // hollow out space in the centre
         difference(){
-            union() {
-                // Through-to-bottom cutout
-                intersection() {
-                    hull() each_lever(){
-                        translate([0, stage_r-3, -99]) cylinder(h=999,r=wall_t);
-                    }
-                    hull() rotate(60) each_lever(){
-                        translate([0, stage_r/2-3, -99]) cylinder(h=999,r=wall_t);
-                    }
-                }
-                intersection() {
-                    hull() each_lever(){
-                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
-                    }
-                    hull() rotate(60) each_lever(){
-                        translate([0, stage_r, casing_height]) cylinder(h=999,r=wall_t);
-                    }
-                }
-
+                
+            intersection(){
+                rotate(30)cylinder(h = 999, r = casing_radius-wall_t, $fn = 3);
+                cylinder(h = 999, r = casing_radius-wall_t, $fn = 6);
             }
+
 
 
             // make the objective mount by not hollowing it out
             rotate(60){
-                objective_mount();
+                union(){
+                    objective_mount();
+                    translate([-stage_r/2,casing_apothem-17.5,0])cube([stage_r,17.5,casing_height]);
+                }
             }
         }
 
 
 
         // bolt slot access slot
-        rotate(60) hull(){
-            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
-            translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
-        }
+        objective_bolt_access();
 
         if (reflection_illumination){
             fl_cube_cutout();
@@ -258,13 +245,26 @@ module casing(){
             trylinder_selftap(nominal_d=3, h=40, center=true);
             translate([15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
             translate([-15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
+        }       
+    }
+}
+module objective_bolt_access(){
+        rotate(60) hull(){
+            translate([0, objective_mount_y+wall_t, z_flexures_z1+6]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+            translate([0, objective_mount_y+wall_t, z_flexures_z2-5]) rotate([-90,0,0]) cylinder(d=6.5,h=99);
+        }
+}
+
+module condenser_mount(){
+    difference(){
+        hull(){
+            rotate(60) translate([0,0,7])hull()each_illumination_arm_screw() mirror([0,0,1]) cylinder(r=5,h=7);
+            rotate(60)translate([0,casing_apothem-0.5,0.5])cube([stage_r/2,1,1], center = true);
         }
         // holes for mounting illumination arm
-        if(condenser_mount){
-            rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
-                trylinder_selftap(3, h=16, center=true); 
+        rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
+            trylinder_selftap(3, h=16, center=true); 
             hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
-            }         
         }
         logos();
     }
@@ -282,9 +282,14 @@ module main_body(){
         lever_flexures();
         lever();
         translate([0,nut_y,0]) actuator_column(actuator_h);
-    }
+    } 
+}
+
+module main_body(){
+    legs();
     moving_stage();
     casing();
+    if (transmission_illumination) condenser_mount();
 }
 
 exterior_brim(r=0) {
@@ -292,7 +297,7 @@ exterior_brim(r=0) {
 }
 
 module thick_section(h, z=0, center=false){
-    linear_extrude(h, center=center) #projection(cut=true){
+    linear_extrude(h, center=center) projection(cut=true){
         translate([0,0,-z]) children();
     }
 } 
