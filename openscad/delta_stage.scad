@@ -277,7 +277,7 @@ module logos(){
     mirror([1,0,0])rotate(150)translate([casing_apothem+0.3,4,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
 }
 
-module main_body(){
+module legs(){
     each_lever(){
         leg();
         lever_flexures();
