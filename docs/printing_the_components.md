@@ -7,11 +7,20 @@ These instructions show you how to print the parts and the printed tools for the
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 [simple base]: models/base.stl "{cat: 3DPrinted}"
-[band tool]: actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
-[nut tool]: actuatortools.md#nuttool "{cat:3DPrinted_tool}"
+[band tool]: models/actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
+[nut tool]: models/actuatortools.md#nuttool "{cat:3DPrinted_tool}"
 [sample clip]: models/sample_clips.stl "{cat: 3DPrinted, note: Both sample clips are in the one file.}"
 [gear]: models/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
+[lens tool]: models/lens_tool.stl "{cat:3DPrinted}"
+[condenser housing]: models/condenser_housing.stl "{cat:3DPrinted}"
+[camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
+[LED grid holder]: models/LED_grid_holder.stl "{cat:3DPrinted}"
+[optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
+[filter cube]: models/filter_cube.md "{cat:3DPrinted}"
+[reflection illumination holder]: models/reflection_illumination.md "{cat:3DPrinted}"
+[reflection illumination condenser]: models/reflection_illumination.md "{cat:3DPrinted}"
+
 ## Main body
 There are two options for the [main body]{output,qty:1}.
 
@@ -29,6 +38,7 @@ To assist with the fiddlier parts, you will need to print out these tools:
 
 1. The [band tool].
 2. The [nut tool].
+3. The [lens tool].
 
 ## Sample clips
 To secure a microscope slide to the stage, you will need to print:
@@ -40,6 +50,23 @@ To secure a microscope slide to the stage, you will need to print:
 To connect the motors to the stage, you will need to print:
 
 1. The three [small gear]s.
+
+## Optics
+
+### Transmission illumination
+
+1. The [condenser housing].
+2. The [optics module casing].
+
+### Reflection illumination
+
+1. The [filter cube].
+2. The [reflection illumination holder]
+3. The [reflection illumination condenser]
+
+### LED grid
+
+1. The [LED grid holder].
 
 ## Base
 
