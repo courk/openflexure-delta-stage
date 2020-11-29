@@ -265,6 +265,7 @@ module condenser_mount(){
             trylinder_selftap(3, h=16, center=true); 
             hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
         }
+        objective_bolt_access();
     }
 }
 
