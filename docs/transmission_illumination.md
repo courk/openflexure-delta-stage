@@ -15,7 +15,7 @@ These instructions show you how to add transmission illumination to your delta s
 [female crimp terminal contact]:"{cat:part}"
 [female connector housing]: "{cat:part}"
 [condenser lens]: "{cat:part}"
-[condenser lens tool]: "{cat:part}"
+[lens tool]: "{cat:part}"
 [condenser housing]: "{cat:3DPrinted}"
 [soldering iron]: "{cat:tool}"
 [solder]: "{cat:part}"
@@ -45,7 +45,7 @@ You have now made a [wired LED]{output, qty:1}.
 
 ### Insert the Condenser Lens {pagestep}
 
-Take a [condenser lens]{qty:1} and place it on top of the [condenser lens tool]{qty:1} with its flat side down.  
+Take a [condenser lens]{qty:1} and place it on top of the [lens tool]{qty:1} with its flat side down.  
 
 Push the [condenser housing]{qty:1} down vertically on top of the lens. make sure it is flat, pushing again harder if necessary.
 
