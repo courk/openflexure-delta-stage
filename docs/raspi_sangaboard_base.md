@@ -8,8 +8,9 @@ This base fits both the Raspberry Pi (Models B+, 3B, 3A+, 3B+, 4B) and the Sanga
 
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 
-[M2.5 20mm standoffs]: standoffs.md "{cat:part}"
-[Sangaboard]: "{cat:part}"
+[M2.5 20mm standoffs]: models/standoffs.md "{cat:part}"
+[Raspberry Pi]: models/raspberry_pi.md "{cat:part}"
+[Sangaboard]: models/sangaboard.md"{cat:part}"
 
 [small pliers]: "{cat:tool}"
 [SW5 nut driver]: "{cat:tool}"
