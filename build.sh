@@ -13,6 +13,8 @@ openscad -o builds/feet.stl openscad/feet.scad
 
 #optional parts
 openscad -o builds/35mm_petri_dish_holder.stl openscad/35mm_petri_dish_holder.scad
+#TODO
+#LED grid holder
 
 # parts from the OFM repository
 openscad -o builds/actuator_assembly_tools.stl openflexure-microscope/openscad/actuator_assembly_tools.scad
@@ -20,3 +22,9 @@ openscad -o builds/sample_clips.stl openflexure-microscope/openscad/sample_clips
 openscad -o builds/small_gears.stl openflexure-microscope/openscad/small_gears.scad
 openscad -o builds/gears.stl openflexure-microscope/openscad/gears.scad
 openscad -o builds/illumination_dovetail.stl openflexure-microscope/openscad/illumination_dovetail.scad
+# TODO:
+# condenser holder
+# Optics modules: Delta stage transmission and reflection
+# camera cover
+# filter cube
+# reflection illumination parts
