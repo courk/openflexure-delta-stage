@@ -14,11 +14,10 @@ The delta stage is a 3D printed x-y-z translation stage. As the optics do not mo
 ## Illumination modes
 1. [.](transmission_illumination.md){step} 
 1. [.](reflection_illumination.md){step}  
-1. [.](LED_grid_illumination.md){step}
+
 
 ## Connecting the components
 1. [.](raspi_sangaboard_base.md){step}
-
 
 ### Software
 
@@ -31,6 +30,7 @@ You can control your microscope using the [OpenFlexure software](https://openfle
 
 ### Optional components
 
-   [.](simple_base.md){step}:  Short base; matches the footprint of the OpenFlexure Delta stage.
-   [.](petri_dish.md){step}: A holder for a 35mm Petri dish.
+* [.](LED_grid_illumination.md){step}: For more complex illumination.
+* [.](simple_base.md){step}:  Short base; matches the footprint of the OpenFlexure Delta stage.
+* [.](petri_dish.md){step}: A holder for a 35mm Petri dish.
 
