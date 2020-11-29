@@ -5,7 +5,7 @@ To securely hold a microscope slide on the stage, you can attach the sample clip
 {{BOM}}
 
 [sample clip]: models/sample_clips.stl "{cat: 3DPrinted, note: Both sample clips are in the one file.}"
-[M3x8mm cap head screw]: "{cat:part}"
+[M3x8mm cap head screw]: models/m3_8mm_screw.md "{cat:part}"
 [2.5mm Allen key]: "{cat:tool}"
 
 ![](images/attaching_the_sample_clips/parts.jpg)
