@@ -1,6 +1,6 @@
 # Transmission illumination
 
-These instructions show you how to add transmission illumination to your delta stage.
+These instructions show you how to add transmission illumination and optics module to your delta stage.
 
 {{BOM}}
 
@@ -23,7 +23,7 @@ These instructions show you how to add transmission illumination to your delta s
 [M3 screw]: "{cat:part}"
 
 
-## Method
+## Illumination
 
 ### Solder the LED {pagestep}
 
@@ -66,4 +66,21 @@ Screw the [condenser housing] onto the [main body](fromstep).
 ### Attach the condenser on to the dovetail
 
 Slide the [condenser housing] down the dovetail.  You can adjust its position up and down by sliding it on the dovetail.  You can move it back and forward by loosing the dovetail and and tightening it when it is the correct position.
+
+
+## Optics Module
+
+### Clean the optics tube {pagestep}
+
+### Attach the objective screw {pagestep}
+
+### Insert the tube lens {pagestep}
+
+### Attach the objective lens {pagestep}
+
+### Remove the camera lens {pagestep}
+
+### Attach the camera to the optics tube {pagestep}
+
+
 
