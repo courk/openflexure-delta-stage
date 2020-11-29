@@ -21,6 +21,7 @@ These instructions show you how to add transmission illumination and optics modu
 [M3 screw]: models/m3_screw.md "{cat:part}"
 [M2 screw]: models/m2_screw.md "{cat:part}"
 [M3 nut]: models/m3_nut.md "{cat:part}"
+[illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
 [Raspberry Pi camera v2]: models/raspberry_pi_camera_v2.md "{cat:part}"
 [objective lens]: models/objective_lens.md "{cat:part}"
 [tube lens]: models/tube_lens.md "{cat:part}"

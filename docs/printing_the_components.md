@@ -13,6 +13,7 @@ These instructions show you how to print the parts and the printed tools for the
 [gear]: models/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted}"
+[illumination dovetail]: models/illumation_dovetail.stl "{cat:3DPrinted}"
 [condenser housing]: models/condenser_housing.stl "{cat:3DPrinted}"
 [camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
 [LED grid holder]: models/LED_grid_holder.stl "{cat:3DPrinted}"
@@ -55,8 +56,9 @@ To connect the motors to the stage, you will need to print:
 
 ### Transmission illumination
 
-1. The [condenser housing].
-2. The [optics module casing].
+1. The [illumination dovetail].
+2. The [condenser housing].
+3. The [optics module casing].
 
 ### Reflection illumination
 
