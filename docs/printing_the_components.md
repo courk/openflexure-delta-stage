@@ -13,7 +13,7 @@ These instructions show you how to print the parts and the printed tools for the
 [gear]: models/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 ## Main body
-There are two options for the [Main body]{output,qty:1}.
+There are two options for the [main body]{output,qty:1}.
 
 1. If you just want the stage, you will need to print the [Delta Stage]{qty:1}.
 2. If you want to use the Delta Stage Microscope, you will need to print [Delta Stage Microscope]{qty:1}.

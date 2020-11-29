@@ -19,7 +19,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 ## Cut the ties {pagestep}
 
-For printing stability, on the [Main body](fromstep){Qty:1} there are two plastic ties in every actuator.  Cut these out, either using a craft knife or small wire cutters.  
+For printing stability, on the [main body](fromstep){Qty:1} there are two plastic ties in every actuator.  Cut these out, either using a craft knife or small wire cutters.  
 
 ![](images/assembling_the_actuators/ties.jpg)
 ![](images/assembling_the_actuators/cutter_ties.jpg)
