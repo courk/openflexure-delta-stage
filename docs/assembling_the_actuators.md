@@ -4,14 +4,14 @@ These instructions show you how to assemble the actuators, to drive the motion o
 {{BOM}}
 
 [Delta stage]: models/delta_stage.stl "{cat:3DPrinted}"
-[M3 washer]: "{cat:part}"
+[M3 washer]: models/m3_washer.md "{cat:part}"
 [light oil]: "{cat:part}"
-[O-ring]: "{cat:part}"
-[M3x25mm hex head screw]: "{cat:part}"
+[O-ring]: models/o_ring.md"{cat:part}"
+[M3x25mm hex head screw]: models/m3_hex_head_screw.md "{cat:part}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [gear]: models/gears.stl "{cat: 3DPrinted}"
-[band tool]:  actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
-[nut tool]:  actuatortools.md#nuttool "{cat:3DPrinted_tool}"
+[band tool]:  models/actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
+[nut tool]:  models/actuatortools.md#nuttool "{cat:3DPrinted_tool}"
 ![](images/assembling_the_actuators/3D_printed_parts.jpg)
 ![](images/assembling_the_actuators/non_3D_printed_parts.jpg)
 
