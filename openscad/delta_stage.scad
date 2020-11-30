@@ -196,13 +196,6 @@ module casing(){
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
                 cylinder(r=casing_radius, h=casing_height, $fn=6);    
-            //add a condenser mount 
-            if (transmission_illumination) {
-                hull(){
-                rotate(60) translate([0,0,7])hull()each_illumination_arm_screw() mirror([0,0,1]) cylinder(r=5,h=7);
-                rotate(60)translate([0, stage_r,0])cube([stage_r/2,1,1], center = true);
-                }
-            }
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
