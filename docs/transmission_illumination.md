@@ -18,7 +18,7 @@ These instructions show you how to add transmission illumination and optics modu
 [soldering iron]: "{cat:tool}"
 [solder]: "{cat:part}"
 [M3 washer]: models/m3_washer.md "{cat:part}"
-[M3 screw]: models/m3_screw.md "{cat:part}"
+[M3x8 screw]: models/m3_8_screw.md "{cat:part}"
 [M2 screw]: models/m2_screw.md "{cat:part}"
 [M3 nut]: models/m3_nut.md "{cat:part}"
 [illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
@@ -65,7 +65,7 @@ Push the LED into the top of the [condenser housing]. If it is loose, secure it 
 
 Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body](fromstep).
 
-Put one [M3 washer]{qty:2} on to two [M3 screws]{qty:1}. 
+Put one [M3 washer]{qty:2} on to two [M3x8 screw]{qty:1}s. 
 
 Insert two [M3 nut]{qty:2}s into the nut slots on the condenser mount.
 
@@ -84,7 +84,7 @@ After printing the [optics module casing]{qty:1} there may be strings or dust.  
 
 ### Attach the objective screw {pagestep}
 
-Slide a [M3 nut]{qty:1} into the slot at the top of the [optics module casing] and screw a [M3 screw]{qty:1} into it.
+Slide a [M3 nut]{qty:1} into the slot at the top of the [optics module casing] and screw a [M3x8 screw]{qty:1} into it.
 
 ### Insert the tube lens {pagestep}
 
