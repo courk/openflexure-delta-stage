@@ -42,7 +42,7 @@ Put two [M3 washer]{qty:6}s onto the screw.
 Repeat for all three gears.  
 ![](images/assembling_the_actuators/washers_on_screw_all.jpg)
 
-## Assemble acutator {pagestep}
+## Assemble actuator {pagestep}
 
 Insert a [brass M3 nut]{qty:3} into the slot of one of the actuators, using the [nut tool]{qty:1}.
 ![](images/assembling_the_actuators/insert_nut.jpg)
