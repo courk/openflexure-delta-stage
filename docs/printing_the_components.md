@@ -2,6 +2,8 @@
 
 These instructions show you how to print the parts and the printed tools for the OpenFlexure Delta Stage. You don't need to print all the files.  Follow the steps below to find the right files for your configuration. 
 
+We normally print with PLA using a 0.15 layer height and ~18% infill. You should not need to print any of the parts with adhesion settings (brim etc.) or supports.  Take note of the optics parts we recommend you print with black PLA, to reduce stray light.
+
 [Delta Stage]: models/delta_stage.stl "{cat:3DPrinted}}"
 [Delta Stage Microscope]: models/reflection_transmission_delta_stage.stl "{cat: 3DPrinted}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
@@ -56,17 +58,23 @@ To connect the motors to the stage, you will need to print:
 
 ### Transmission illumination
 
+
+
 1. The [illumination dovetail].
-2. The [condenser housing].
-3. The [optics module casing].
+2. The [condenser housing]. **Print in black**
+3. The [optics module casing]. **Print in black**
+4. The [camera cover].
 
 ### Reflection illumination
 
-1. The [filter cube].
-2. The [reflection illumination holder]
-3. The [reflection illumination condenser]
+Print all of these in black PLA.
 
-### LED grid
+1. The [filter cube].
+2. The [reflection illumination holder]. **Print in black**
+3. The [reflection illumination condenser]. **Print in black**
+4. The [camera cover].
+
+### LED grid for structured illumination
 
 1. The [LED grid holder].
 
@@ -79,3 +87,9 @@ The base{output,qty:1} keeps the microscope steady. Choose which one you want to
    or
 
 2. The [Raspberry Pi & Sangaboard base].
+
+
+
+### Stage adaptors
+
+1. The [35mm petri dish holder].
