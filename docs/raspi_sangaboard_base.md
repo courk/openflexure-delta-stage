@@ -29,15 +29,12 @@ Alternatively, you could drill holes in the bottom of the base to attach it to a
 
 ### Add Raspberry Pi {pagestep}
 
-If you haven't already [connected the camera ribbon cable and LED](./connecting_the_electronics.md), then do this now.
+Connect the camera ribbon cable and LED to the Raspberry Pi.
 
 Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5 20mm standoffs]{qty:4} through the holes of the Raspberry Pi (hand tight or using [small pliers]{qty:1} or [SW5 nut driver]{qty:1}, being careful not to over-tighten) and into the base.  You may find it easier to tap the holes with M2.5 screws before.
 
 ![](images/raspi_sangaboard_base/raspi_standoffs.jpg)
 ![](images/raspi_sangaboard_base/raspi_standoffs_closeup1.jpg)
-
-
-
 
 ### Add Sangaboard {pagestep}
 
@@ -64,10 +61,10 @@ The Sangaboard connects to the Raspberry Pi by USB cable. There is a special win
 
 ### Attach the camera ribbon cable {pagestep}
 
-If you are using the [transmission](./transmission_illumination.md) or [reflection](./reflection_illumination.md) illumination, connect the ribbon cable to the camera module and attach it to the microscope as per those instructions.
+Connect the ribbon cable to the camera module.
 
 ![](images/raspi_sangaboard_base/camera_ribbon_cable.jpg)
-![](images/raspi_sangaboard_base/optics_module_attach.jpg)
+
 
 ### Put microscope into base {pagestep}
 
