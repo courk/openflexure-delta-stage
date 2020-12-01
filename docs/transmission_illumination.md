@@ -51,30 +51,51 @@ Push both crimp terminals into a [female connector housing]{qty:1}.
 
 You have now made a [wired LED]{output, qty:1}. 
 
+![](images/transmission_illumination/finished_led.jpg)
+
 ### Insert the Condenser Lens {pagestep}
 
-Take a [condenser lens]{qty:1} and place it on top of the [lens tool]{qty:1} with its flat side down.  
+Take a [condenser lens]{qty:1} and place it on top of the [lens tool]{qty:1} with its flat side down. 
+
+![](images/transmission_illumination/condenser_lens.jpg)
 
 Push the [condenser housing]{qty:1} down vertically on top of the lens. make sure it is flat, pushing again harder if necessary.
+
+![](images/transmission_illumination/push_condenser.jpg)
+![](images/transmission_illumination/finished_condenser_lens.jpg)
 
 ### Insert the LED {pagestep}
 
 Push the LED into the top of the [condenser housing]. If it is loose, secure it in place with some [electrical tape]{qty:some}.
 
+![](images/transmission_illumination/led_in_condenser.jpg)
+![](images/transmission_illumination/condenser_tape.jpg)
+
 ### Attach the illumination dovetail
 
 Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body](fromstep).
 
+![](images/transmission_illumination/dovetail_on_mount.jpg)
+
 Put one [M3 washer]{qty:2} on to two [M3x8 screw]{qty:1}s. 
+
+![](images/transmission_illumination/dovetail_screws.jpg)
 
 Insert two [M3 nut]{qty:2}s into the nut slots on the condenser mount.
 
+![](images/transmission_illumination/dovetail_nuts.jpg)
+
 Screw the [illumination dovetail] onto the [main body](fromstep).
+
+![](images/transmission_illumination/dovetail_attach1.jpg)
+![](images/transmission_illumination/dovetail_attach2.jpg)
 
 ### Attach the condenser on to the dovetail
 
 Slide the [condenser housing] down the dovetail.  You can adjust its position up and down by sliding it on the dovetail.  You can move it back and forward by loosening the dovetail and and tightening it when it is the correct position.
 
+![](images/transmission_illumination/dovetail_condenser1.jpg)
+![](images/transmission_illumination/dovetail_condenser2.jpg)
 
 ## Optics Module
 
@@ -82,19 +103,32 @@ Slide the [condenser housing] down the dovetail.  You can adjust its position up
 
 After printing the [optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
 
+![](images/transmission_illumination/dovetail_condenser1.jpg)
+
 ### Attach the objective screw {pagestep}
 
 Slide a [M3 nut]{qty:1} into the slot at the top of the [optics module casing] and screw a [M3x8 screw]{qty:1} into it.
+
+![](images/transmission_illumination/objective_screw.jpg)
 
 ### Insert the tube lens {pagestep}
 
 Put the [tube lens]{qty:1} onto the [lens tool], with the more convex side down.
 
+![](images/transmission_illumination/tube_lens.jpg)
+
 Push the [optics module casing] down on top of the lens until it is flat and secure.
+
+![](images/transmission_illumination/push_objective_tube.jpg)
+![](images/transmission_illumination/tube_lens_in_objective.jpg)
 
 ### Attach the objective lens {pagestep}
 
 Screw the [objective lens]{qty:1} into the top of the [optics module casing].  Be careful to screw it in straight, to avoid cross-threading.
+
+![](images/transmission_illumination/objective1.jpg)
+![](images/transmission_illumination/objective2.jpg)
+![](images/transmission_illumination/objective3.jpg)
 
 ### Remove the camera lens {pagestep}
 
@@ -107,3 +141,20 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 ### Attach the camera to the optics tube {pagestep}
 
 Attach the [Raspberry Pi camera v2] to the bottom of the [optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screws]{qty:1}.
+
+![](images/transmission_illumination/camera_parts.jpg)
+![](images/transmission_illumination/camera_in_place.jpg)
+![](images/transmission_illumination/camera_screw.jpg)
+
+### Attach the optics module to the Delta Stage {pagestep}
+
+Slot the objective screw into the mount inside the [main body](fromstep).
+
+![](images/transmission_illumination/optics_in_mount.jpg)
+
+When the optics module is in roughly the correct position, the objective screw can be tightened through the access hole in the back.
+
+![](images/transmission_illumination/objective_access_slot.jpg)
+![](images/transmission_illumination/optics_in_position.jpg)
+
+
