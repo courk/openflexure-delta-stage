@@ -50,11 +50,10 @@ Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables fr
 
 ### Plug in motors {pagestep}
 
-Plug in the motors ([already attached to the stage](./attaching_the_motors.md)).  Two of the motor cables can enter though the window in the side of the case and the other one can enter through the fluorescent illumination cutout.
+Plug in the motors ([already attached to the stage](./attaching_the_motors.md)).  Two of the motor cables can enter though the window in the side of the case and the other one can enter through the fluorescent illumination cutout. The correct order to plug in the motors can be seen here:
 
-Coming soon: the correct order to plug in the motors.
-
-![](images/raspi_sangaboard_base/sangaboard_motors.jpg)
+![](images/raspi_sangaboard_base/motor_screwed_all_top_labelled.jpg)
+![](images/raspi_sangaboard_base/sangaboard_usb_top_labelled.jpg)
 
 ### Connect the Sangaboard {pagestep}
 
