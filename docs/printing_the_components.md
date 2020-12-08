@@ -15,7 +15,7 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 [gear]: models/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted}"
-[illumination dovetail]: models/illumation_dovetail.stl "{cat:3DPrinted}"
+[illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
 [condenser housing]: models/condenser_housing.stl "{cat:3DPrinted}"
 [camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
 [LED grid holder]: models/LED_grid_holder.stl "{cat:3DPrinted}"
