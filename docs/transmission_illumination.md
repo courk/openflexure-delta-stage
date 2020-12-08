@@ -5,8 +5,8 @@ These instructions show you how to add transmission illumination and optics modu
 {{BOM}}
 
 [LED]: models/led.md "{cat:part}"
-[25cm wire]: models/wire.md "{cat:part}"
-[330Ω resistor]: models/resistor.md "{cat:part}"
+[40cm wire]: models/wire.md "{cat:part}"
+[100Ω resistor]: models/resistor.md "{cat:part}"
 [soldering iron]: "{cat:tool}"
 [heat shrink]: "{cat:part}"
 [electrical tape]: "{cat:part}"
@@ -35,9 +35,9 @@ These instructions show you how to add transmission illumination and optics modu
 
 ### Solder the LED {pagestep}
 
-Solder  one [330Ω resistor]{qty:1} on one leg of the [LED]{qty:1} with a [soldering iron]. 
+Solder  one [100Ω resistor]{qty:1} on one leg of the [LED]{qty:1} with a [soldering iron]. 
 
-Strip both ends of the [25cm wires]{qty:2} with a [wire stripper]{qty:1}. 
+Strip both ends of the [40cm wires]{qty:2} with a [wire stripper]{qty:1}. 
 
 Solder the two wires on to the free end of the [330Ω resistor] and the other leg of the [LED] using a [soldering iron]{qty:1} and [solder]{qty:some}.  
 
