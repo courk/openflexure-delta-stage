@@ -1,6 +1,6 @@
 # Printing the components
 
-These instructions show you how to print the parts and the printed tools for the OpenFlexure Delta Stage. You don't need to print all the files.  Follow the steps below to find the right files for your configuration. 
+These instructions show you how to print the parts and the printed tools for the OpenFlexure Delta Stage. You don't need to print all the files.  Follow the steps below to find the right files for your configuration.
 
 We normally print with PLA using a 0.15 layer height and ~18% infill. You should not need to print any of the parts with adhesion settings (brim etc.) or supports.  Take note of the optics parts we recommend you print with black PLA, to reduce stray light.
 
@@ -25,18 +25,21 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 [reflection illumination condenser]: models/reflection_illumination.md "{cat:3DPrinted}"
 
 ## Main body
+
 There are two options for the [main body]{output,qty:1}.
 
 1. If you just want the stage, you will need to print the [Delta Stage]{qty:1}.
 2. If you want to use the Delta Stage Microscope, you will need to print [Delta Stage Microscope]{qty:1}.
 
 ## Actuators
+
 To control the movement of the stage, you will need to print:
 
 1. The three [feet].
 2. The three [gear]s.
 
-## Printed tools  
+## Printed tools
+
 To assist with the fiddlier parts, you will need to print out these tools:
 
 1. The [band tool].
@@ -44,6 +47,7 @@ To assist with the fiddlier parts, you will need to print out these tools:
 3. The [lens tool].
 
 ## Sample clips
+
 To secure a microscope slide to the stage, you will need to print:
 
 1. The two [sample clip]s.
@@ -57,8 +61,6 @@ To connect the motors to the stage, you will need to print:
 ## Optics
 
 ### Transmission illumination
-
-
 
 1. The [illumination dovetail].
 2. The [condenser housing]. **Print in black**
@@ -87,8 +89,6 @@ The base{output,qty:1} keeps the microscope steady. Choose which one you want to
    or
 
 2. The [Raspberry Pi & Sangaboard base].
-
-
 
 ### Stage adaptors
 

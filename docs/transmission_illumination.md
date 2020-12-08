@@ -30,32 +30,31 @@ These instructions show you how to add transmission illumination and optics modu
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
 
-
 ## Illumination
 
 ### Solder the LED {pagestep}
 
-Solder  one [100Ω resistor]{qty:1} on one leg of the [LED]{qty:1} with a [soldering iron]. 
+Solder  one [100Ω resistor]{qty:1} on one leg of the [LED]{qty:1} with a [soldering iron].
 
-Strip both ends of the [40cm wires]{qty:2} with a [wire stripper]{qty:1}. 
+Strip both ends of the [40cm wires]{qty:2} with a [wire stripper]{qty:1}.
 
 Solder the two wires on to the free end of the [330Ω resistor] and the other leg of the [LED] using a [soldering iron]{qty:1} and [solder]{qty:some}.  
 
-Cover each leg of the LED and resistor with some [heat shrink]{qty:some} or [electrical tape]{qty:some} so that the exposed metal cannot short-circuit. 
+Cover each leg of the LED and resistor with some [heat shrink]{qty:some} or [electrical tape]{qty:some} so that the exposed metal cannot short-circuit.
 
 Twist the two wires together and trim so that they are the same length.  
 
-Using a [crimp]{qty:1}, crimp a [female crimp terminal contact] on to the ends of both the wires. 
+Using a [crimp]{qty:1}, crimp a [female crimp terminal contact] on to the ends of both the wires.
 
 Push both crimp terminals into a [female connector housing]{qty:1}.  
 
-You have now made a [wired LED]{output, qty:1}. 
+You have now made a [wired LED]{output, qty:1}.
 
 ![](images/transmission_illumination/finished_led.jpg)
 
 ### Insert the Condenser Lens {pagestep}
 
-Take a [condenser lens]{qty:1} and place it on top of the [lens tool]{qty:1} with its flat side down. 
+Take a [condenser lens]{qty:1} and place it on top of the [lens tool]{qty:1} with its flat side down.
 
 ![](images/transmission_illumination/condenser_lens.jpg)
 
@@ -77,7 +76,7 @@ Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body]
 
 ![](images/transmission_illumination/dovetail_on_mount.jpg)
 
-Put one [M3 washer]{qty:2} on to two [M3x8 screw]{qty:1}s. 
+Put one [M3 washer]{qty:2} on to two [M3x8 screw]{qty:1}s.
 
 ![](images/transmission_illumination/dovetail_screws.jpg)
 
@@ -164,5 +163,3 @@ When the optics module is in roughly the correct position, the objective screw c
 
 ![](images/transmission_illumination/objective_access_slot.jpg)
 ![](images/transmission_illumination/optics_in_position.jpg)
-
-
