@@ -134,9 +134,17 @@ Screw the [objective lens]{qty:1} into the top of the [optics module casing].  B
 
 Remove the plastic film from the lens of the [Raspberry Pi camera v2]{qty:1}.
 
+![](images/transmission_illumination/remove_film1.jpg)
+![](images/transmission_illumination/remove_film2.jpg)
+
 Unscrew the camera lens using the camera lens tool supplied with the camera.
 
+![](images/transmission_illumination/lens_tool.jpg)
+![](images/transmission_illumination/camera_open.jpg)
+
 Once you've removed the lens, keep the camera face down or put some tape over the lens holder to stop dust settling on the sensor (which is difficult to clean!).
+
+![](images/transmission_illumination/camera_upside_down.jpg)
 
 ### Attach the camera to the optics tube {pagestep}
 
