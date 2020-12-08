@@ -103,7 +103,7 @@ Slide the [condenser housing] down the dovetail.  You can adjust its position up
 
 After printing the [optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
 
-![](images/transmission_illumination/dovetail_condenser1.jpg)
+![](images/transmission_illumination/optics_clean.jpg)
 
 ### Attach the objective screw {pagestep}
 
