@@ -29,24 +29,67 @@ These instructions show you how to add transmission illumination and optics modu
 [camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
+[wire cutters]: "{cat:tool}"
 
 ## Illumination
 
-### Solder the LED {pagestep}
+### Wire the LED {pagestep}
 
-Solder  one [100Ω resistor]{qty:1} on one leg of the [LED]{qty:1} with a [soldering iron].
+Snip the longer (positive) leg of the [LED]{qty:1} using [wire cutters]{qty:1}.
 
-Strip both ends of the [40cm wires]{qty:2} with a [wire stripper]{qty:1}.
+![](images/transmission_illumination/LED.jpg)
+![](images/transmission_illumination/LED_snipped.jpg)
 
-Solder the two wires on to the free end of the [330Ω resistor] and the other leg of the [LED] using a [soldering iron]{qty:1} and [solder]{qty:some}.  
+Snip one leg of the [100Ω resistor]{qty:1} using [wire cutters].
 
-Cover each leg of the LED and resistor with some [heat shrink]{qty:some} or [electrical tape]{qty:some} so that the exposed metal cannot short-circuit.
+![](images/transmission_illumination/resistor.jpg)
+![](images/transmission_illumination/resistor_snipped.jpg)
 
-Twist the two wires together and trim so that they are the same length.  
+Solder the shorter leg of [100Ω resistor] to the positive leg of the [LED] with a [soldering iron]{qty:1} and [solder]{qty:some}. Snip the leg of the resistor so that the two legs are approximately the same length using [wire cutters].
+
+![](images/transmission_illumination/resistor_soldered.jpg)
+
+Cut the [red LED wire]{qty:40cm} and the [black LED wire]{qty:40cm} to 40cm lengths using [wire cutters].
+
+![](images/transmission_illumination/LED_wires.jpg)
+
+Strip both ends of the [red LED wire] and [black LED wire] with a [wire stripper]{qty:1}.
+
+![](images/transmission_illumination/red_wire_stripped.jpg)
+![](images/transmission_illumination/black_wire_stripped.jpg)
+
+Solder the [red LED wire] on to the free leg of the [330Ω resistor] using a [soldering iron] and [solder]{qty:some}.
+
+![](images/transmission_illumination/red_wire_soldered.jpg)
+
+Solder the [black LED wire] on to the free leg of the [LED] using a [soldering iron] and [solder]{qty:some}.
+
+![](images/transmission_illumination/black_wire_soldered.jpg)
+
+Cover each leg of the LED and resistor with some [3.2mm heat shrink]{qty:6cm} so that the exposed metal cannot short-circuit.  Use a [heat gun]{qty:1} to heat the [3.2mm heat shrink] on both legs.
+
+![](images/transmission_illumination/LED_heatshrink1.jpg)
+![](images/transmission_illumination/LED_heatshrink2.jpg)
+![](images/transmission_illumination/LED_heatshrink3.jpg)
+
+Slide some [4.6mm heat shrink]{qty:4cm} over both heat shrinks and heat with a [heatgun].
+
+![](images/transmission_illumination/LED_heatshrink_both1.jpg)
+![](images/transmission_illumination/LED_heatshrink_both2.jpg)
+
+Twist the two wires together. If they are not the same length then trim and re-strip.
+
+![](images/transmission_illumination/LED_wire_twist.jpg)
 
 Using a [crimp]{qty:1}, crimp a [female crimp terminal contact] on to the ends of both the wires.
 
+![](images/transmission_illumination/LED_crimp1.jpg)
+![](images/transmission_illumination/LED_crimp2.jpg)
+
 Push both crimp terminals into a [female connector housing]{qty:1}.  
+
+![](images/transmission_illumination/LED_terminal1.jpg)
+![](images/transmission_illumination/LED_terminal2.jpg)
 
 You have now made a [wired LED]{output, qty:1}.
 
