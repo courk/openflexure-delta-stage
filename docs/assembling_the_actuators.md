@@ -12,6 +12,9 @@ These instructions show you how to assemble the actuators, to drive the motion o
 [gear]: models/gears.stl "{cat: 3DPrinted}"
 [band tool]:  models/actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
 [nut tool]:  models/actuatortools.md#nuttool "{cat:3DPrinted_tool}"
+[wire cutters]: "{cat:tool}"
+[craft knife]: "{cat:tool}"
+
 ![](images/assembling_the_actuators/3D_printed_parts.jpg)
 ![](images/assembling_the_actuators/non_3D_printed_parts.jpg)
 
@@ -19,7 +22,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 ## Cut the ties {pagestep}
 
-For printing stability, on the [main body](fromstep){Qty:1} there are two plastic ties in every actuator.  Cut these out, either using a craft knife or small wire cutters.  
+For printing stability, on the [main body](fromstep){Qty:1} there are two plastic ties in every actuator.  Cut these out, either using a [craft knife] or [wire cutters].  
 
 ![](images/assembling_the_actuators/ties.jpg)
 ![](images/assembling_the_actuators/cutter_ties.jpg)
