@@ -10,6 +10,7 @@ The delta stage is a 3D printed x-y-z translation stage. As the optics do not mo
 1. [.](assembling_the_actuators.md){step}
 1. [.](attaching_the_sample_clips.md){step}
 1. [.](attaching_the_motors.md){step} 
+1. [.](motor_controller.md){step}
 
 ## Illumination modes
 1. [.](transmission_illumination.md){step} 
