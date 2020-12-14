@@ -5,23 +5,24 @@ The stage can be powered by a Raspberry Pi and a motor controller.
 {{BOM}}
 
 [Raspberry Pi power supply]: models/raspi_power.md "{cat:part}"
-[red power wire]: models/red_power_wire.md "{cat:part}"
-[black power wire]: models/black_power_wire.md "{cat:part}"
+[red power wire]: models/power_wire.md#red "{cat:part}"
+[black power wire]: models/power_wire.md#black "{cat:part}"
 [4.8mm heat shrink]: models/4_8mm_heat_shrink.md "{cat:part}"
 [6.4mm heat shrink]: models/6_4mm_heat_shrink.md "{cat:part}"
 [soldering iron]: "{cat:tool}"
-[solder]: "{cat:part}"
 [wire stripper]: "{cat:tool}"
-[wire cutters]: "{cat:tool}"
 [craft knife]: "{cat:tool}"
+[heat gun]: "{cat:tool}"
+[wire cutters]: "{cat:tool}"
+
 
 ## Method
 
-## The Sangaboard {pagestep}
+### The Sangaboard {pagestep}
 
 [These instructions](https://build.openflexure.org/openflexure-microscope/v6.1.2/docs/#/6_motor_controllers) show the different ways of controlling the motors. The base currently works best with the Sangaboard v2.
 
-## Powering the motors {pagestep}
+### Powering the motors {pagestep}
 
 Do not power the motors from the pins on the Raspberry Pi.  Instead split the [Raspberry Pi power supply] cable.  
 
@@ -60,16 +61,16 @@ Repeat for the positive wire.
 
 ![](images/motor_controller/solder_third_repeat.jpg)
 
-Move the two [4.8 heat shrink] tubes over the joints and heat in place using a [heatgun]{qty:1} or [soldering iron].
+Move the two [4.8 heat shrink] tubes over the joints and heat in place using a [heat gun]{qty:1} or [soldering iron]{qty:1}.
 
 ![](images/motor_controller/heatshrink_in_place.jpg)
 ![](images/motor_controller/heatshrink_shrunk.jpg)
 
-Move the [5.6mm heat shrink] tube over both joints and heat in place using a [heatgun] or [soldering iron].
+Move the [5.6mm heat shrink] tube over both joints and heat in place using a [heat gun]{qty:1} or [soldering iron]{qty:1}.
 
 ![](images/motor_controller/large_heatshrink_in_place.jpg)
 ![](images/motor_controller/large_heatshrink_shrunk.jpg)
 
+You can then attach the connector of your choice to connect to the Sangaboard.
 
-
-
+![](images/motor_controller/connector.jpg)
