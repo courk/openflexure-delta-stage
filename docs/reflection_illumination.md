@@ -13,10 +13,9 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [Raspberry Pi camera v2]: models/raspberry_pi_camera_v2.md "{cat:part}"
 [objective lens]: models/objective_lens.md "{cat:part}"
 [tube lens]: models/tube_lens.md "{cat:part}"
-[camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
+[camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
-[filter cube]: models/filter_cube.md "{cat:3DPrinted}"
 [reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
 [reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted}"
 [star LED]: models/star_LED.md "{cat:part}"
@@ -30,7 +29,7 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [emission filter]: models/glass_filters.md#emission "{cat:part}"
 [beamsplitter filter]: models/glass_filters.md#beamsplitter "{cat:part}"
 [electrical tape]: "{cat:part}"
-[filter cube]: models/filter_cube.md "{cat:3DPrinted}"
+[filter cube]: models/fl_cube.stl "{cat:3DPrinted}"
 
 
 [oil glass cutter]: "{cat:tool}"

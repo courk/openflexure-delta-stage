@@ -24,7 +24,7 @@ These instructions show you how to add transmission illumination and optics modu
 [objective lens]: models/objective_lens.md "{cat:part}"
 [tube lens]: models/tube_lens.md "{cat:part}"
 [condenser housing]: models/condenser_housing.stl "{cat:3DPrinted}"
-[camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
+[camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
 [wire cutters]: "{cat:tool}"
