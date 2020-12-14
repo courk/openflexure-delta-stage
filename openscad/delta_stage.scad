@@ -128,6 +128,22 @@ module stage_edges(h=5-2*dz, z=flex_z2+2*dz){
     }
 }
 
+module stage_mounting_holes(z_translate=0){
+    //Generate all the mounting holes for the stage
+    each_stage_mounting_hole(z_translate) trylinder_selftap(3,h=999);
+}
+
+module each_stage_mounting_hole(z_translate =0){
+    // Each of the mounting holes on the stage (3 per leg)
+    each_lever() translate([0,-zflex[0]/2,z_translate]) repeat([leg_strut_l/2,0,0],3,center=true) children();
+}
+
+module each_stage_mounting_hole_without_center(z_translate =0){
+    //The mounting holes (not including the center mounting hole) (2 per leg)
+    each_lever() translate([0,-zflex[0]/2,z_translate]) repeat([leg_strut_l,0,0],2,center=true) children();
+}
+
+
 module moving_stage(){
     // the moving stage is printed suspended between the legs.
     // we start by joining the legs together
@@ -147,7 +163,7 @@ module moving_stage(){
             }
         }
         //mounting holes for stage
-        each_lever() translate([0,-zflex[0]/2,flex_z2+4*dz]) repeat([leg_strut_l/2,0,0],3,center=true) trylinder_selftap(3,h=999);
+        stage_mounting_holes(z_translate=flex_z2+4*dz);
     }
 }
 
