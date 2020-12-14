@@ -23,7 +23,7 @@ build:
       # Build STL files with OpenSCAD
       - mkdir -p /root/.local/share
       - ./build.sh
-      - cd ./openflexure-microscope/
+      - cd openflexure-microscope/
       - git checkout 4dfc357ee2cffe9bf95603c26d42fa8b9b22fec6
       - cd ..
       - ./build_newfiles.sh
