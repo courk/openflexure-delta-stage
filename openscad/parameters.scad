@@ -3,7 +3,7 @@
 */
 
 use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
-version_numstring = "0.0.0";
+version_numstring = "1.0.0";
 
 // Set the overall geometry
 leg_strut_l = 32; // inner width of the legs
@@ -23,7 +23,7 @@ nut_y = lever_l + 12;
 motor_lugs = true;
 
 // Condenser mount
-condenser_mount = false;
+transmission_illumination = false;
 
 // Reflection illumination - The hole cut out the side for the reflection illuminator
 reflection_illumination = false; 

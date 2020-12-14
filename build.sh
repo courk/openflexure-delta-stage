@@ -13,6 +13,10 @@ openscad -o builds/base_raspi_sangaboard.stl openscad/base_raspi_sangaboard.scad
 openscad -o builds/base.stl openscad/base.scad
 openscad -o builds/feet.stl openscad/feet.scad
 
+# optics
+openscad -o builds/delta_stage_optics.stl -D 'delta_stage = true' openflexure-microscope/openscad/optics.scad
+openscad -o builds/delta_stage_optics.stl -D 'delta_stage = true' -D 'beamsplitter = true' openflexure-microscope/openscad/optics.scad
+
 # parts from the OFM repository
 openscad -o builds/actuator_assembly_tools.stl openflexure-microscope/openscad/actuator_assembly_tools.scad
 openscad -o builds/sample_clips.stl openflexure-microscope/openscad/sample_clips.scad
