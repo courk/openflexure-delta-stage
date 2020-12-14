@@ -5,9 +5,7 @@ These instructions show you how to add transmission illumination and optics modu
 {{BOM}}
 
 [LED]: models/led.md "{cat:part}"
-[40cm wire]: models/wire.md "{cat:part}"
 [100Ω resistor]: models/resistor.md "{cat:part}"
-[soldering iron]: "{cat:tool}"
 [heat shrink]: "{cat:part}"
 [electrical tape]: "{cat:part}"
 [crimp]: "{cat:tool}"
@@ -17,20 +15,22 @@ These instructions show you how to add transmission illumination and optics modu
 [condenser lens]: models/condenser_lens.md "{cat:part}"
 [soldering iron]: "{cat:tool}"
 [solder]: "{cat:part}"
-[M3 washer]: models/m3_washer.md "{cat:part}"
-[M3x8 screw]: models/m3_8_screw.md "{cat:part}"
-[M2 screw]: models/m2_screw.md "{cat:part}"
-[M3 nut]: models/m3_nut.md "{cat:part}"
+[M3 washer]:"{cat:part}"
+[M3x8 screw]: "{cat:part}"
+[M2 screw]: "{cat:part}"
+[M3 nut]: "{cat:part}"
 [illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
 [Raspberry Pi camera v2]: models/raspberry_pi_camera_v2.md "{cat:part}"
 [objective lens]: models/objective_lens.md "{cat:part}"
 [tube lens]: models/tube_lens.md "{cat:part}"
 [condenser housing]: models/condenser_housing.stl "{cat:3DPrinted}"
 [camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
-[lens tool]: models/lens_tool.stl "{cat:3DPrinted}"
+[lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
 [wire cutters]: "{cat:tool}"
-
+[red LED wire]: models/led_wire.md#red "{cat:part}"
+[black LED wire]: models/led_wire.md#black "{cat:part}"
+[heat gun]: "{cat:tool}"
 ## Illumination
 
 ### Wire the LED {pagestep}
@@ -40,16 +40,16 @@ Snip the longer (positive) leg of the [LED]{qty:1} using [wire cutters]{qty:1}.
 ![](images/transmission_illumination/LED.jpg)
 ![](images/transmission_illumination/LED_snipped.jpg)
 
-Snip one leg of the [100Ω resistor]{qty:1} using [wire cutters].
+Snip one leg of the [100Ω resistor]{qty:1} using [wire cutters]{qty:1}.
 
 ![](images/transmission_illumination/resistor.jpg)
 ![](images/transmission_illumination/resistor_snipped.jpg)
 
-Solder the shorter leg of [100Ω resistor] to the positive leg of the [LED] with a [soldering iron]{qty:1} and [solder]{qty:some}. Snip the leg of the resistor so that the two legs are approximately the same length using [wire cutters].
+Solder the shorter leg of [100Ω resistor] to the positive leg of the [LED] with a [soldering iron]{qty:1} and [solder]{qty:some}. Snip the leg of the resistor so that the two legs are approximately the same length using [wire cutters]{qty:1}.
 
 ![](images/transmission_illumination/resistor_soldered.jpg)
 
-Cut the [red LED wire]{qty:40cm} and the [black LED wire]{qty:40cm} to 40cm lengths using [wire cutters].
+Cut the [red LED wire]{qty:40cm} and the [black LED wire]{qty:40cm} to 40cm lengths using [wire cutters]{qty:1}.
 
 ![](images/transmission_illumination/LED_wires.jpg)
 
@@ -58,11 +58,11 @@ Strip both ends of the [red LED wire] and [black LED wire] with a [wire stripper
 ![](images/transmission_illumination/red_wire_stripped.jpg)
 ![](images/transmission_illumination/black_wire_stripped.jpg)
 
-Solder the [red LED wire] on to the free leg of the [330Ω resistor] using a [soldering iron] and [solder]{qty:some}.
+Solder the [red LED wire] on to the free leg of the [330Ω resistor] using a [soldering iron]{qty:1} and [solder]{qty:some}.
 
 ![](images/transmission_illumination/red_wire_soldered.jpg)
 
-Solder the [black LED wire] on to the free leg of the [LED] using a [soldering iron] and [solder]{qty:some}.
+Solder the [black LED wire] on to the free leg of the [LED] using a [soldering iron]{qty:1} and [solder]{qty:some}.
 
 ![](images/transmission_illumination/black_wire_soldered.jpg)
 
@@ -72,7 +72,7 @@ Cover each leg of the LED and resistor with some [3.2mm heat shrink]{qty:6cm} so
 ![](images/transmission_illumination/LED_heatshrink2.jpg)
 ![](images/transmission_illumination/LED_heatshrink3.jpg)
 
-Slide some [4.6mm heat shrink]{qty:4cm} over both heat shrinks and heat with a [heatgun].
+Slide some [4.6mm heat shrink]{qty:4cm} over both heat shrinks and heat with a [heat gun]{qty:1}.
 
 ![](images/transmission_illumination/LED_heatshrink_both1.jpg)
 ![](images/transmission_illumination/LED_heatshrink_both2.jpg)
@@ -81,7 +81,7 @@ Twist the two wires together. If they are not the same length then trim and re-s
 
 ![](images/transmission_illumination/LED_wire_twist.jpg)
 
-Using a [crimp]{qty:1}, crimp a [female crimp terminal contact] on to the ends of both the wires.
+Using a [crimp]{qty:1}, crimp a [female crimp terminal contact]{qty:2} on to the ends of both the wires.
 
 ![](images/transmission_illumination/LED_crimp1.jpg)
 ![](images/transmission_illumination/LED_crimp2.jpg)
@@ -91,7 +91,7 @@ Push both crimp terminals into a [female connector housing]{qty:1}.
 ![](images/transmission_illumination/LED_terminal1.jpg)
 ![](images/transmission_illumination/LED_terminal2.jpg)
 
-You have now made a [wired LED]{output, qty:1}.
+You have now made a wired LED.
 
 ![](images/transmission_illumination/finished_led.jpg)
 
@@ -155,7 +155,7 @@ Slide a [M3 nut]{qty:1} into the slot at the top of the [optics module casing] a
 
 ### Insert the tube lens {pagestep}
 
-Put the [tube lens]{qty:1} onto the [lens tool], with the more convex side down.
+Put the [tube lens]{qty:1} onto the [lens tool]{qty:1}, with the more convex side down.
 
 ![](images/transmission_illumination/tube_lens.jpg)
 
