@@ -31,6 +31,8 @@ These instructions show you how to add transmission illumination and optics modu
 [red LED wire]: models/led_wire.md#red "{cat:part}"
 [black LED wire]: models/led_wire.md#black "{cat:part}"
 [heat gun]: "{cat:tool}"
+[3.2mm heat shrink]: models/3_2mm_heat_shrink.md "{cat:part}"
+[4.8mm heat shrink]: models/4_8mm_heat_shrink.md "{cat:part}"
 ## Illumination
 
 ### Wire the LED {pagestep}
