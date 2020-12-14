@@ -18,7 +18,7 @@ build:
       - apt-get update -qq
       - apt-get install -y -qq openscad
       - apt-get install -qq git
-      - apt-get install git-lfs
+      - apt-get install -qq git-lfs
       # - pip3 install -r requirements.txt
 
     script:
