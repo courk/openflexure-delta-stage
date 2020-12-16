@@ -1,6 +1,8 @@
 # LED grid illumination
 
-Using a LED grid for illumination opens up new imaging modalities, such as darkfield, Rheinberg and phase imaging.  These instructions, behaving as an add on for the standard build, show you how to use a LED grid with the OpenFlexure Delta Stage. This module is still under test, and requires some electronics experience, so please proceed with caution.  
+Using a LED grid for illumination opens up new imaging modalities, such as darkfield, Rheinberg and phase imaging.  These instructions, behaving as an add on for the standard build, show you how to use a LED grid with the OpenFlexure Delta Stage. 
+
+>This module is still under test, and requires some electronics experience, so please proceed with caution.  
 
 {{BOM}}
 
@@ -20,7 +22,7 @@ Using a LED grid for illumination opens up new imaging modalities, such as darkf
 
 ## Solder the parts {pagestep}
 
-Solder the [Adafruit 3444 LED grid]{qty:1} to the [perma-proto board]{qty:1} with the [74AHCT125]{qty:1} chip.  You will need to power the LED grid, we recommend using a [USB cable]{qty:1} with a high power (2A) [USB plug]{qty:1} for convenience. 
+Solder the [Adafruit 3444 LED grid]{qty:1} to the [perma-proto board]{qty:1} with the [74AHCT125]{qty:1} chip using a [soldering iron]{qty:1} and [solder]{qty:some}.  You will need to power the LED grid, we recommend using a [USB cable]{qty:1} with a high power (2A) [USB plug]{qty:1} for convenience. 
 
 ![](fritzing/LED_grid_bb.png)
 
@@ -48,13 +50,21 @@ As with the [Raspberry Pi & Sangaboard base instructions](raspi_sangaboard_base.
 
 Push the [perma-proto board] on top of the Raspberry Pi.  Make sure the GPIO pins align with the header on the perma-proto board. The camera ribbon cable should fit through the slot.  Secure it in place with four [M2.5x12mm standoffs]{qty:4}.
 
+![](images/LED_grid_illumination/perma-proto.jpg)
+![](images/LED_grid_illumination/perma-proto_standoffs.jpg)
+
 ## Put the Sangaboard on top of the perma-proto HAT {pagestep}
 
 The Sangaboard (currently v2 only) should sit on top of the standoffs, and can be secured with four [M2.5x7mm screw]{qty:4}s.
 
+![](images/LED_grid_illumination/sangaboard.jpg)
+
 ## Complete microscope as usual and put the main body on the top {pagestep}
 
 The rest of the [Raspberry Pi & Sangaboard base instructions](raspi_sangaboard_base.md) will guide you with putting the microscope together. The LED grid slots on the illumination dovetail.  You should not power the LED grid from the Raspberry Pi, instead power it using the high power (2A) [USB plug].
+
+![](images/LED_grid_illumination/led_grid_in_position.jpg)
+![](images/LED_grid_illumination/led_grid_complete.jpg)
 
 # Software
 
