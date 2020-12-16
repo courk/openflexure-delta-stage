@@ -19,8 +19,8 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
 [reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted}"
 [star LED]: models/star_LED.md "{cat:part}"
-[red LED wire]: models/led_wire.md#red "{cat:part}"
-[black LED wire]: models/led_wire.md#black "{cat:part}"
+[red 0.5A instrument wire]: models/0_5A_instrument_wire.md#red "{cat:part}"
+[black 0.5A instrument wire]: models/0_5A_instrument_wire.md#black "{cat:part}"
 [solder]: "{cat:part}"
 [power supply]: models/power_supply.md "{cat:part}"
 [banana plug]: models/banana_plugs.md "{cat:part}" 
@@ -39,7 +39,7 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 
 ### Wire the star LED {pagestep}
 
-Solder the [red LED wire]{qty:40cm} and the [black LED wire]{qty:40cm} to the [star LED]{qty:1}, following the manufacturer's instructions for which pad to solder to, using a [soldering iron]{qty:1} and some [solder]{qty:some}. Be careful to keep the solder joint as small as possible.  At the other end, attach connectors for connecting to your [power supply]{qty:1}.  In this example, we use [banana plug]{qty:2}.
+Solder the [red 0.5A instrument wire]{qty:40cm} and the [black 0.5A instrument wire]{qty:40cm} to the [star LED]{qty:1}, following the manufacturer's instructions for which pad to solder to, using a [soldering iron]{qty:1} and some [solder]{qty:some}. Be careful to keep the solder joint as small as possible.  At the other end, attach connectors for connecting to your [power supply]{qty:1}.  In this example, we use [banana plug]{qty:2}.
 
 ![](images/reflection_illumination/star_LED.jpg)
 ![](images/reflection_illumination/star_LED_solder.jpg)

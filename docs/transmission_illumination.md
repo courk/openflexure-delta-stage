@@ -23,13 +23,13 @@ These instructions show you how to add transmission illumination and optics modu
 [Raspberry Pi camera v2]: models/raspberry_pi_camera_v2.md "{cat:part}"
 [objective lens]: models/objective_lens.md "{cat:part}"
 [tube lens]: models/tube_lens.md "{cat:part}"
-[condenser housing]: models/condenser_housing.stl "{cat:3DPrinted}"
+[condenser housing]: models/condenser.stl "{cat:3DPrinted}"
 [camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
 [wire cutters]: "{cat:tool}"
-[red LED wire]: models/led_wire.md#red "{cat:part}"
-[black LED wire]: models/led_wire.md#black "{cat:part}"
+[red 0.5A instrument wire]: models/0_5A_instrument_wire.md#red "{cat:part}"
+[black 0.5A instrument wire]: models/0_5A_instrument_wire.md#black "{cat:part}"
 [heat gun]: "{cat:tool}"
 [3.2mm heat shrink]: models/3_2mm_heat_shrink.md "{cat:part}"
 [4.8mm heat shrink]: models/4_8mm_heat_shrink.md "{cat:part}"
@@ -51,20 +51,20 @@ Solder the shorter leg of [100Ω resistor] to the positive leg of the [LED] wit
 
 ![](images/transmission_illumination/resistor_soldered.jpg)
 
-Cut the [red LED wire]{qty:40cm} and the [black LED wire]{qty:40cm} to 40cm lengths using [wire cutters]{qty:1}.
+Cut the [red 0.5A instrument wire]{qty:40cm} and the [black 0.5A instrument wire]{qty:40cm} to 40cm lengths using [wire cutters]{qty:1}.
 
 ![](images/transmission_illumination/LED_wires.jpg)
 
-Strip both ends of the [red LED wire] and [black LED wire] with a [wire stripper]{qty:1}.
+Strip both ends of the [red 0.5A instrument wire] and [black 0.5A instrument wire ] with a [wire stripper]{qty:1}.
 
 ![](images/transmission_illumination/red_wire_stripped.jpg)
 ![](images/transmission_illumination/black_wire_stripped.jpg)
 
-Solder the [red LED wire] on to the free leg of the [330Ω resistor] using a [soldering iron]{qty:1} and [solder]{qty:some}.
+Solder the [red 0.5A instrument wire] on to the free leg of the [330Ω resistor] using a [soldering iron]{qty:1} and [solder]{qty:some}.
 
 ![](images/transmission_illumination/red_wire_soldered.jpg)
 
-Solder the [black LED wire] on to the free leg of the [LED] using a [soldering iron]{qty:1} and [solder]{qty:some}.
+Solder the [black 0.5A instrument wire] on to the free leg of the [LED] using a [soldering iron]{qty:1} and [solder]{qty:some}.
 
 ![](images/transmission_illumination/black_wire_soldered.jpg)
 

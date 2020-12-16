@@ -5,8 +5,8 @@ The stage can be powered by a Raspberry Pi and a motor controller.
 {{BOM}}
 
 [Raspberry Pi power supply]: models/raspi_power.md "{cat:part}"
-[red power wire]: models/power_wire.md#red "{cat:part}"
-[black power wire]: models/power_wire.md#black "{cat:part}"
+[red 4A instrument wire]: models/4A_instrument_wire.md#red "{cat:part}"
+[black 4A instrument wire]: models/4A_instrument_wire.md#black "{cat:part}"
 [4.8mm heat shrink]: models/4_8mm_heat_shrink.md "{cat:part}"
 [6.4mm heat shrink]: models/6_4mm_heat_shrink.md "{cat:part}"
 [soldering iron]: "{cat:tool}"
@@ -35,7 +35,7 @@ Carefully separate the two cables using a [craft knife]{qty:1} on the USB plug c
 ![](images/motor_controller/separate_wires.jpg)
 ![](images/motor_controller/USB_strip.jpg)
 
-Cut a 20cm length of [red power cable]{qty:1} and [black power cable]{qty:1} using [wire cutters]. Strip one end using a [wire stripper]. Wrap the red wire around the positive wire of the [Raspberry Pi power supply] cable. Solder in place with a [soldering iron]{qty:1} and [solder]{qty:some}.
+Cut a 20cm length of [red 4A instrument wire]{qty:20cm} and [black 4A instrument wire]{qty:20cm} using [wire cutters]. Strip one end using a [wire stripper]. Wrap the red wire around the positive wire of the [Raspberry Pi power supply] cable. Solder in place with a [soldering iron]{qty:1} and [solder]{qty:some}.
 
 ![](images/motor_controller/wrap_positive_usb.jpg)
 ![](images/motor_controller/solder_positive_usb.jpg)
