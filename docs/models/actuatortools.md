@@ -1,8 +1,12 @@
-# Actuator tools
-[actuator tool]:models/actuator_assembly_tools.stl
+# Actuator tools  
+[Actuator assembly tools]:models/actuator_assembly_tools.stl
 
-## Band tool    
-[actuator tool]
+Both tools are in the same file.
+
+## Band tool
+
+[Actuator assembly tools]{qty:1}
 
 ## Nut tool    
-[actuator tool]
+
+[Actuator assembly tools]{qty:1}

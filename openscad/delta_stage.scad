@@ -300,7 +300,9 @@ module main_body(){
     if (transmission_illumination) condenser_mount();
 }
 
-exterior_brim(r=5) {
+brim_radius = 0;
+
+exterior_brim(r=brim_radius) {
     main_body();
 }
 

@@ -3,15 +3,17 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 {{BOM}}
 
-[delta stage]: models/delta_stage.stl "{cat:3DPrinted}"
 [M3 washer]: "{cat:part}"
 [light oil]: "{cat:part}"
-[O-ring]: "{cat:part}"
-[M3x25mm hex head screw]: "{cat:part}"
+[O-ring]: models/o_ring.md"{cat:part}"
+[M3x25mm hex head screw]: models/m3_hex_head_screw.md "{cat:part}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [gear]: models/gears.stl "{cat: 3DPrinted}"
-[band tool]:  actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
-[nut tool]:  actuatortools.md#nuttool "{cat:3DPrinted_tool}"
+[band tool]:  models/actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
+[nut tool]:  models/actuatortools.md#nuttool "{cat:3DPrinted_tool}"
+[wire cutters]: "{cat:tool}"
+[craft knife]: "{cat:tool}"
+
 ![](images/assembling_the_actuators/3D_printed_parts.jpg)
 ![](images/assembling_the_actuators/non_3D_printed_parts.jpg)
 
@@ -19,14 +21,14 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 ## Cut the ties {pagestep}
 
-For printing stability, on the [delta stage]{qty:0} there are two plastic ties in every actuator.  Cut these out, either using a craft knife or small wire cutters.  
+For printing stability, on the [main body](fromstep){qty:1} there are two plastic ties in every actuator.  Cut these out, either using a [craft knife]{qty:1} or [wire cutters]{qty:1}.  
 
 ![](images/assembling_the_actuators/ties.jpg)
 ![](images/assembling_the_actuators/cutter_ties.jpg)
 ![](images/assembling_the_actuators/knife_ties.jpg)
 ![](images/assembling_the_actuators/no_ties.jpg)
 
-Repeat for all three acutators.
+Repeat for all three actuators.
 ![](images/assembling_the_actuators/no_ties_all.jpg)
 
 ## Assemble gear {pagestep}
@@ -42,7 +44,7 @@ Put two [M3 washer]{qty:6}s onto the screw.
 Repeat for all three gears.  
 ![](images/assembling_the_actuators/washers_on_screw_all.jpg)
 
-## Assemble acutator {pagestep}
+## Assemble actuator {pagestep}
 
 Insert a [brass M3 nut]{qty:3} into the slot of one of the actuators, using the [nut tool]{qty:1}.
 ![](images/assembling_the_actuators/insert_nut.jpg)
@@ -50,7 +52,7 @@ Insert a [brass M3 nut]{qty:3} into the slot of one of the actuators, using the 
 ![](images/assembling_the_actuators/nut_on_slot_nut_tool.jpg)
 ![](images/assembling_the_actuators/nut_in_slot.jpg)
 
-Screw the gear through the hole in the top of the actuator, through the gear that you just inserted.  Apply a small amount of [light oil]{qty:small amount} to the screw thread before it is fully tightened.
+Screw the gear through the hole in the top of the actuator, through the nut that you just inserted.  Apply a small amount of [light oil]{qty:small amount} to the screw thread before it is fully tightened.
 ![](images/assembling_the_actuators/gear_in_top_hole.jpg)
 ![](images/assembling_the_actuators/screwing_gear.jpg)
 

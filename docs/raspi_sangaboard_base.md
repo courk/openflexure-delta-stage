@@ -1,15 +1,17 @@
 # Raspberry Pi and Sangaboard base
 
-This base fits both the Raspberry Pi (Models B+, 3B, 3A+, 3B+, 4B) and the Sangaboard, with holes for the wires and connections and space for an optics module to move.
+This base fits both the Raspberry Pi (Models B+, 2, 3B, 3B+, 4B) and the Sangaboard v2, with holes for the wires and connections and space for an optics module to move.
 
->**Warning:** Make sure your SD card is flashed with the [OS and software](index.md#Software) and inserted into your Raspberry Pi as it is not easily accessible once the base is completed.
+>**Warning:** Make sure your SD card is flashed with the [OS and software](index.md#Software) and inserted into your Raspberry Pi.
 
 {{BOM}}
 
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 
-[M2.5 20mm standoffs]: standoffs.md "{cat:part}"
-[Sangaboard]: "{cat:part}"
+[M2.5x20mm standoff]: models/20mm_standoffs.md "{cat:part}"
+[M2.5x7mm screw]: "{cat:part}"
+[Raspberry Pi]: models/raspberry_pi.md "{cat:part}"
+[Sangaboard]: models/sangaboard.md "{cat:part}"
 
 [small pliers]: "{cat:tool}"
 [SW5 nut driver]: "{cat:tool}"
@@ -28,19 +30,16 @@ Alternatively, you could drill holes in the bottom of the base to attach it to a
 
 ### Add Raspberry Pi {pagestep}
 
-If you haven't already [connected the camera ribbon cable and LED](./connecting_the_electronics.md), then do this now.
+Connect the camera ribbon cable and LED to the Raspberry Pi.
 
-Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5 20mm standoffs]{qty:4} through the holes of the Raspberry Pi (hand tight or using [small pliers]{qty:1} or [SW5 nut driver]{qty:1}, being careful not to over-tighten) and into the base.  You may find it easier to tap the holes with M2.5 screws before.
+Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5x20mm standoff]{qty:4}s through the holes of the Raspberry Pi (hand tight or using [small pliers]{qty:1} or [SW5 nut driver]{qty:1}, being careful not to over-tighten) and into the base.  You may find it easier to tap the holes with M2.5 screws before.
 
 ![](images/raspi_sangaboard_base/raspi_standoffs.jpg)
 ![](images/raspi_sangaboard_base/raspi_standoffs_closeup1.jpg)
 
-
-
-
 ### Add Sangaboard {pagestep}
 
-Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables from the Raspberry Pi have space. Screw the [M2.5 7mm screws]{qty:4} using a [M2 screwdriver]{qty:1} through the holes of the Sangaboard into the standoffs.  You might find it easier to attach all four loosely, then tighten them together.  Be careful not to over-tighten these screws.
+Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables from the Raspberry Pi have space. Screw the [M2.5 7mm screw]{qty:4}s using a [M2 screwdriver]{qty:1} through the holes of the Sangaboard into the standoffs.  You might find it easier to attach all four loosely, then tighten them together.  Be careful not to over-tighten these screws.
 
 ![](images/raspi_sangaboard_base/sangaboard_screws_top.jpg)
 ![](images/raspi_sangaboard_base/sangaboard_screws_closeup1.jpg)
@@ -49,11 +48,10 @@ Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables fr
 
 ### Plug in motors {pagestep}
 
-Plug in the motors ([already attached to the stage](./attaching_the_motors.md)).  Two of the motor cables can enter though the window in the side of the case and the other one can enter through the fluorescent illumination cutout.
+Plug in the motors ([already attached to the stage](./attaching_the_motors.md)).  Two of the motor cables can enter though the window in the side of the case and the other one can enter through the fluorescent illumination cutout. The correct order to plug in the motors can be seen here:
 
-Coming soon: the correct order to plug in the motors.
-
-![](images/raspi_sangaboard_base/sangaboard_motors.jpg)
+![](images/raspi_sangaboard_base/motor_screwed_all_top_labelled.jpg)
+![](images/raspi_sangaboard_base/sangaboard_usb_top_labelled.jpg)
 
 ### Connect the Sangaboard {pagestep}
 
@@ -64,10 +62,10 @@ The Sangaboard connects to the Raspberry Pi by USB cable. There is a special win
 
 ### Attach the camera ribbon cable {pagestep}
 
-If you are using the [transmission](./transmission_illumination.md) or [reflection](./reflection_illumination.md) illumination, connect the ribbon cable to the camera module and attach it to the microscope as per those instructions.
+Connect the ribbon cable to the camera module.
 
 ![](images/raspi_sangaboard_base/camera_ribbon_cable.jpg)
-![](images/raspi_sangaboard_base/optics_module_attach.jpg)
+
 
 ### Put microscope into base {pagestep}
 
