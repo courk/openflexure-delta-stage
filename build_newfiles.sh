@@ -12,7 +12,7 @@ openscad -o builds/illumination_dovetail.stl openflexure-microscope/openscad/ill
 openscad -o builds/picamera_2_cover.stl openflexure-microscope/openscad/picamera_2_cover.scad
 openscad -o builds/fl_cube.stl openflexure-microscope/openscad/fl_cube.scad
 openscad -o builds/condenser.stl openflexure-microscope/openscad/condenser.scad
-openscad -o builds/optics_picamera2_rms_f50d13_delta.stl -D 'optics = "rms_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' openflexure-microscope/openscad/optics.scad
+openscad -o builds/optics_picamera2_rms_f50d13_delta.stl -D 'optics = "rms_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' -D 'beamsplitter = false' openflexure-microscope/openscad/optics.scad
 openscad -o builds/optics_picamera2_rms_f50d13_beamsplitter_delta.stl -D 'optics = "rms_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' -D 'beamsplitter = true' openflexure-microscope/openscad/optics.scad
 openscad -o builds/LED_array_holder.stl openflexure-microscope/openscad/LED_array_holder.scad
 openscad -o builds/reflection_illuminator_LED_star.stl openflexure-microscope/openscad/reflection_illuminator_LED_star.scad
