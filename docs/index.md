@@ -1,7 +1,6 @@
 # OpenFlexure Delta Stage
 
 The delta stage is a 3D printed x-y-z translation stage. As the optics do not move it is particularly suited to more complex imaging (phase, reflection, fluorescence microscopy).
-![](images/index/completed_microscopes.jpg)
 
 ## Constructing the Delta Stage
 
