@@ -13,7 +13,7 @@ Using a LED grid for illumination opens up new imaging modalities, such as darkf
 [M2.5x8mm]: "{cat:part}"
 [USB plug]: models/USB_plug.md "{cat:part}"
 [LED array holder]: models/LED_array_holder.stl "{cat:3DPrinted}"
-[M2.5x20mm standoffs]: models/standoff.md "{cat:part}"
+[M2.5x12mm standoffs]: models/12mm_standoffs.md "{cat:part}"
 
 
 # Hardware

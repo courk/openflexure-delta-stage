@@ -8,7 +8,7 @@ This base fits both the Raspberry Pi (Models B+, 2, 3B, 3B+, 4B) and the Sangabo
 
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 
-[M2.5x20mm standoff]: models/standoff.md "{cat:part}"
+[M2.5x20mm standoff]: models/20mm_standoffs.md "{cat:part}"
 [M2.5x7mm screw]: "{cat:part}"
 [Raspberry Pi]: models/raspberry_pi.md "{cat:part}"
 [Sangaboard]: models/sangaboard.md "{cat:part}"
