@@ -1,6 +1,6 @@
 # Transmission illumination
 
-These instructions show you how to add transmission illumination and optics module to your delta stage.
+These instructions show you how to add transmission illumination and optics module to your Delta Stage.
 
 {{BOM}}
 

@@ -1,4 +1,4 @@
-# Delta stage microscope main body
+# Delta Stage microscope main body
 
 [Delta Stage Microscope]: delta_stage_microscope.stl
 [Delta Stage Microscope smart brim]: delta_stage_microscope_smart_brim.stl
