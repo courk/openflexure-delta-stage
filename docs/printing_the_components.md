@@ -5,7 +5,7 @@ These instructions show you how to print the parts and the printed tools for the
 We normally print with PLA using a 0.15 layer height and ~18% infill. You should not need to print any of the parts with adhesion settings (brim etc.) or supports.  Take note of the optics parts we recommend you print with black PLA, to reduce stray light.
 
 [Delta Stage]: models/delta_stage.stl "{cat:3DPrinted}}"
-[Delta Stage Microscope]: models/reflection_transmission_delta_stage.stl "{cat: 3DPrinted}"
+[Delta Stage Microscope]: models/delta_stage_microscope.stl "{cat: 3DPrinted}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 [simple base]: models/base.stl "{cat: 3DPrinted}"
@@ -16,11 +16,11 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 [gear]: models/gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [small gear]: models/small_gears.stl "{cat: 3DPrinted, note: All three gears are in the one file.}"
 [illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
-[condenser housing]: models/condenser_housing.stl "{cat:3DPrinted}"
-[camera cover]: models/camera_cover.stl "{cat:3DPrinted}"
+[condenser housing]: models/condenser.stl "{cat:3DPrinted}"
+[camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [LED grid holder]: models/LED_grid_holder.stl "{cat:3DPrinted}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
-[filter cube]: models/filter_cube.md "{cat:3DPrinted}"
+[filter cube]: models/fl_cube.stl "{cat:3DPrinted}"
 [reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
 [reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted}"
 
