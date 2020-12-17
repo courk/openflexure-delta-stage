@@ -5,8 +5,8 @@ Both tools are in the same file.
 
 ## Band tool
 
-[Actuator assembly tools]{qty:1}
+[Actuator assembly tools]
 
 ## Nut tool    
 
-[Actuator assembly tools]{qty:1}
+[Actuator assembly tools]

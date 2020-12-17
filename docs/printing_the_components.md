@@ -80,7 +80,7 @@ To connect the motors to the stage, you will need to print:
 
 ## Base
 
-The base{output,qty:1} keeps the microscope steady. Choose which one you want to print:
+The base keeps the microscope steady. Choose which one you want to print:
 
 1. The [simple base].
 
