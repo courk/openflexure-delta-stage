@@ -23,6 +23,7 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 [filter cube]: models/fl_cube.stl "{cat:3DPrinted}"
 [reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
 [reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted}"
+[35mm petri dish holder]: models/35mm_petri_dish_holder.stl "{cat:3DPrinted}"
 
 ## Main body
 
