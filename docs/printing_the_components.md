@@ -18,7 +18,7 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 [illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
 [condenser housing]: models/condenser.stl "{cat:3DPrinted}"
 [camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
-[LED grid holder]: models/LED_grid_holder.stl "{cat:3DPrinted}"
+[LED grid holder]: models/LED_array_holder.stl "{cat:3DPrinted}"
 [optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
 [filter cube]: models/fl_cube.stl "{cat:3DPrinted}"
 [reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
