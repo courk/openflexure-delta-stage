@@ -33,7 +33,7 @@ CustomCategories:
 #Title: 'My project'
 
 #Uncomment below to set a custom Website root for static HTML builds
-WebsiteRoot: '/openflexure-delta-stage/v1.0.0/'
+WebsiteRoot: '/openflexure-delta-stage/master/'
 
 #Uncomment below to disable fussy warnings
 #Fussy: False
