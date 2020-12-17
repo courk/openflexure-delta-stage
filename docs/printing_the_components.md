@@ -4,8 +4,8 @@ These instructions show you how to print the parts and the printed tools for the
 
 We normally print with PLA using a 0.15 layer height and ~18% infill. You should not need to print any of the parts with adhesion settings (brim etc.) or supports.  Take note of the optics parts we recommend you print with black PLA, to reduce stray light.
 
-[Delta Stage main body]: models/delta_stage.md "{cat:3DPrinted}"
-[Delta Stage Microscope main body]: models/delta_stage_microscope.md "{cat: 3DPrinted}"
+[Delta Stage main body]: models/delta_stage_both.md "{cat:3DPrinted}"
+[Delta Stage Microscope main body]: models/delta_stage_microscope_both.md "{cat: 3DPrinted}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [Raspberry Pi & Sangaboard base]: models/base_raspi_sangaboard.stl "{cat: 3DPrinted}"
 [simple base]: models/base.stl "{cat: 3DPrinted}"
