@@ -145,13 +145,13 @@ Slide the [condenser housing] down the dovetail.  You can adjust its position up
 
 ### Clean the optics module casing {pagestep}
 
-After printing the [optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
+After printing the [transmission optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
 
 ![](images/transmission_illumination/optics_clean.jpg)
 
 ### Attach the objective screw {pagestep}
 
-Slide a [M3 nut]{qty:1} into the slot at the top of the [optics module casing] and screw a [M3x8 screw]{qty:1} into it.
+Slide a [M3 nut]{qty:1} into the slot at the top of the [transmission optics module casing] and screw a [M3x8 screw]{qty:1} into it.
 
 ![](images/transmission_illumination/objective_screw.jpg)
 
@@ -161,14 +161,14 @@ Put the [tube lens]{qty:1} onto the [lens tool]{qty:1}, with the more convex sid
 
 ![](images/transmission_illumination/tube_lens.jpg)
 
-Push the [optics module casing] down on top of the lens until it is flat and secure.
+Push the [transmission optics module casing] down on top of the lens until it is flat and secure.
 
 ![](images/transmission_illumination/push_objective_tube.jpg)
 ![](images/transmission_illumination/tube_lens_in_objective.jpg)
 
 ### Attach the objective lens {pagestep}
 
-Screw the [objective lens]{qty:1} into the top of the [optics module casing].  Be careful to screw it in straight, to avoid cross-threading.
+Screw the [objective lens]{qty:1} into the top of the [transmission optics module casing].  Be careful to screw it in straight, to avoid cross-threading.
 
 ![](images/transmission_illumination/objective1.jpg)
 ![](images/transmission_illumination/objective2.jpg)
@@ -192,7 +192,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ### Attach the camera to the optics tube {pagestep}
 
-Attach the [Raspberry Pi camera v2] to the bottom of the [optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screws]{qty:1}.
+Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screws]{qty:1}.
 
 ![](images/transmission_illumination/camera_parts.jpg)
 ![](images/transmission_illumination/camera_in_place.jpg)

@@ -91,14 +91,14 @@ Push the [beamsplitter filter] into the 45° slot. Again it might be tight, and 
 
 ### Clean the optics module casing {pagestep}
 
-After printing the [optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
+After printing the [reflection optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
 
 ![](images/reflection_illumination/clean_optics1.jpg)
 ![](images/reflection_illumination/clean_optics2.jpg)
 
 ### Attach the objective screw {pagestep}
 
-Slide a [M3 nut]{qty:1} into the slot at the top of the [optics module casing] and screw a [M3 screw]{qty:1} into it.
+Slide a [M3 nut]{qty:1} into the slot at the top of the [reflection optics module casing] and screw a [M3 screw]{qty:1} into it.
 
 ![](images/reflection_illumination/objective_screw1.jpg)
 ![](images/reflection_illumination/objective_screw2.jpg)
@@ -110,14 +110,14 @@ Put the [tube lens]{qty:1} onto the [lens tool]{qty:1}, with the more convex sid
 
 ![](images/reflection_illumination/tube_lens1.jpg)
 
-Push the [optics module casing] down on top of the lens until it is flat and secure.
+Push the [reflection optics module casing] down on top of the lens until it is flat and secure.
 
 ![](images/reflection_illumination/tube_lens2.jpg)
 ![](images/reflection_illumination/tube_lens3.jpg)
 
 ### Attach the objective lens {pagestep}
 
-Screw the [objective lens]{qty:1} into the top of the [optics module casing].  Be careful to screw it in straight, to avoid cross-threading.
+Screw the [objective lens]{qty:1} into the top of the [reflection optics module casing].  Be careful to screw it in straight, to avoid cross-threading.
 
 ![](images/reflection_illumination/objective_lens1.jpg)
 ![](images/reflection_illumination/objective_lens2.jpg)
@@ -139,13 +139,13 @@ The [excitation filter] slides into the slot on top of the [reflection illuminat
 
 ### Attach the reflection illumination holder to the optics module {pagestep}
 
-Slide the [filter cube] into the slot in the side of the [optics module casing].
+Slide the [filter cube] into the slot in the side of the [reflection optics module casing].
 
 ![](images/reflection_illumination/filter_cube_in_optics1.jpg)
 ![](images/reflection_illumination/filter_cube_in_optics2.jpg)
 ![](images/reflection_illumination/filter_cube_in_optics3.jpg)
 
-Screw the [reflection illumination holder] to the [optics module casing] using two [M2.5x8mm screw]{qty:2}s.
+Screw the [reflection illumination holder] to the [reflection optics module casing] using two [M2.5x8mm screw]{qty:2}s.
 
 ![](images/reflection_illumination/holder_screws1.jpg)
 ![](images/reflection_illumination/holder_screws2.jpg)
@@ -183,7 +183,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ### Attach the camera to the optics tube {pagestep}
 
-Attach the [Raspberry Pi camera v2] to the bottom of the [optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screw]{qty:2}s.
+Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screw]{qty:2}s.
 
 ![](images/reflection_illumination/camera.jpg)
 ![](images/reflection_illumination/camera_cover.jpg)
@@ -204,8 +204,3 @@ When the optics module is in roughly the correct position, the objective screw c
 You can move the position of the condenser by loosening these screws.
 
 ![](images/reflection_illumination/module_in_position4.jpg)
-
-
-
-
-
