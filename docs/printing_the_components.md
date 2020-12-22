@@ -19,7 +19,8 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 [condenser housing]: models/condenser.stl "{cat:3DPrinted}"
 [camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [LED grid holder]: models/LED_array_holder.stl "{cat:3DPrinted}"
-[optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
+[transmission optics module casing]: models/optics_picamera2_rms_f50d13_delta.stl "{cat:3DPrinted}"
+[reflection optics module casing]: models/optics_picamera2_rms_f50d13_beamsplitter_delta.stl "{cat:3DPrinted}"
 [filter cube]: models/fl_cube.stl "{cat:3DPrinted}"
 [reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
 [reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted}"
@@ -65,7 +66,7 @@ To connect the motors to the stage, you will need to print:
 
 1. The [illumination dovetail].
 2. The [condenser housing]. **Print in black**
-3. The [optics module casing]. **Print in black**
+3. The [transmission optics module casing]. **Print in black**
 4. The [camera cover].
 
 ### Reflection illumination
@@ -73,7 +74,8 @@ To connect the motors to the stage, you will need to print:
 1. The [filter cube]. **Print in black**
 2. The [reflection illumination holder]. **Print in black**
 3. The [reflection illumination condenser]. **Print in black**
-4. The [camera cover].
+4. The [reflection optics module casing]. **Print in black**
+5. The [camera cover].
 
 ### LED grid for structured illumination
 

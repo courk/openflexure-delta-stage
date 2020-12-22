@@ -26,7 +26,7 @@ These instructions show you how to add transmission illumination and optics modu
 [condenser housing]: models/condenser.stl "{cat:3DPrinted}"
 [camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
-[optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
+[transmission optics module casing]: models/optics_picamera2_rms_f50d13_delta.stl "{cat:3DPrinted}"
 [wire cutters]: "{cat:tool}"
 [red 0.5A instrument wire]: models/0_5A_instrument_wire.md#red "{cat:part}"
 [black 0.5A instrument wire]: models/0_5A_instrument_wire.md#black "{cat:part}"

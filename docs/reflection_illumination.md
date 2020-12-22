@@ -15,7 +15,7 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [tube lens]: models/tube_lens.md "{cat:part}"
 [camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
-[optics module casing]: models/optics_module_casing.md "{cat:3DPrinted}"
+[reflection optics module casing]: models/optics_picamera2_rms_f50d13_beamsplitter_delta.stl "{cat:3DPrinted}"
 [reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
 [reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted}"
 [star LED]: models/star_LED.md "{cat:part}"
