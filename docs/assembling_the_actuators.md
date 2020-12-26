@@ -5,7 +5,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 [M3 washer]: "{cat:part}"
 [light oil]: "{cat:part}"
-[O-ring]: models/o_ring.md"{cat:part}"
+[O-ring]: models/o_ring.md "{cat:part}"
 [M3x25mm hex head screw]: models/m3_hex_head_screw.md "{cat:part}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [gear]: models/gears.stl "{cat: 3DPrinted}"
