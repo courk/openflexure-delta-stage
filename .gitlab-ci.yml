@@ -55,7 +55,6 @@ build-docs:
     script:
       - cd docs
       - cp -r ../builds/* models/
-      - gitbuilding build
       - gitbuilding build-html
       - cd ..
       - mv docs/_site public
