@@ -40,7 +40,7 @@ Cut a 20cm length of [red 4A instrument wire]{qty:20cm} and [black 4A instrument
 ![](images/motor_controller/wrap_positive_usb.jpg)
 ![](images/motor_controller/solder_positive_usb.jpg)
 
-Repeat for the [black power cable] on the negative wire of the [Raspberry Pi power supply] cable.
+Repeat for the [black 4A instrument wire] on the negative wire of the [Raspberry Pi power supply] cable.
 
 ![](images/motor_controller/USB_both_solder.jpg)
 
@@ -48,7 +48,7 @@ Cut two [4.8mm heat shrink]{qty:6cm} tubes approximately 3cm long.  Cut one [6.4
 
 ![](images/motor_controller/cut_heat_shrink.jpg)
 
-Carefully separate the two cables using a [craft knife]{qty:1} on the longer end of the [Raspberry Pi power supply cable] for approximately 5cm and strip both wires using a [wire stripper]. Push the longer [6.4mm heat shrink] tube over both wires and the two shorter [4.7mm heat shrink] tubes over each of the wires.
+Carefully separate the two cables using a [craft knife]{qty:1} on the longer end of the [Raspberry Pi power supply] cable for approximately 5cm and strip both wires using a [wire stripper]. Push the longer [6.4mm heat shrink] tube over both wires and the two shorter [4.8mm heat shrink] tubes over each of the wires.
 
 ![](images/motor_controller/USB_wire_with_heatshrink.jpg)
 
@@ -61,12 +61,12 @@ Repeat for the positive wire.
 
 ![](images/motor_controller/solder_third_repeat.jpg)
 
-Move the two [4.8 heat shrink] tubes over the joints and heat in place using a [heat gun]{qty:1} or [soldering iron]{qty:1}.
+Move the two [4.8mm heat shrink] tubes over the joints and heat in place using a [heat gun]{qty:1} or [soldering iron]{qty:1}.
 
 ![](images/motor_controller/heatshrink_in_place.jpg)
 ![](images/motor_controller/heatshrink_shrunk.jpg)
 
-Move the [5.6mm heat shrink] tube over both joints and heat in place using a [heat gun]{qty:1} or [soldering iron]{qty:1}.
+Move the [6.4mm heat shrink] tube over both joints and heat in place using a [heat gun]{qty:1} or [soldering iron]{qty:1}.
 
 ![](images/motor_controller/large_heatshrink_in_place.jpg)
 ![](images/motor_controller/large_heatshrink_shrunk.jpg)
