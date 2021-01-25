@@ -39,7 +39,7 @@ Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5x20mm s
 
 ### Add Sangaboard {pagestep}
 
-Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables from the Raspberry Pi have space. Screw the [M2.5 7mm screw]{qty:4}s using a [M2 screwdriver]{qty:1} through the holes of the Sangaboard into the standoffs.  You might find it easier to attach all four loosely, then tighten them together.  Be careful not to over-tighten these screws.
+Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables from the Raspberry Pi have space. Screw the [M2.5x7mm screw]{qty:4}s using a [M2 screwdriver]{qty:1} through the holes of the Sangaboard into the standoffs.  You might find it easier to attach all four loosely, then tighten them together.  Be careful not to over-tighten these screws.
 
 ![](images/raspi_sangaboard_base/sangaboard_screws_top.jpg)
 ![](images/raspi_sangaboard_base/sangaboard_screws_closeup1.jpg)
