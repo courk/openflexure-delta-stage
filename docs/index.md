@@ -1,23 +1,22 @@
 # OpenFlexure Delta Stage
 
-The delta stage is a 3D printed x-y-z translation stage. As the optics do not move it is particularly suited to more complex imaging (phase, reflection, fluorescence microscopy).
+The delta stage is a 3D printed x-y-z translation stage. As the optics do not move it is particularly suited to more complex imaging (phase, reflection, fluorescence microscopy).  There are two standard ways to build it, with either transmission illumination or reflection illumination.  The motorised translation stage, which forms the body of the microscope, is the same for both, and so swapping between the two configurations is possible by replacing the optics module.  There are also some optional accessories linked at the bottom of the page.
+
+## Building the Delta Stage
+There are two versions of the instructions:
+
+* [Delta stage microscope with transmission illumination](index_transmission.md)
+* [Delta stage microscope with reflection illumination](index_reflection.md)
+
+### Optional components
+
+* [LED Grid illumination](LED_grid_illumination.md): For more complex illumination.
+* [Simple base](simple_base.md):  Short base; matches the footprint of the OpenFlexure Delta stage.
+* [Petri dish holder](petri_dish.md): A holder for a 35mm Petri dish.
+
 
 ![](images/index/complete_microscopes.jpg)
-## Constructing the Delta Stage
 
-1. [.](printing_the_components.md){step}  
-1. [.](assembling_the_actuators.md){step}
-1. [.](attaching_the_sample_clips.md){step}
-1. [.](attaching_the_motors.md){step} 
-1. [.](motor_controller.md){step}
-
-## Illumination modes
-1. [.](transmission_illumination.md){step} 
-1. [.](reflection_illumination.md){step}  
-
-
-## Connecting the components
-1. [.](raspi_sangaboard_base.md){step}
 
 ### Software
 
@@ -28,9 +27,4 @@ You can control your microscope using the [OpenFlexure software](https://openfle
 3. Change the `Stage geometry` dropdown to `SangaStage (Delta)`.
 4. Click `CHANGE STAGE GEOMETRY`.
 
-### Optional components
-
-* [.](LED_grid_illumination.md){step}: For more complex illumination.
-* [.](simple_base.md){step}:  Short base; matches the footprint of the OpenFlexure Delta stage.
-* [.](petri_dish.md){step}: A holder for a 35mm Petri dish.
 
