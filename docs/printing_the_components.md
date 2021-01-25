@@ -28,7 +28,7 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 
 ## Main body
 
-There are two options for the [main body]{output,qty:1}.
+There are two options for the [main body]{output,qty:1,cat:3DPrinted}.
 
 1. If you just want the stage, you will need to print the [Delta Stage main body].
 2. If you want to use the Delta Stage Microscope, you will need to print [Delta Stage Microscope main body].
