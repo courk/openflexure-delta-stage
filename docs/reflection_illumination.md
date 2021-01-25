@@ -8,7 +8,7 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [M2.5x8mm screw]: "{cat:part}"
 [M2.5 washer]: "{cat:part}"
 [M2.5 nut]: "{cat:part}"
-[M2 screw]: "{cat:part}"
+[M2x6mm screw]: "{cat:part}"
 [M3 nut]: "{cat:part}"
 [Raspberry Pi camera v2]: models/raspberry_pi_camera_v2.md "{cat:part}"
 [objective lens]: models/objective_lens.md "{cat:part}"
@@ -30,6 +30,7 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [beamsplitter filter]: models/glass_filters.md#beamsplitter "{cat:part}"
 [electrical tape]: "{cat:part}"
 [filter cube]: models/fl_cube.stl "{cat:3DPrinted}"
+[main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
 
 
 [oil glass cutter]: "{cat:tool}"
@@ -183,7 +184,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ### Attach the camera to the optics tube {pagestep}
 
-Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screw]{qty:2}s.
+Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screw]{qty:2}s.
 
 ![](images/reflection_illumination/camera.jpg)
 ![](images/reflection_illumination/camera_cover.jpg)

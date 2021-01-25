@@ -17,7 +17,7 @@ These instructions show you how to add transmission illumination and optics modu
 [solder]: "{cat:part}"
 [M3 washer]:"{cat:part}"
 [M3x8mm screw]: "{cat:part}"
-[M2 screw]: "{cat:part}"
+[M2x6mm screw]: "{cat:part}"
 [M3 nut]: "{cat:part}"
 [illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
 [Raspberry Pi camera v2]: models/raspberry_pi_camera_v2.md "{cat:part}"
@@ -193,7 +193,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ### Attach the camera to the optics tube {pagestep}
 
-Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screws]{qty:1}.
+Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screws]{qty:2}.
 
 ![](images/transmission_illumination/camera_parts.jpg)
 ![](images/transmission_illumination/camera_in_place.jpg)
