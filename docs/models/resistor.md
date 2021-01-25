@@ -1,1 +1,1 @@
-# 100Ω resistor
+# 100&#8486; resistor
