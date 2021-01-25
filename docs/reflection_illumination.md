@@ -192,7 +192,7 @@ Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics modu
 
 ### Attach the optics module to the Delta Stage {pagestep}
 
-Slot the objective screw into the mount inside the [main body](fromstep).
+Slot the objective screw into the mount inside the [main body].
 
 ![](images/reflection_illumination/module_in_position1.jpg)
 

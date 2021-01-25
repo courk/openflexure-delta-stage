@@ -33,6 +33,7 @@ These instructions show you how to add transmission illumination and optics modu
 [heat gun]: "{cat:tool}"
 [3.2mm heat shrink]: models/3_2mm_heat_shrink.md "{cat:part}"
 [4.8mm heat shrink]: models/4_8mm_heat_shrink.md "{cat:part}"
+[main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
 ## Illumination
 
 ### Wire the LED {pagestep}
@@ -117,7 +118,7 @@ Push the LED into the top of the [condenser housing]. If it is loose, secure it 
 
 ### Attach the illumination dovetail
 
-Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body](fromstep).
+Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body].
 
 ![](images/transmission_illumination/dovetail_on_mount.jpg)
 
@@ -129,7 +130,7 @@ Insert two [M3 nut]{qty:2}s into the nut slots on the condenser mount.
 
 ![](images/transmission_illumination/dovetail_nuts.jpg)
 
-Screw the [illumination dovetail] onto the [main body](fromstep).
+Screw the [illumination dovetail] onto the [main body].
 
 ![](images/transmission_illumination/dovetail_attach1.jpg)
 ![](images/transmission_illumination/dovetail_attach2.jpg)
@@ -200,7 +201,7 @@ Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics mo
 
 ### Attach the optics module to the Delta Stage {pagestep}
 
-Slot the objective screw into the mount inside the [main body](fromstep).
+Slot the objective screw into the mount inside the [main body].
 
 ![](images/transmission_illumination/optics_in_mount.jpg)
 

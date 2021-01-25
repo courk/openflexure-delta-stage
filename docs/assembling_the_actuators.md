@@ -13,6 +13,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 [nut tool]:  models/actuatortools.md#nuttool "{cat:3DPrinted_tool}"
 [wire cutters]: "{cat:tool}"
 [craft knife]: "{cat:tool}"
+[main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
 
 ![](images/assembling_the_actuators/3D_printed_parts.jpg)
 ![](images/assembling_the_actuators/non_3D_printed_parts.jpg)
@@ -21,7 +22,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 
 ## Cut the ties {pagestep}
 
-For printing stability, on the [main body](fromstep){qty:1} there are two plastic ties in every actuator.  Cut these out, either using a [craft knife]{qty:1} or [wire cutters]{qty:1}.  
+For printing stability, on the [main body]{qty:1} there are two plastic ties in every actuator.  Cut these out, either using a [craft knife]{qty:1} or [wire cutters]{qty:1}.  
 
 ![](images/assembling_the_actuators/ties.jpg)
 ![](images/assembling_the_actuators/cutter_ties.jpg)
