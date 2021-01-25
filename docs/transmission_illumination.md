@@ -75,7 +75,7 @@ Cover each leg of the LED and resistor with some [3.2mm heat shrink]{qty:6cm} so
 ![](images/transmission_illumination/LED_heatshrink2.jpg)
 ![](images/transmission_illumination/LED_heatshrink3.jpg)
 
-Slide some [4.6mm heat shrink]{qty:4cm} over both heat shrinks and heat with a [heat gun]{qty:1}.
+Slide some [4.8mm heat shrink]{qty:4cm} over both heat shrinks and heat with a [heat gun]{qty:1}.
 
 ![](images/transmission_illumination/LED_heatshrink_both1.jpg)
 ![](images/transmission_illumination/LED_heatshrink_both2.jpg)
