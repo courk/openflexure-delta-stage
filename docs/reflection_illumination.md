@@ -15,9 +15,9 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [tube lens]: models/tube_lens.md "{cat:part}"
 [camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
-[reflection optics module casing]: models/optics_picamera2_rms_f50d13_beamsplitter_delta.stl "{cat:3DPrinted}"
-[reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted}"
-[reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted}"
+[reflection optics module casing]: models/optics_picamera2_rms_f50d13_beamsplitter_delta.stl "{cat:3DPrinted, note: Print in black.}"
+[reflection illumination holder]: models/reflection_illumination.md#holder "{cat:3DPrinted, note: Print in black.}"
+[reflection illumination condenser]: models/reflection_illumination.md#condenser "{cat:3DPrinted, note: Print in black.}"
 [star LED]: models/star_LED.md "{cat:part}"
 [red 0.5A instrument wire]: models/0_5A_instrument_wire.md#red "{cat:part}"
 [black 0.5A instrument wire]: models/0_5A_instrument_wire.md#black "{cat:part}"
@@ -29,7 +29,7 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [emission filter]: models/glass_filters.md#emission "{cat:part}"
 [beamsplitter filter]: models/glass_filters.md#beamsplitter "{cat:part}"
 [electrical tape]: "{cat:part}"
-[filter cube]: models/fl_cube.stl "{cat:3DPrinted}"
+[filter cube]: models/fl_cube.stl "{cat:3DPrinted, note: Print in black.}"
 [main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
 
 
@@ -81,7 +81,7 @@ Cut the [excitation filter]{qty:1}, [emission filter]{qty:1} and [beamsplitter f
 
 ### Slot the filters into the filter cube {pagestep}
 
-Push the [emission filter] into the bottom of the filter cube.  It should be tight but be careful not to break the glass filter. You might need to file down the slot if there are printing errors.
+Push the [emission filter] into the bottom of the [filter cube]{qty:1}.  It should be tight but be careful not to break the glass filter. You might need to file down the slot if there are printing errors.
 
 Push the [beamsplitter filter] into the 45° slot. Again it might be tight, and you might need to use a file to ensure you can fit it in. 
 
@@ -125,7 +125,7 @@ Screw the [objective lens]{qty:1} into the top of the [reflection optics module 
 
 ### Attach the filter cube to the reflection illumination holder {pagestep}
 
-Slide the [filter cube] into the dovetail of the [reflection illumination holder].
+Slide the [filter cube] into the dovetail of the [reflection illumination holder]{qty:1}.
 
 ![](images/reflection_illumination/filter_cube_in_holder1.jpg)
 ![](images/reflection_illumination/filter_cube_in_holder2.jpg)
