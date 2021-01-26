@@ -1,5 +1,5 @@
 # Actuator tools  
-[Actuator assembly tools]:models/actuator_assembly_tools.stl
+[Actuator assembly tools]: ./actuator_assembly_tools.stl
 
 Both tools are in the same file.
 
