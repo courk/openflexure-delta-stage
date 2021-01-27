@@ -5,6 +5,7 @@
 # the submodule should be updated to that tag and the parts can be built without checking out to this commit in the gitlab-ci.
 
 openscad -o builds/actuator_assembly_tools.stl openflexure-microscope/openscad/actuator_assembly_tools.scad
+openscad -o builds/lens_tool.stl openflexure-microscope/openscad/lens_tool.scad
 openscad -o builds/sample_clips.stl openflexure-microscope/openscad/sample_clips.scad
 openscad -o builds/small_gears.stl openflexure-microscope/openscad/small_gears.scad
 openscad -o builds/large_gears.stl openflexure-microscope/openscad/large_gears.scad
