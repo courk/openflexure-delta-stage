@@ -16,23 +16,24 @@ These instructions show you how to add transmission illumination and optics modu
 [soldering iron]: "{cat:tool}"
 [solder]: "{cat:part}"
 [M3 washer]:"{cat:part}"
-[M3x8 screw]: "{cat:part}"
-[M2 screw]: "{cat:part}"
+[M3x8mm screw]: "{cat:part}"
+[M2x6mm screw]: "{cat:part}"
 [M3 nut]: "{cat:part}"
 [illumination dovetail]: models/illumination_dovetail.stl "{cat:3DPrinted}"
 [Raspberry Pi camera v2]: models/raspberry_pi_camera_v2.md "{cat:part}"
 [objective lens]: models/objective_lens.md "{cat:part}"
 [tube lens]: models/tube_lens.md "{cat:part}"
-[condenser housing]: models/condenser.stl "{cat:3DPrinted}"
+[condenser housing]: models/condenser.stl "{cat:3DPrinted, note: Print in black.}"
 [camera cover]: models/picamera_2_cover.stl "{cat:3DPrinted}"
 [lens tool]: models/lens_tool.stl "{cat:3DPrinted_tool}"
-[transmission optics module casing]: models/optics_picamera2_rms_f50d13_delta.stl "{cat:3DPrinted}"
+[transmission optics module casing]: models/optics_picamera2_rms_f50d13_delta.stl "{cat:3DPrinted, note: Print in black.}"
 [wire cutters]: "{cat:tool}"
 [red 0.5A instrument wire]: models/0_5A_instrument_wire.md#red "{cat:part}"
 [black 0.5A instrument wire]: models/0_5A_instrument_wire.md#black "{cat:part}"
 [heat gun]: "{cat:tool}"
 [3.2mm heat shrink]: models/3_2mm_heat_shrink.md "{cat:part}"
 [4.8mm heat shrink]: models/4_8mm_heat_shrink.md "{cat:part}"
+[main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
 ## Illumination
 
 ### Wire the LED {pagestep}
@@ -74,7 +75,7 @@ Cover each leg of the LED and resistor with some [3.2mm heat shrink]{qty:6cm} so
 ![](images/transmission_illumination/LED_heatshrink2.jpg)
 ![](images/transmission_illumination/LED_heatshrink3.jpg)
 
-Slide some [4.6mm heat shrink]{qty:4cm} over both heat shrinks and heat with a [heat gun]{qty:1}.
+Slide some [4.8mm heat shrink]{qty:4cm} over both heat shrinks and heat with a [heat gun]{qty:1}.
 
 ![](images/transmission_illumination/LED_heatshrink_both1.jpg)
 ![](images/transmission_illumination/LED_heatshrink_both2.jpg)
@@ -117,11 +118,11 @@ Push the LED into the top of the [condenser housing]. If it is loose, secure it 
 
 ### Attach the illumination dovetail
 
-Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body](fromstep).
+Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body].
 
 ![](images/transmission_illumination/dovetail_on_mount.jpg)
 
-Put one [M3 washer]{qty:2} on to two [M3x8 screw]{qty:1}s.
+Put one [M3 washer]{qty:2} on to two [M3x8mm screw]{qty:1}s.
 
 ![](images/transmission_illumination/dovetail_screws.jpg)
 
@@ -129,7 +130,7 @@ Insert two [M3 nut]{qty:2}s into the nut slots on the condenser mount.
 
 ![](images/transmission_illumination/dovetail_nuts.jpg)
 
-Screw the [illumination dovetail] onto the [main body](fromstep).
+Screw the [illumination dovetail] onto the [main body].
 
 ![](images/transmission_illumination/dovetail_attach1.jpg)
 ![](images/transmission_illumination/dovetail_attach2.jpg)
@@ -151,7 +152,7 @@ After printing the [transmission optics module casing]{qty:1} there may be strin
 
 ### Attach the objective screw {pagestep}
 
-Slide a [M3 nut]{qty:1} into the slot at the top of the [transmission optics module casing] and screw a [M3x8 screw]{qty:1} into it.
+Slide a [M3 nut]{qty:1} into the slot at the top of the [transmission optics module casing] and screw a [M3x8mm screw]{qty:1} into it.
 
 ![](images/transmission_illumination/objective_screw.jpg)
 
@@ -192,7 +193,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ### Attach the camera to the optics tube {pagestep}
 
-Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2 screws]{qty:1}.
+Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screws]{qty:2}.
 
 ![](images/transmission_illumination/camera_parts.jpg)
 ![](images/transmission_illumination/camera_in_place.jpg)
@@ -200,7 +201,7 @@ Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics mo
 
 ### Attach the optics module to the Delta Stage {pagestep}
 
-Slot the objective screw into the mount inside the [main body](fromstep).
+Slot the objective screw into the mount inside the [main body].
 
 ![](images/transmission_illumination/optics_in_mount.jpg)
 

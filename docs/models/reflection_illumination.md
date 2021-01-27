@@ -1,6 +1,6 @@
 # Reflection Illumination
 
-[reflection illumination](models/reflection_illuminator_LED_star.stl)
+[reflection illumination]: ./reflection_illuminator_LED_star.stl
 
 Both these parts are in the same file.
 
