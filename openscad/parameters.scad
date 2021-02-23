@@ -70,7 +70,8 @@ mid_cutout_w = illuminator_width() + 1;
 bottom_cutout_w = illuminator_width() + 4;
 
 // Base
-base_height = 30;
+simple_base_height = 30;
+base_height = 80;
 base_cutout_tolerance = 0.5;
 raspi_board = [56,85,16]; // The actual size of the RPi
 casing_apothem = casing_radius*sqrt(3)/2; // The apothem of the hexagon used to join up the legs
