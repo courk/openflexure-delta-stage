@@ -24,7 +24,7 @@ module feet_projection() {
 }
 
 module base_extrusion() {
-    linear_extrude(height=base_height) {
+    linear_extrude(height=simple_base_height) {
         union() {
             feet_projection();
             base_projection();
@@ -53,7 +53,7 @@ module base_hollow(wall_thickness=2, cutout_tolerance=1) {
 module foot_stands(cutout_tolerance=1) {
     minkowski() {
         // Extrusion of the feet projection
-        linear_extrude(height=base_height-foot_height) {
+        linear_extrude(height=simple_base_height-foot_height) {
             feet_projection();
         }
 
@@ -72,10 +72,10 @@ module base() {
 module window_cubes(window_width=30) {
     frame_height=5;
     // Flat face windows
-    rotate([0, 0, 60]) each_lever() translate([-window_width/2, 0, frame_height]) cube([window_width, base_height, base_height-(2*frame_height)]);
+    rotate([0, 0, 60]) each_lever() translate([-window_width/2, 0, frame_height]) cube([window_width, simple_base_height, simple_base_height-(2*frame_height)]);
 
     // Side windows
-    each_lever() translate([-50, (window_width+frame_height)/2, frame_height]) cube([99, window_width/2, base_height-(2*frame_height)]);
+    each_lever() translate([-50, (window_width+frame_height)/2, frame_height]) cube([99, window_width/2, simple_base_height-(2*frame_height)]);
 }
 
 module base_windowed() {
