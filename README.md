@@ -32,7 +32,7 @@ The additional components are also located in the ``\openscad`` folder and can b
 
 To build every component you can run ``build.sh`` if you have a Bash shell (in either linux or Windows Subsystem Linux).  You may need to add ``openscad`` to your path if you want this to work in MinGW on Windows, or in the Mac OS Terminal.
 
-The [assembly instructions](https://openflexure.gitlab.io/openflexure-delta-stage/) cover the standard uses for the delta stage.  If you are trying something more complex with it then you may also need to refer to the [microscope instructions](https://openflexure.org/projects/microscope/build/).  
+The [assembly instructions](https://build.openflexure.org/openflexure-delta-stage/latest) cover the standard uses for the delta stage.  If you are trying something more complex with it then you may also need to refer to the [microscope instructions](https://openflexure.org/projects/microscope/build/).  
 
 ## Get Involved
 
