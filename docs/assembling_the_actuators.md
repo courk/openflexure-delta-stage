@@ -70,7 +70,7 @@ Attach one of the [feet]{qty:3} onto the bottom of the actuator.
 ![](images/assembling_the_actuators/foot_from_bottom.jpg)
 
 Hold an [O-ring]{qty:3} against the bottom of the foot.  Push the [band tool] against the two sides of the [O-ring] so that the [O-ring] begins to enter the actuator.  Make sure the [O-ring] aligns with the grooves of the [band tool].  
-![](images/assembling_the_actuators/O_ring_against_foot.jpg)
+![](images/assembling_the_actuators/o_ring_against_foot.jpg)
 ![](images/assembling_the_actuators/pushing_band_tool_o_ring.jpg)
 ![](images/assembling_the_actuators/pushing_band_tool_o_ring_2.jpg)
 
