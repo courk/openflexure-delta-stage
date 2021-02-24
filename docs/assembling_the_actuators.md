@@ -8,7 +8,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 [O-ring]: models/o_ring.md "{cat:part}"
 [M3x25mm hex head screw]: models/m3_hex_head_screw.md "{cat:part}"
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
-[gear]: models/gears.stl "{cat: 3DPrinted}"
+[large gear]: models/large_gears.stl "{cat: 3DPrinted}"
 [band tool]:  models/actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
 [nut tool]:  models/actuatortools.md#nuttool "{cat:3DPrinted_tool}"
 [wire cutters]: "{cat:tool}"
@@ -34,7 +34,7 @@ Repeat for all three actuators.
 
 ## Assemble gear {pagestep}
 
-Put a [M3x25mm hex head screw]{qty:3} into one [gear]{qty:3}.
+Put a [M3x25mm hex head screw]{qty:3} into one [large gear]{qty:3}.
 ![](images/assembling_the_actuators/screw_and_gear.jpg)
 ![](images/assembling_the_actuators/screw_in_gear.jpg)
 
