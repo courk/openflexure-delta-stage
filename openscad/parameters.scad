@@ -3,7 +3,7 @@
 */
 
 use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
-version_numstring = "1.0.0";
+version_numstring = "1.0.1";
 
 // Set the overall geometry
 leg_strut_l = 32; // inner width of the legs
