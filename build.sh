@@ -10,7 +10,9 @@ openscad -o builds/delta_stage_microscope.stl -D 'transmission_illumination = tr
 openscad -o builds/delta_stage_smart_brim.stl -D 'brim_radius = 5'  openscad/delta_stage.scad
 openscad -o builds/delta_stage_microscope_smart_brim.stl -D 'brim_radius = 5' -D 'transmission_illumination = true' -D 'reflection_illumination = true' openscad/delta_stage.scad
 
-
+# optics
+openscad -o builds/optics_picamera2_rms_f50d13_delta.stl -D 'optics = "rms_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' -D 'beamsplitter = false' openflexure-microscope/openscad/optics.scad
+openscad -o builds/optics_picamera2_rms_f50d13_beamsplitter_delta.stl -D 'optics = "rms_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' -D 'beamsplitter = true' openflexure-microscope/openscad/optics.scad
 
 # common parts
 openscad -o builds/base_raspi_sangaboard.stl openscad/base_raspi_sangaboard.scad
@@ -28,6 +30,8 @@ openscad -o builds/condenser.stl openflexure-microscope/openscad/condenser.scad
 
 #optional parts
 openscad -o builds/35mm_petri_dish_holder.stl openscad/35mm_petri_dish_holder.scad
+openscad -o builds/LED_array_holder.stl openflexure-microscope/openscad/LED_array_holder.scad
+openscad -o builds/reflection_illuminator_LED_star.stl openflexure-microscope/openscad/reflection_illuminator_LED_star.scad
 
 
 
