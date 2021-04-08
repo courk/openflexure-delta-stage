@@ -46,17 +46,25 @@ You can then make changes using VS Code and use OpenScad with the editor hidden 
     1. `git submodule init` (to set the repository up for the first time).
     2. `git submodule update` (to fetch the required data).
 
- >With git-lfs installed, git will download the latest version of the large files.  If they are still missing run:
-    ```
-    git lfs fetch
-    git lfs checkout
-    ```
+ > With git-lfs installed, git will download the latest version of the large files.  If they are still missing run: 
+    
+```
+git lfs fetch 
+git lfs checkout
+```
+
+  > To make Git always download everything in the repository run the following commands in your terminal:
+```
+git config --local lfs.fetchexclude ""
+git lfs fetch
+git lfs checkout
+```
 
 ### Guide to repository
 
 #### Delta Stage components
 
-The Delta Stage components are found in the `openscad` folder. For example the main body is compiled from `openscad/delta_stage.scad`.  The majority of parameters reside in ``openscad/parameters.scad`, so you can easily change aspects of the design (height etc.). Some parts of the design borrow objects from the `openflexure-microscope` submodule.      
+The Delta Stage components are found in the `openscad` folder. For example the main body is compiled from `openscad/delta_stage.scad`.  The majority of parameters reside in `openscad/parameters.scad`, so you can easily change aspects of the design (height etc.). Some parts of the design borrow objects from the `openflexure-microscope` submodule.      
 
 > :warning: There are currently issues where OpenSCAD runs out of memory when previewing or compiling `delta_stage.scad` in the graphical interface. The complexity of the model will be reduced to fix this, but in the meantime it is still possible to compile it using the [command line](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment#Command_line_usage):
 ```
