@@ -59,7 +59,12 @@ git config --local lfs.fetchexclude ""
 git lfs fetch
 git lfs checkout
 ```
+### Downloading the repository
 
+1. Download the `openflexure-delta-stage` repository.
+2. In the OpenFlexure Delta Stage repository on GitLab, click on the 8 characters after the folder named `openflexure-microscope @ ...`. This will take you to the OpenFlexure Microscope repository at the correct commit.
+     > :warning: It is important that the submodule is at the correct commit, it will not work if it is on a different commit.
+3. Download the OpenFlexure Microscope repository and copy these files in the folder called `openflexure-microscope` in the Delta Stage folder.
 ### Guide to repository
 
 #### Delta Stage components
@@ -70,6 +75,7 @@ The Delta Stage components are found in the `openscad` folder. For example the m
 ```
 openscad -o delta_stage.stl delta_stage.scad
 ```
+
 #### OpenFlexure Microscope components
 
 The `openflexure-microscope` folder is a submodule containing a version of the [OpenFlexure Microscope repository](https://gitlab.com/openflexure/openflexure-microscope) at a specific commit. The components common to both devices are compiled from there.  If you make changes to these components that you feel should be merged in for others to use, then you should make a merge request to that repository (bearing in mind that it will be ahead of the specific commit that this repository uses).
@@ -79,7 +85,6 @@ The `openflexure-microscope` folder is a submodule containing a version of the [
 To build every component you can run ``build.sh`` if you have a Bash shell (in either linux or Windows Subsystem Linux).  You may need to add ``openscad`` to your path if you want this to work in MinGW on Windows, or in the Mac OS Terminal.
 
 It is also useful to look in ``build.sh`` to see how the components are compiled (and from which openscad file) as some use command line variables.
-
 #### Assembly instructions
 
 The [assembly instructions](https://build.openflexure.org/openflexure-delta-stage/latest) cover the standard uses for the delta stage. They are compiled using [gitbuilding](https://gitbuilding.io/) and stored in the `\docs` folder.    
@@ -116,5 +121,6 @@ You can:
 * Make an [issue](https://gitlab.com/openflexure/openflexure-delta-stage/-/issues/new).
 * Make a merge request.
 * [Tweet us](https://twitter.com/openflexure) with your completed projects.
+
 ## License
 This project is open-source and is released under the CERN open hardware license.  There is not yet any accompanying software, but if that changes please consider it GPL.  Any documentation contained in this project is licensed CC-BY International 4.0.  We are working on selling kits through OpenFlexure Industries, though we're not yet taking orders - however this will stay a fully open-source project.
