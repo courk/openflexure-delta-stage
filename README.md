@@ -62,7 +62,7 @@ git lfs checkout
 ### Downloading the repository
 
 1. Download the `openflexure-delta-stage` repository.
-2. In the OpenFlexure Delta Stage repository on GitLab, click on the 8 characters after the folder named `openflexure-microscope @ ...`. This will take you to the OpenFlexure Microscope repository at the correct commit.
+2. In the OpenFlexure Delta Stage repository on GitLab, click on the 8 characters (the commit ref) after the `@` on the folder named `openflexure-microscope @ ...`. This will take you to the OpenFlexure Microscope repository at the correct commit.
      > :warning: It is important that the submodule is at the correct commit, it will not work if it is on a different commit.
 3. Download the OpenFlexure Microscope repository and copy these files in the folder called `openflexure-microscope` in the Delta Stage folder.
 ### Guide to repository
