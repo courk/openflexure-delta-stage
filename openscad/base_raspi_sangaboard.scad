@@ -66,14 +66,38 @@ module base_hollow(wall_thickness=2, cutout_tolerance=1) {
 }
 
 module foot_stands(cutout_tolerance=1) {
-    minkowski() {
-        // Extrusion of the feet projection
-        linear_extrude(height=base_height-foot_height) {
-            feet_projection();
-        }
+    translate([0,0,base_height-foot_height-2]){
 
-        // Outer wall cutout_tolerance thick
-        cylinder(r=cutout_tolerance,h=1);
+            // Extrusion of the feet projection
+            each_lever(){
+                translate([0, nut_y, 0]){
+                    intersection(){ 
+                        hull(){
+                            difference(){
+                                linear_extrude(d){
+                                    projection(){
+                                        minkowski(){
+                                            screw_seat_shell(10);
+                                            cylinder(r=cutout_tolerance,h=d);
+                                        }
+                                    }
+                                }
+                                translate([0,-52.5,0])cube([100,100,100],center = true);
+                            }
+                            translate([0,10,-20]) cube([30,d,d],center=true);
+                        }
+                        translate([0,0,-50])
+                        minkowski(){
+                            screw_seat_shell(100);
+                            cylinder(r=cutout_tolerance+1,h=d);
+                        }
+                    }
+                }
+            }    
+        }
+            }    
+
+
     }
 }
 
