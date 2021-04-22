@@ -38,8 +38,8 @@ module feet_projection() {
     }  
 }
 
-module base_extrusion() {
-    linear_extrude(height=base_height) {
+module base_extrusion(h) {
+    linear_extrude(height=h) {
         union() {
             feet_projection();
             base_projection();
@@ -50,14 +50,13 @@ module base_extrusion() {
 module base_hollow(wall_thickness=2, cutout_tolerance=1) {
     difference(){
         // Base extrusion, but with an outer wall wall_thickness thick
-        minkowski(){
-            base_extrusion();
-            cylinder(r=wall_thickness+cutout_tolerance,h=1);
-        }
-
+            minkowski(){
+                base_extrusion(base_height);
+                cylinder(r=wall_thickness+cutout_tolerance,h=1);
+            }
         // Base extrusion, but with an outer wall cutout_tolerance thick
         translate([0, 0, wall_thickness]) minkowski(){
-            base_extrusion();
+            base_extrusion(base_height);
             cylinder(r=cutout_tolerance,h=1);
         }
         
