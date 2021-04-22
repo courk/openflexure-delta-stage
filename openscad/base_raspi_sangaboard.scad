@@ -14,15 +14,13 @@ module base_projection(){
                         leg_and_lever_clearance();
                         cylinder(r1=wall_t, r2=0.5, h=0.9);
                     }
-                translate([-(casing_radius+1),0,0])cube([(casing_radius+1),casing_apothem,10]); // This fills in space in the side that are then later cut to give access to side RPi connections.
+                    reflect([1,0,0]){
+                        translate([-(casing_radius+1),0,0])cube([(casing_radius+1),casing_apothem,10]); // This fills in space in the side that are then later cut to give access to side RPi connections.
+                    }
                 }
-            translate([-(casing_radius+1),2.5,0])cube([(casing_radius+1),casing_apothem,10]); // This squares off the side wall for access to RPi connections
-            translate(raspi_center+[0,-(raspi_board[1]+2),-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //This squares off the back wall for access to RPi connections
-            }
-            // This puts in a quarter of the hexagon that is in the center of the microscope
-            intersection(){
-                cylinder(r=casing_radius, h=casing_height, $fn=6);   
-                cube([100,100,100]);
+                translate([0,sangaboard_center[1]-sangaboard[1]/2,0])cube([100,sangaboard[1],10]); // This squares off the side wall for access to Sangaboard connections
+                translate([-(casing_radius+1),2.5,0])cube([(casing_radius+1),casing_apothem,10]); // This squares off the side wall for access to RPi connections
+                translate(raspi_center+[0,-(raspi_board[1]+2),-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //This squares off the back wall for access to RPi connections
             }
             // This fills in where the RPi goes with extra space at the front of the microscope as the Sangaboard is bigger that the RPi in that dimension
             translate(raspi_center-[0,-2,raspi_standoff]) cube(raspi_board + [1,8,0], center =true);
