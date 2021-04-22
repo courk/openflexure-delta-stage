@@ -143,6 +143,12 @@ module each_stage_mounting_hole_without_center(z_translate =0){
     each_lever() translate([0,-zflex[0]/2,z_translate]) repeat([leg_strut_l,0,0],2,center=true) children();
 }
 
+module each_base_mounting_point(){
+    // The locations of the mounting points to the base.
+    for(a = [0,120,240]){
+        rotate(a)translate([0,mounting_point,0]) children();
+    }
+}
 
 module moving_stage(){
     // the moving stage is printed suspended between the legs.
@@ -211,7 +217,11 @@ module casing(){
             // casing for the actuator
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
+            cylinder(r=casing_radius, h=casing_height, $fn=6);
                 cylinder(r=casing_radius, h=casing_height, $fn=6);    
+            cylinder(r=casing_radius, h=casing_height, $fn=6);
+            // add the base mounting points
+            base_mounting_points();    
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
@@ -291,6 +301,24 @@ module legs(){
         lever();
         translate([0,nut_y,0]) actuator_column(actuator_h);
     } 
+}
+
+module base_mounting_points(){
+    each_base_mounting_point(){
+        difference(){
+            union(){
+                cylinder(d=8, h=6, $fn = 50);
+                translate([0,0,4]){
+                    hull(){
+                        cylinder(d=8,h=2,$fn=50);
+                        linear_extrude(5) projection()translate([0,nut_y+stage_r-mounting_point,0]) screw_seat(h=actuator_h);
+                    }
+                }
+            }
+            translate([0,0,4])cylinder(d = 6, h = 100, $fn=50);
+            translate([0,0,-50])cylinder(d = 3.5, h = 100, $fn=50);
+        }
+    }
 }
 
 module main_body(){
