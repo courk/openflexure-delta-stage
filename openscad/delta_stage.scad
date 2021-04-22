@@ -218,8 +218,6 @@ module casing(){
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
             cylinder(r=casing_radius, h=casing_height, $fn=6);
-                cylinder(r=casing_radius, h=casing_height, $fn=6);    
-            cylinder(r=casing_radius, h=casing_height, $fn=6);
             // add the base mounting points
             base_mounting_points();    
         }
