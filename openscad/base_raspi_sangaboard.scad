@@ -59,7 +59,6 @@ module base_hollow(wall_thickness=2, cutout_tolerance=1) {
         }
         
     }
-
 }
 
 module foot_stands(cutout_tolerance=1) {
@@ -90,8 +89,6 @@ module foot_stands(cutout_tolerance=1) {
                         }
                     }
                 }
-            }    
-        }
             }    
 
 
@@ -164,9 +161,31 @@ module logos(){
     rotate(-90)translate([casing_apothem-3.5,8,base_height*0.7])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
     mirror([1,0,0])rotate(-90)translate([casing_apothem-3.5,4,base_height*0.8])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
 }
+
+module stage_connection(){
+    translate([0,0,base_height+1])
+    {
+        each_base_mounting_point(){
+            difference(){
+                hull(){
+                    translate([0,0,-2*d])repeat([0,0,-10],2){
+                        minkowski(){
+                            cube([10,10,d], center = true);
+                            cylinder(r = 1, h = d, $fn = 50);
+                        }
+                    }
+                    translate([0,-5,-10])cube([12,d,20], center = true);
+                }
+                translate([0,0,-2])cylinder(d = 8.5, h = 2, $fn=50);
+                trylinder_selftap(3, h=40, center=true);
+                hull()repeat([0,100,0],2) translate([0,0,-8]) cylinder(d=6.9,h=2.8,$fn=6); 
+            }
+        }
+    }
+}
+
 module base_windowed() {
     union(){
-
         difference() {
             base();
             window_cubes();
@@ -176,6 +195,7 @@ module base_windowed() {
             logos();
         }
         raspi_supports();
+        stage_connection();
     }
 }
 
