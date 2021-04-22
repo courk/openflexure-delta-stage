@@ -83,4 +83,4 @@ sangaboard = [56,68,25]; // The actual size of the Sangaboard
 raspi_center = [0,10,raspi_board[2]/2+raspi_standoff]; // Where the centre of the Raspberry Pi is in its final position
 standoff_height = 20; //The height of the standoff between the Rpi and the Sangaboard
 sangaboard_center = raspi_center+[0,(raspi_board[1]/2-sangaboard[1]/2),(sangaboard[2]/2-raspi_board[2]/2+standoff_height)]; // Where the centre of the Raspberry Pi is in its final position
-sangaboard_window = [100,power_HDMI_window[1]*2/3,20]; // The back window of Sangaboard
+sangaboard_window = [100,power_HDMI_window[1],20]; // The back window of Sangaboard
