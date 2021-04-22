@@ -27,11 +27,13 @@ openscad -o builds/illumination_dovetail.stl openflexure-microscope/openscad/ill
 openscad -o builds/picamera_2_cover.stl openflexure-microscope/openscad/cameras/picamera_2_cover.scad
 openscad -o builds/fl_cube.stl openflexure-microscope/openscad/fl_cube.scad
 openscad -o builds/condenser.stl openflexure-microscope/openscad/condenser.scad
+openscad -o builds/reflection_illuminator_LED_star.stl openflexure-microscope/openscad/reflection_illuminator_LED_star.scad
 
 #optional parts
 openscad -o builds/35mm_petri_dish_holder.stl openscad/35mm_petri_dish_holder.scad
 openscad -o builds/LED_array_holder.stl openflexure-microscope/openscad/LED_array_holder.scad
-openscad -o builds/reflection_illuminator_LED_star.stl openflexure-microscope/openscad/reflection_illuminator_LED_star.scad
 
 
+# svg generators
+openscad -o builds/bottom_of_stage.svg openscad/bottom_of_stage.scad
 
