@@ -1,8 +1,9 @@
 include <parameters.scad> //Delta-stage params
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
-use <../openflexure-microscope/openscad/microscope_stand.scad>;
 use <delta_stage.scad>
+use <delta_stage_logo.scad>;
+use <../openflexure-microscope/openscad/logo.scad>;
 
 module base_projection(){
     projection(cut=true){
@@ -137,14 +138,18 @@ module raspi(){
     translate(raspi_center)cube(raspi_board, center = true);
 }
 
+module logos(){
+    //The OSHW and OpenFlexure logos (goes on back of the base)
+    rotate(-90)translate([casing_apothem-3.5,8,base_height*0.7])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
+    mirror([1,0,0])rotate(-90)translate([casing_apothem-3.5,4,base_height*0.8])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
+}
 module base_windowed() {
     union(){
 
         difference() {
             base();
             window_cubes();
-            translate([-(casing_radius+2),0,base_height-3])cube([casing_radius+2,sangaboard_center[1]+sangaboard[1]/2-sangaboard_window[1]/2,10]); // cutout at top for the base to pass under the mircoscope (side)
-            translate(raspi_center+[0,-(raspi_board[1]+2),base_height-3-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //cutout at top for the base to pass under the mircoscope (back)
+            logos();
         }
         raspi_supports();
     }
