@@ -149,6 +149,9 @@ module base_windowed() {
         difference() {
             base();
             window_cubes();
+            translate([-(casing_radius+2),0,base_height-5])cube([casing_radius+2,sangaboard_center[1]+sangaboard[1]/2-sangaboard_window[1]/2,10]); // cutout at top for the base to pass under the mircoscope (side)
+            translate([0,sangaboard_center[1]-sangaboard[1]/2,base_height-5])cube([100,sangaboard[1]/2,10]); // cutout at top for the base to pass under the mircoscope (side)
+            translate(raspi_center+[0,-(raspi_board[1]+2),base_height-5-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //cutout at top for the base to pass under the mircoscope (back)
             logos();
         }
         raspi_supports();
