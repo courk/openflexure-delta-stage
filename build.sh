@@ -19,3 +19,6 @@ openscad -o builds/feet.stl openscad/feet.scad
 
 #optional parts
 openscad -o builds/35mm_petri_dish_holder.stl openscad/35mm_petri_dish_holder.scad
+
+# accessories/adapters
+openscad -o builds/bottom_of_stage.svg openscad/bottom_of_stage.scad
