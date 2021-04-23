@@ -124,8 +124,8 @@ module window_cubes() {
     translate(sangaboard_center-[0,50,0]) rotate([0,0,90])cube(sangaboard_window, center=true);
 
     //Side windows
-    translate([raspi_center[0]-power_HDMI_window[0]/2,raspi_center[1]+raspi_board[1]/2-power_HDMI_window[1]/2-3.5,sangaboard_center[2]-power_HDMI_window[2]/2+3]) cube(power_HDMI_window+[0,0,6], center = true);
-    translate(sangaboard_center+[50,5/2,-power_HDMI_window[2]/2]) cube([100,sangaboard[1]-5,power_HDMI_window[2]],center = true);
+    translate([raspi_center[0]-power_HDMI_window[0]/2,raspi_center[1]+raspi_board[1]/2-power_HDMI_window[1]/2-3.5,sangaboard_center[2]-sangaboard[2]/2+power_HDMI_window[2]/2+3]) cube(power_HDMI_window+[0,0,6], center = true);
+    translate(sangaboard_center+[50,5/2,-sangaboard[2]/2+power_HDMI_window[2]/2]) cube([100,sangaboard[1]-5,power_HDMI_window[2]],center = true);
     //Reflection gap
     rotate([0,0,-60])translate([0,50,base_height-9])cube([bottom_cutout_w,100,20],center=true);
 
