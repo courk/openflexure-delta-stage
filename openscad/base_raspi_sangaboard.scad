@@ -47,11 +47,14 @@ module base_extrusion(h) {
 
 module base_hollow(cutout_tolerance=1) {
     difference(){
+        union(){
         // Base extrusion, but with an outer wall wall_thickness thick
             minkowski(){
                 base_extrusion(base_height);
                 cylinder(r=wall_thickness+cutout_tolerance,h=1);
             }
+            stage_connection();
+        }
         // Base extrusion, but with an outer wall cutout_tolerance thick
         translate([0, 0, wall_thickness]) minkowski(){
             base_extrusion(base_height);
@@ -195,7 +198,6 @@ module base_windowed() {
             logos();
         }
         raspi_supports();
-        stage_connection();
     }
 }
 
