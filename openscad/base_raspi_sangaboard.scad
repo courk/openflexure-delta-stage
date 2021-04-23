@@ -177,10 +177,23 @@ module stage_connection(){
                             cylinder(r = 1, h = d, $fn = 50);
                         }
                     }
-                    translate([0,-5,-10])cube([12,d,20], center = true);
+                    translate([0,nut_y+stage_r-mounting_point,-20]){
+                        difference(){                                
+                            linear_extrude(20){
+                                projection(){
+                                    minkowski(){
+                                        screw_seat_shell(10);
+                                        cylinder(r=wall_thickness,h=d);
+                                    }
+                                }
+                            }
+                        translate([-50,-99,-50])cube([100,100,100]);
+                        }
+                    }
                 }
                 translate([0,0,-2])cylinder(d = 8.5, h = 2, $fn=50);
-                trylinder_selftap(3, h=40, center=true);
+                translate([0,0,-8+d])cylinder(d= 3.5, h = 8, $fn=50);
+                translate([0,0,-10-8+d])trylinder_selftap(3, h=20, center=true);
                 hull()repeat([0,100,0],2) translate([0,0,-8]) cylinder(d=6.9,h=2.8,$fn=6); 
             }
         }
