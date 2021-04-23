@@ -65,7 +65,7 @@ module base_hollow(cutout_tolerance=1) {
 }
 
 module foot_stands(cutout_tolerance=1) {
-    translate([0,0,base_height-foot_height-2]){
+    translate([0,0,base_height-foot_height+1]){
 
             // Extrusion of the feet projection
             each_lever(){
