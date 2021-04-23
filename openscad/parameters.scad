@@ -28,6 +28,9 @@ transmission_illumination = false;
 // Reflection illumination - The hole cut out the side for the reflection illuminator
 reflection_illumination = false; 
 
+// Stage connectors
+stage_connectors = false;
+
 // Flexure dimensions - good for PLA and ~0.5mm nozzle
 zflex = [6, 1.5, 0.75]; //dimensions of flexure
 flex_a = 0.1; //angle through which flexures are bent, radians

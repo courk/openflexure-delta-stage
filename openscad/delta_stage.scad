@@ -219,7 +219,9 @@ module casing(){
             // join the casings up, by adding a big block in the middle.
             cylinder(r=casing_radius, h=casing_height, $fn=6);
             // add the base mounting points
-            base_mounting_points();    
+            if(stage_connectors) {
+                base_mounting_points();
+            } 
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
