@@ -45,7 +45,7 @@ module base_extrusion(h) {
     }
 }
 
-module base_hollow(wall_thickness=2, cutout_tolerance=1) {
+module base_hollow(cutout_tolerance=1) {
     difference(){
         // Base extrusion, but with an outer wall wall_thickness thick
             minkowski(){

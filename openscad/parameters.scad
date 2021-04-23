@@ -71,6 +71,7 @@ mid_cutout_w = illuminator_width() + 1;
 bottom_cutout_w = illuminator_width() + 4;
 
 // Base
+wall_thickness = 2;
 simple_base_height = 30;
 base_height = 80;
 base_cutout_tolerance = 0.5;
