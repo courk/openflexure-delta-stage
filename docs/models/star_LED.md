@@ -24,11 +24,15 @@ eg.
         <td> 523 </td>
         <td> <a href = "https://www.mouser.co.uk/ProductDetail/LED-Engin/LZ1-10G102-0000?qs=QhAb4EtQfbUZK37Yw6q95g%3D%3D">897-LZ110G102000</a> </td>
     </tr>
-        </tr>
         <tr>
         <td> Red </td>
         <td> 623 </td>
         <td><a href = "https://www.mouser.co.uk/ProductDetail/LED-Engin/LZ1-10R102-0000?qs=QhAb4EtQfbUOXmBwg3w3fQ%3D%3D">897-LZ110R1020000</a> </td>
+    </tr>
+        <tr>
+        <td> Cool White </td>
+        <td> 5500K </td>
+        <td><a href = "https://www.mouser.co.uk/ProductDetail/LED-Engin/LZ1-10CW02-0055?qs=sGAEpiMZZMt82OzCyDsLFC9d7bkTA8Rg4x8j7Nzmv7M%3D">897-LZ110CW020055</a> </td>
     </tr>
 
 </table>
