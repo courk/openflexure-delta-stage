@@ -1,9 +1,13 @@
 # Actuator tools  
 [Actuator assembly tools]: ./actuator_assembly_tools.stl
 
-Both tools are in the same file.
+All three components are in the same file.
 
 ## Band tool
+
+[Actuator assembly tools]
+
+## Band tool holder
 
 [Actuator assembly tools]
 

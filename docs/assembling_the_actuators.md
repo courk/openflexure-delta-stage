@@ -10,13 +10,11 @@ These instructions show you how to assemble the actuators, to drive the motion o
 [feet]: models/feet.stl "{cat:3DPrinted, note: All three feet are in the one file.}"
 [large gear]: models/large_gears.stl "{cat: 3DPrinted}"
 [band tool]:  models/actuatortools.md#bandtool "{cat: 3DPrinted_tool}"
+[band tool holder]: models/actuatortools.md#bandtoolholder "{cat: 3DPrinted_tool}"
 [nut tool]:  models/actuatortools.md#nuttool "{cat:3DPrinted_tool}"
 [wire cutters]: "{cat:tool}"
 [craft knife]: "{cat:tool}"
 [main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
-
-![](images/assembling_the_actuators/3D_printed_parts.jpg)
-![](images/assembling_the_actuators/non_3D_printed_parts.jpg)
 
 ## Method
 
@@ -39,17 +37,14 @@ Put a [M3x25mm hex head screw]{qty:3} into one [large gear]{qty:3}.
 ![](images/assembling_the_actuators/screw_in_gear.jpg)
 
 Put two [M3 washer]{qty:6}s onto the screw.
-![](images/assembling_the_actuators/washers_on_screw.jpg)  
-
+![](images/assembling_the_actuators/washers_on_screw.jpg)
 
 Repeat for all three gears.  
-![](images/assembling_the_actuators/washers_on_screw_all.jpg)
 
 ## Assemble actuator {pagestep}
 
 Insert a [brass M3 nut]{qty:3} into the slot of one of the actuators, using the [nut tool]{qty:1}.
 ![](images/assembling_the_actuators/insert_nut.jpg)
-![](images/assembling_the_actuators/nut_on_slot.jpg)
 ![](images/assembling_the_actuators/nut_on_slot_nut_tool.jpg)
 ![](images/assembling_the_actuators/nut_in_slot.jpg)
 
@@ -62,8 +57,9 @@ Looking through the hole that the nut was pushed into, rotate the gear until you
 ![](images/assembling_the_actuators/gear_screwed.jpg)
 ![](images/assembling_the_actuators/nut_tool_in_hole.jpg)
 
-Bend the [band tool]{qty:1} ready for use.
+Bend the [band tool]{qty:1} ready for use and put inside the [band tool holder]{qty:1}.
 ![](images/assembling_the_actuators/band_tool_bent.jpg)
+![](images/assembling_the_actuators/band_tool_holder.jpg)
 
 Attach one of the [feet]{qty:3} onto the bottom of the actuator.
 ![](images/assembling_the_actuators/foot_profile.jpg)
