@@ -99,7 +99,7 @@ After printing the [reflection optics module casing]{qty:1} there may be strings
 
 ### Attach the objective screw {pagestep}
 
-Slide a [M3 nut]{qty:1} into the slot at the top of the [reflection optics module casing] and screw a [M3 screw]{qty:1} into it.
+Slide a [M3 nut]{qty:1} into the slot at the top of the [reflection optics module casing] and screw a [M3x8mm screw]{qty:1} into it.
 
 ![](images/reflection_illumination/objective_screw1.jpg)
 ![](images/reflection_illumination/objective_screw2.jpg)
