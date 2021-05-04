@@ -20,13 +20,13 @@ The stage can be powered by a Raspberry Pi and a motor controller.
 
 ### The Sangaboard {pagestep}
 
-[These instructions](https://build.openflexure.org/openflexure-microscope/latest/docs/#/6_motor_controllers) show the different ways of controlling the motors. The base currently works best with the Sangaboard v2.
+[These instructions](https://build.openflexure.org/openflexure-microscope/latest/docs/#/6_motor_controllers) show the different ways of controlling the motors. The base currently works with the Sangaboard v0.2 and v0.3.
 
-### Powering the motors {pagestep}
+### Powering the motors for Sangaboard v0.2 {pagestep}
 
 Do not power the motors from the pins on the Raspberry Pi.  Instead split the [Raspberry Pi power supply] cable.  
 
-Cut the [Raspberry Pi power supply]{qty:1} cable approximately 20cm from the USB plug end using [wire cutters].
+Cut the [Raspberry Pi power supply]{qty:1} cable approximately 20cm from the USB plug end using [wire cutters]{qty:1}.
 
 ![](images/motor_controller/cut_power.jpg)
 
@@ -35,7 +35,7 @@ Carefully separate the two cables using a [craft knife]{qty:1} on the USB plug c
 ![](images/motor_controller/separate_wires.jpg)
 ![](images/motor_controller/USB_strip.jpg)
 
-Cut a 20cm length of [red 4A instrument wire]{qty:20cm} and [black 4A instrument wire]{qty:20cm} using [wire cutters]. Strip one end using a [wire stripper]. Wrap the red wire around the positive wire of the [Raspberry Pi power supply] cable. Solder in place with a [soldering iron]{qty:1} and [solder]{qty:some}.
+Cut a 20cm length of [red 4A instrument wire]{qty:20cm} and [black 4A instrument wire]{qty:20cm} using [wire cutters]{qty:1}. Strip one end using a [wire stripper]. Wrap the red wire around the positive wire of the [Raspberry Pi power supply] cable. Solder in place with a [soldering iron]{qty:1} and [solder]{qty:some}.
 
 ![](images/motor_controller/wrap_positive_usb.jpg)
 ![](images/motor_controller/solder_positive_usb.jpg)
@@ -71,6 +71,10 @@ Move the [6.4mm heat shrink] tube over both joints and heat in place using a [he
 ![](images/motor_controller/large_heatshrink_in_place.jpg)
 ![](images/motor_controller/large_heatshrink_shrunk.jpg)
 
-You can then attach the connector of your choice to connect to the Sangaboard.
+You can then attach the connector of your choice to connect to the Sangaboard v0.2.
 
 ![](images/motor_controller/connector.jpg)
+
+### Powering the motors for Sangaboard v0.3 {pagestep}
+
+The Sangaboard v0.3 is powered by micro USB.  It should not be powered from a USB port on the Raspberry Pi, but by a separate power source.
