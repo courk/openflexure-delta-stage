@@ -244,9 +244,6 @@ module casing(){
             }
             
         }
-
-
-
         // bolt slot access slot
         objective_bolt_access();
 
@@ -304,6 +301,7 @@ module legs(){
 }
 
 module base_mounting_points(){
+// The supports attached to each leg that slot into the base.
     each_base_mounting_point(){
         difference(){
             union(){

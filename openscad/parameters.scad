@@ -28,7 +28,7 @@ transmission_illumination = false;
 // Reflection illumination - The hole cut out the side for the reflection illuminator
 reflection_illumination = false; 
 
-// Stage connectors
+// Stage connectors - the mounts to connect the stage to the base
 stage_connectors = false;
 
 // Flexure dimensions - good for PLA and ~0.5mm nozzle

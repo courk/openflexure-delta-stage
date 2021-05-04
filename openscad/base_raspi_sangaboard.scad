@@ -24,7 +24,6 @@ module base_projection(){
             }
             // This fills in where the RPi goes with extra space at the front of the microscope as the Sangaboard is bigger that the RPi in that dimension
             translate(raspi_center-[0,-2,raspi_standoff]) cube(raspi_board + [1,8,0], center =true);
-            
         }
     }
 }
@@ -60,41 +59,38 @@ module base_hollow(cutout_tolerance=1) {
             base_extrusion(base_height);
             cylinder(r=cutout_tolerance,h=1);
         }
-        
     }
 }
 
 module foot_stands(cutout_tolerance=1) {
+    // Creates 3 ledges approximately half the foot size such that the main body of the microscope will start 2mm below the height of the base.
     translate([0,0,base_height-foot_height+1]){
-
-            // Extrusion of the feet projection
-            each_lever(){
-                translate([0, nut_y, 0]){
-                    intersection(){ 
-                        hull(){
-                            difference(){
-                                linear_extrude(d){
+        each_lever(){
+            translate([0, nut_y, 0]){
+                intersection(){ 
+                    hull(){
+                        difference(){
+                            linear_extrude(d){
+                                minkowski(){
                                     projection(){
-                                        minkowski(){
-                                            screw_seat_shell(10);
-                                            cylinder(r=cutout_tolerance,h=d);
-                                        }
+                                        screw_seat_shell(10);
                                     }
+                                    cylinder(r=cutout_tolerance,h=d);
                                 }
-                                translate([0,-52.5,0])cube([100,100,100],center = true);
                             }
-                            translate([0,10,-20]) cube([30,d,d],center=true);
+                            translate([0,-52.5,0])cube([100,100,100],center = true);
                         }
-                        translate([0,0,-50])
+                        translate([0,10,-20]) cube([30,d,d],center=true);
+                    }
+                    translate([0,0,-50]){
                         minkowski(){
                             screw_seat_shell(100);
                             cylinder(r=cutout_tolerance+1,h=d);
                         }
                     }
                 }
-            }    
-
-
+            }
+        }    
     }
 }
 
@@ -131,9 +127,6 @@ module window_cubes() {
     translate(sangaboard_center+[50,5/2,-sangaboard[2]/2+power_HDMI_window[2]/2+3]) cube([100,sangaboard[1]-5,power_HDMI_window[2]+6],center = true);
     //Reflection gap
     rotate([0,0,-60])translate([0,50,base_height-9])cube([bottom_cutout_w,100,20],center=true);
-
-
-
 }
 
 module pi_supports(){
@@ -149,23 +142,8 @@ module raspi_supports(){
     }
 }
 
-// Used to show position of sangaboard
-module sangaboard(){
-    translate(sangaboard_center) cube(sangaboard, center =true);
-}
-
-//Used to show position of raspberry pi
-module raspi(){
-    translate(raspi_center)cube(raspi_board, center = true);
-}
-
-module logos(){
-    //The OSHW and OpenFlexure logos (goes on back of the base)
-    rotate(-90)translate([casing_apothem-3.5,8,base_height*0.7])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
-    mirror([1,0,0])rotate(-90)translate([casing_apothem-3.5,4,base_height*0.8])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
-}
-
 module stage_connection(){
+    // Creates 3 mounting posts to connect to the main body. The top of the post is in line with the top of the base, with the cutout circle 2mm down such that the main body sits 2mm under the top of the base.
     translate([0,0,base_height+1])
     {
         each_base_mounting_point(){
@@ -198,6 +176,22 @@ module stage_connection(){
             }
         }
     }
+}
+
+// Used to show position of sangaboard
+module sangaboard(){
+    translate(sangaboard_center) cube(sangaboard, center =true);
+}
+
+//Used to show position of raspberry pi
+module raspi(){
+    translate(raspi_center)cube(raspi_board, center = true);
+}
+
+module logos(){
+    //The OSHW and OpenFlexure logos (goes on back of the base)
+    rotate(-90)translate([casing_apothem-3.5,8,base_height*0.7])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
+    mirror([1,0,0])rotate(-90)translate([casing_apothem-3.5,4,base_height*0.8])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
 }
 
 module base_windowed() {
