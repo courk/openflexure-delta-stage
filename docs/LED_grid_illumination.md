@@ -16,6 +16,7 @@ Using a LED grid for illumination opens up new imaging modalities, such as darkf
 [USB plug]: models/USB_plug.md "{cat:part}"
 [LED array holder]: models/LED_array_holder.stl "{cat:3DPrinted}"
 [M2.5x12mm standoffs]: models/12mm_standoffs.md "{cat:part}"
+ [2mm hex screwdriver]: "{cat:tool}"
 
 
 # Hardware
@@ -36,7 +37,7 @@ Please make reference to the [fritzing diagram](fritzing/LED_grid.fzz).  Of cour
 
 ## Attach the LED grid to the holder {pagestep}
 
-Pass the [Adafruit 3444 LED grid] through the [LED array holder]{qty:1}. Secure it in place with four [M2.5x8mm screws]{qty:4}.
+Pass the [Adafruit 3444 LED grid] through the [LED array holder]{qty:1}. Secure it in place with four [M2.5x8mm screws]{qty:4} using a [2mm hex screwdriver]{qty:1}.
 
 ![](images/LED_grid_illumination/array_holder1.jpg)
 ![](images/LED_grid_illumination/array_holder2.jpg)
@@ -55,7 +56,7 @@ Push the [perma-proto board] on top of the Raspberry Pi.  Make sure the GPIO pin
 
 ## Put the Sangaboard on top of the perma-proto HAT {pagestep}
 
-The Sangaboard (currently v2 only) should sit on top of the standoffs, and can be secured with four [M2.5x7mm screw]{qty:4}s.
+The Sangaboard (currently v2 only) should sit on top of the standoffs, and can be secured with four [M2.5x7mm screw]{qty:4}s using a [2mm hex screwdriver]{qty:1}.
 
 ![](images/LED_grid_illumination/sangaboard.jpg)
 

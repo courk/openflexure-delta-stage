@@ -18,7 +18,8 @@ This base fits both the Raspberry Pi (Models B+, 2, 3B, 3B+, 4B) and the Sangabo
 
 [small pliers]: "{cat:tool}"
 [SW5 nut driver]: "{cat:tool}"
-[M2 screwdriver]: "{cat:tool}"
+[2mm hex screwdriver]: "{cat:tool}"
+[2.5mm hex screwdriver]: "{cat:tool}"
 
 
 ## Method
@@ -47,7 +48,7 @@ Place the [Sangaboard]{qty:1} on top of the standoffs, making sure the cables fr
 
 #### Sangaboard v0.2
 
-Screw the [M2.5x8mm screw]{qty:4}s using a [M2 screwdriver]{qty:1} through the holes of the Sangaboard into the standoffs.You might find it easier to attach all four loosely, then tighten them together.  Be careful not to over-tighten these screws.
+Screw the [M2.5x8mm screw]{qty:4}s using a [2mm hex screwdriver]{qty:1} through the holes of the Sangaboard into the standoffs. You might find it easier to attach all four loosely, then tighten them together. Be careful not to over-tighten these screws.
 
 ![](images/raspi_sangaboard_base/sangaboard_screws_top.jpg)
 ![](images/raspi_sangaboard_base/sangaboard_screws_closeup1.jpg)
@@ -55,7 +56,7 @@ Screw the [M2.5x8mm screw]{qty:4}s using a [M2 screwdriver]{qty:1} through the h
 
 #### Sangaboard v0.3
 
-You can attach this Sangaboard to the two standoffs closest to the motors connectors using two [M2.5x8mm screw]s  It will sit (but not secured) on the other two standoffs.
+You can attach this Sangaboard to the two standoffs closest to the GPIO with two [M2.5x8mm screw]s using a [2mm hex head screwdriver]{qty:1}.  It will sit (but not secured) on the other two standoffs.
 
 ![](images/raspi_sangaboard_base/sangaboard_v0_3_screws_closeup2.jpg)
 ![](images/raspi_sangaboard_base/sangaboard_v0_3_screws_closeup1.jpg)
@@ -63,7 +64,7 @@ You can attach this Sangaboard to the two standoffs closest to the motors connec
 
 ### Plug in motors {pagestep}
 
-Plug in the motors.  Motor cables from motors `a` and `b`  can enter though the window in the side of the case and the motor cable from motor `c` can enter through the window at the back. The correct order to plug in the motors can be seen here:
+Plug in the motors.  Motor cables from motors `a` and `b`  can enter though the window in the side of the case and the motor cable from motor `c` can enter through the window at the back or the side. The correct order to plug in the motors can be seen here:
 
 #### Sangaboard v0.2
 
@@ -87,7 +88,7 @@ Connect the ribbon cable to the camera module.
 
 ### Put microscope into base {pagestep}
 
-The microscope [main body] fits snuggly into the [Raspberry Pi & Sangaboard base].
+The microscope [main body] fits tightly into the [Raspberry Pi & Sangaboard base].
 
 ![](images/raspi_sangaboard_base/microscope_in_base.jpg)
 
@@ -98,7 +99,7 @@ Insert one [M3 nut]{qty:3} into the nut trap in the base.  It may be necessary t
 ![](images/raspi_sangaboard_base/nut_in_trap1.jpg)
 ![](images/raspi_sangaboard_base/nut_in_trap2.jpg)
 
-Insert one [M3x12mm screw] into the hole in the microscope [main body].  Screw it in place.
+Insert one [M3x12mm screw] into the hole in the microscope [main body].  Screw it in place using a [2.5mm hex screwdriver]{qty:1}.
 
 ![](images/raspi_sangaboard_base/base_screw1.jpg)
 ![](images/raspi_sangaboard_base/base_screw2.jpg)
