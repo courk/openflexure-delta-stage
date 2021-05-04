@@ -48,6 +48,7 @@ d=0.05;
 // joins the casing) out sideways, to the middle of the vertical part of the
 // leg, then take the midpoint of the line joining each pair, that's the hole)
 mounting_hole_r = sin(30)*stage_r + sin(60)*(leg_strut_l/2+zflex[1]+leg_t/2);
+// The position of the mounting point between the base and main body (from centre at each 120 degree position of the actuators)
 mounting_point = 87;
 
 // Objective mount
