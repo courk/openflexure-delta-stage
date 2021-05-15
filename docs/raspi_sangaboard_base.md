@@ -10,7 +10,7 @@ This base fits both the Raspberry Pi (Models B+, 2, 3B, 3B+, 4B) and the Sangabo
 
 [M2.5x20mm standoff]: models/20mm_standoffs.md "{cat:part}"
 [M2.5x8mm screw]: "{cat:part}"
-[M2x12mm screw]: "{cat:part}"
+[M3x12mm screw]: "{cat:part}"
 [Raspberry Pi]: models/raspberry_pi.md "{cat:part}"
 [Sangaboard]: models/sangaboard.md "{cat:part}"
 [USB cable]: models/sangaboard_USB_cable.md "{cat:part}"
@@ -99,7 +99,7 @@ Insert one [M3 nut]{qty:3} into the nut trap in the base.  It may be necessary t
 ![](images/raspi_sangaboard_base/nut_in_trap1.jpg)
 ![](images/raspi_sangaboard_base/nut_in_trap2.jpg)
 
-Insert one [M3x12mm screw] into the hole in the microscope [main body].  Screw it in place using a [2.5mm hex screwdriver]{qty:1}.
+Insert one [M3x12mm screw]{qty:3} into the hole in the microscope [main body].  Screw it in place using a [2.5mm hex screwdriver]{qty:1}.
 
 ![](images/raspi_sangaboard_base/base_screw1.jpg)
 ![](images/raspi_sangaboard_base/base_screw2.jpg)
