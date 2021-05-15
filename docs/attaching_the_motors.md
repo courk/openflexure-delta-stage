@@ -8,7 +8,7 @@ If you want your stage to be automated, these instructions will show you how to 
 [electrical tape]: "{cat:part}"
 [M4x6mm button head screw]: "{cat:part}"
 
-[3mm hex screwdriver]: "{cat:tool}"
+[2.5mm hex screwdriver]: "{cat:tool}"
 
 ![](images/attaching_the_motors/non_printed_parts.jpg)
 ![](images/attaching_the_motors/printed_parts.jpg)
@@ -32,7 +32,7 @@ Repeat for all three motors.
 
 ## Attach the motor to the microscope {pagestep}
 
-Line up the motor so that the small gear is between the large gear and the stage leg. The motor's mounting holes should line up with the motor legs. Screw one [M4x6mm button head screw]{qty:6} through the motor's mounting hole onto the leg using a [3mm hex screwdriver]{qty:1}.
+Line up the motor so that the small gear is between the large gear and the stage leg. The motor's mounting holes should line up with the motor legs. Screw one [M4x6mm button head screw]{qty:6} through the motor's mounting hole onto the leg using a [2.5mm hex screwdriver]{qty:1}.
 
 ![](images/attaching_the_motors/motor_in_position.jpg)
 ![](images/attaching_the_motors/motor_in_position_close_up.jpg)
