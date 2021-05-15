@@ -28,6 +28,12 @@ transmission_illumination = false;
 // Reflection illumination - The hole cut out the side for the reflection illuminator
 reflection_illumination = false; 
 
+// Stage connectors - the mounts to connect the stage to the base
+stage_connectors = false;
+
+//Objective mount - the dovetail for attaching the optics module
+optics_module_mount = true;
+
 // Flexure dimensions - good for PLA and ~0.5mm nozzle
 zflex = [6, 1.5, 0.75]; //dimensions of flexure
 flex_a = 0.1; //angle through which flexures are bent, radians
@@ -45,6 +51,8 @@ d=0.05;
 // joins the casing) out sideways, to the middle of the vertical part of the
 // leg, then take the midpoint of the line joining each pair, that's the hole)
 mounting_hole_r = sin(30)*stage_r + sin(60)*(leg_strut_l/2+zflex[1]+leg_t/2);
+// The position of the mounting point between the base and main body (from centre at each 120 degree position of the actuators)
+mounting_point = 87;
 
 // Objective mount
 objective_mount_y = 18; // y position of clip for optics
@@ -70,6 +78,7 @@ mid_cutout_w = illuminator_width() + 1;
 bottom_cutout_w = illuminator_width() + 4;
 
 // Base
+wall_thickness = 2;
 simple_base_height = 30;
 base_height = 80;
 base_cutout_tolerance = 0.5;
@@ -82,4 +91,4 @@ sangaboard = [56,68,25]; // The actual size of the Sangaboard
 raspi_center = [0,10,raspi_board[2]/2+raspi_standoff]; // Where the centre of the Raspberry Pi is in its final position
 standoff_height = 20; //The height of the standoff between the Rpi and the Sangaboard
 sangaboard_center = raspi_center+[0,(raspi_board[1]/2-sangaboard[1]/2),(sangaboard[2]/2-raspi_board[2]/2+standoff_height)]; // Where the centre of the Raspberry Pi is in its final position
-sangaboard_window = [100,power_HDMI_window[1]*2/3,20]; // The back window of Sangaboard
+sangaboard_window = [100,power_HDMI_window[1],20]; // The back window of Sangaboard

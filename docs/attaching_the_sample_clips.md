@@ -8,11 +8,13 @@ To securely hold a microscope slide on the stage, you can attach the sample clip
 [M3x8mm screw]: "{cat:part}"
 ![](images/attaching_the_sample_clips/parts.jpg)
 
+[2.5mm hex screwdriver]: "{cat:tool}"
+
 ## Method
 
 ## Insert the screws into the clips {pagestep}
 
-Push the two [M3x8mm screw]{qty:2}s through the lower hole of the [sample clip]{qty:2}.
+Push the two [M3x8mm screw]{qty:2}s through the lower hole of the [sample clip]{qty:2} using a [2.5mm hex screwdriver]{qty:1}.
 ![](images/attaching_the_sample_clips/insert_screws_into_clips.jpg)
 
 ## Screw the sample clips onto the stage {pagestep}

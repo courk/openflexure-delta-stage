@@ -31,6 +31,9 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [electrical tape]: "{cat:part}"
 [filter cube]: models/fl_cube.stl "{cat:3DPrinted, note: Print in black.}"
 [main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
+[2.5mm hex screwdriver]: "{cat:tool}"
+[2mm hex screwdriver]: "{cat:tool}"
+[1.5mm hex screwdriver]: "{cat:tool}"
 
 
 [oil glass cutter]: "{cat:tool}"
@@ -58,7 +61,7 @@ Push the [reflection illumination condenser]{qty:1} down onto the lens.  Check i
 
 ### Attach the LED {pagestep}
 
-Attach the [star LED] to the back of the [reflection illumination condenser] using [M3x8mm screw]{qty:2}.  Make sure the wires come out from near the bottom.
+Attach the [star LED] to the back of the [reflection illumination condenser] with two [M3x8mm screw]{qty:2} using a [2.5mm hex screwdriver]{qty:1}.  Make sure the wires come out from near the bottom.
 
 ![](images/reflection_illumination/attach_led.jpg)
 
@@ -99,7 +102,7 @@ After printing the [reflection optics module casing]{qty:1} there may be strings
 
 ### Attach the objective screw {pagestep}
 
-Slide a [M3 nut]{qty:1} into the slot at the top of the [reflection optics module casing] and screw a [M3 screw]{qty:1} into it.
+Slide a [M3 nut]{qty:1} into the slot at the top of the [reflection optics module casing] and screw a [M3x8mm screw]{qty:1} into it using a [2.5mm hex screwdriver]{qty:1}.
 
 ![](images/reflection_illumination/objective_screw1.jpg)
 ![](images/reflection_illumination/objective_screw2.jpg)
@@ -162,7 +165,7 @@ Put some [electrical tape]{qty:some} over the excitation filter slot to keep the
 
 ### Attach the reflection illumination holder
 
-Put two [M2.5 washer]{qty:2}s onto two [M2.5x8mm screw]{qty:2}s.  Screw through the slip plate on the [reflection illumination holder] into the [M2.5 nut] in the [reflection illumination condenser].  
+Put two [M2.5 washer]{qty:2}s onto two [M2.5x8mm screw]{qty:2}s.  Screw through the slip plate on the [reflection illumination holder] into the [M2.5 nut] in the [reflection illumination condenser] using a [2mm hex screwdriver]{qty:1}.  
 
 ![](images/reflection_illumination/slip_plate_screws1.jpg)
 ![](images/reflection_illumination/slip_plate_screws2.jpg)
@@ -184,7 +187,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ### Attach the camera to the optics tube {pagestep}
 
-Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screw]{qty:2}s.
+Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screw]{qty:2}s using a [1.5mm hex screwdriver]{qty:1}.
 
 ![](images/reflection_illumination/camera.jpg)
 ![](images/reflection_illumination/camera_cover.jpg)

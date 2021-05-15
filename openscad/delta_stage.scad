@@ -143,6 +143,12 @@ module each_stage_mounting_hole_without_center(z_translate =0){
     each_lever() translate([0,-zflex[0]/2,z_translate]) repeat([leg_strut_l,0,0],2,center=true) children();
 }
 
+module each_base_mounting_point(){
+    // The locations of the mounting points to the base.
+    for(a = [0,120,240]){
+        rotate(a)translate([0,mounting_point,0]) children();
+    }
+}
 
 module moving_stage(){
     // the moving stage is printed suspended between the legs.
@@ -211,7 +217,11 @@ module casing(){
             // casing for the actuator
             each_lever() translate([0,nut_y,0]) screw_seat(h=actuator_h, travel=actuator_travel, motor_lugs=true, lug_angle=180);
             // join the casings up, by adding a big block in the middle.
-                cylinder(r=casing_radius, h=casing_height, $fn=6);    
+            cylinder(r=casing_radius, h=casing_height, $fn=6);
+            // add the base mounting points
+            if(stage_connectors) {
+                base_mounting_points();
+            } 
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
@@ -226,19 +236,19 @@ module casing(){
                 cylinder(h = 999, r = casing_radius-wall_t, $fn = 6);
             }
             // make the objective mount by not hollowing it out
-            rotate(60){
-                union(){
-                    objective_mount();
-                    translate([-stage_r/2,casing_apothem-17.5,0])cube([stage_r,17.5,casing_height]);
+            if (optics_module_mount){
+                rotate(60){
+                    union(){
+                        objective_mount();
+                        translate([-stage_r/2,casing_apothem-17.5,0])cube([stage_r,17.5,casing_height]);
+                    }
                 }
             }
-            
         }
-
-
-
         // bolt slot access slot
-        objective_bolt_access();
+        if (optics_module_mount){
+            objective_bolt_access();
+        }
 
         if (reflection_illumination){
             fl_cube_cutout();
@@ -280,8 +290,8 @@ module condenser_mount(){
 
 module logos(){
     //The OSHW and OpenFlexure logos (goes on the side of the casing without the access holes)
-    rotate(30)translate([casing_apothem+0.3,8,casing_height*0.35])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
-    mirror([1,0,0])rotate(150)translate([casing_apothem+0.3,4,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
+    rotate(30)translate([casing_apothem+0.3,8,casing_height*0.15])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
+    mirror([1,0,0])rotate(150)translate([casing_apothem+0.3,4,casing_height*0.35])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
 }
 
 module legs(){
@@ -291,6 +301,25 @@ module legs(){
         lever();
         translate([0,nut_y,0]) actuator_column(actuator_h);
     } 
+}
+
+module base_mounting_points(){
+// The supports attached to each leg that slot into the base.
+    each_base_mounting_point(){
+        difference(){
+            union(){
+                cylinder(d=8, h=6, $fn = 50);
+                translate([0,0,4]){
+                    hull(){
+                        cylinder(d=8,h=2,$fn=50);
+                        linear_extrude(5) projection()translate([0,nut_y+stage_r-mounting_point,0]) screw_seat(h=actuator_h);
+                    }
+                }
+            }
+            translate([0,0,4])cylinder(d = 6, h = 100, $fn=50);
+            translate([0,0,-50])cylinder(d = 3.5, h = 100, $fn=50);
+        }
+    }
 }
 
 module main_body(){

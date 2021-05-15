@@ -1,8 +1,9 @@
 include <parameters.scad> //Delta-stage params
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
-use <../openflexure-microscope/openscad/microscope_stand.scad>;
 use <delta_stage.scad>
+use <delta_stage_logo.scad>;
+use <../openflexure-microscope/openscad/logo.scad>;
 
 module base_projection(){
     projection(cut=true){
@@ -13,19 +14,16 @@ module base_projection(){
                         leg_and_lever_clearance();
                         cylinder(r1=wall_t, r2=0.5, h=0.9);
                     }
-                translate([-(casing_radius+1),0,0])cube([(casing_radius+1),casing_apothem,10]); // This fills in space in the side that are then later cut to give access to side RPi connections.
+                    reflect([1,0,0]){
+                        translate([-(casing_radius+1),0,0])cube([(casing_radius+1),casing_apothem,10]); // This fills in space in the side that are then later cut to give access to side RPi connections.
+                    }
                 }
-            translate([-(casing_radius+1),2.5,0])cube([(casing_radius+1),casing_apothem,10]); // This squares off the side wall for access to RPi connections
-            translate(raspi_center+[0,-(raspi_board[1]+2),-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //This squares off the back wall for access to RPi connections
-            }
-            // This puts in a quarter of the hexagon that is in the center of the microscope
-            intersection(){
-                cylinder(r=casing_radius, h=casing_height, $fn=6);   
-                cube([100,100,100]);
+                translate([0,sangaboard_center[1]-sangaboard[1]/2,0])cube([100,sangaboard[1],10]); // This squares off the side wall for access to Sangaboard connections
+                translate([-(casing_radius+1),2.5,0])cube([(casing_radius+1),casing_apothem,10]); // This squares off the side wall for access to RPi connections
+                translate(raspi_center+[0,-(raspi_board[1]+2),-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //This squares off the back wall for access to RPi connections
             }
             // This fills in where the RPi goes with extra space at the front of the microscope as the Sangaboard is bigger that the RPi in that dimension
             translate(raspi_center-[0,-2,raspi_standoff]) cube(raspi_board + [1,8,0], center =true);
-            
         }
     }
 }
@@ -37,8 +35,8 @@ module feet_projection() {
     }  
 }
 
-module base_extrusion() {
-    linear_extrude(height=base_height) {
+module base_extrusion(h) {
+    linear_extrude(height=h) {
         union() {
             feet_projection();
             base_projection();
@@ -46,33 +44,53 @@ module base_extrusion() {
     }
 }
 
-module base_hollow(wall_thickness=2, cutout_tolerance=1) {
+module base_hollow(cutout_tolerance=1) {
     difference(){
+        union(){
         // Base extrusion, but with an outer wall wall_thickness thick
-        minkowski(){
-            base_extrusion();
-            cylinder(r=wall_thickness+cutout_tolerance,h=1);
+            minkowski(){
+                base_extrusion(base_height);
+                cylinder(r=wall_thickness+cutout_tolerance,h=1);
+            }
+            stage_connection();
         }
-
         // Base extrusion, but with an outer wall cutout_tolerance thick
         translate([0, 0, wall_thickness]) minkowski(){
-            base_extrusion();
+            base_extrusion(base_height);
             cylinder(r=cutout_tolerance,h=1);
         }
-        
     }
-
 }
 
 module foot_stands(cutout_tolerance=1) {
-    minkowski() {
-        // Extrusion of the feet projection
-        linear_extrude(height=base_height-foot_height) {
-            feet_projection();
-        }
-
-        // Outer wall cutout_tolerance thick
-        cylinder(r=cutout_tolerance,h=1);
+    // Creates 3 ledges approximately half the foot size such that the main body of the microscope will start 2mm below the height of the base.
+    translate([0,0,base_height-foot_height+1]){
+        each_lever(){
+            translate([0, nut_y, 0]){
+                intersection(){ 
+                    hull(){
+                        difference(){
+                            linear_extrude(d){
+                                minkowski(){
+                                    projection(){
+                                        screw_seat_shell(10);
+                                    }
+                                    cylinder(r=cutout_tolerance,h=d);
+                                }
+                            }
+                            translate([0,-52.5,0])cube([100,100,100],center = true);
+                        }
+                        translate([0,10,-20]) cube([30,d,d],center=true);
+                    }
+                    translate([0,0,-50]){
+                        minkowski(){
+                            screw_seat_shell(100);
+                            cylinder(r=cutout_tolerance+1,h=d);
+                        }
+                    }
+                }
+            }
+        }    
     }
 }
 
@@ -92,26 +110,23 @@ module window_cubes() {
 
     //Side window
     translate(raspi_center+[-power_HDMI_window[0]/2,raspi_board[1]/2-power_HDMI_window[1]/2-3.5,-raspi_board[2]/2+power_HDMI_window[2]/2-1]) cube(power_HDMI_window,center = true);
-
+    
     //Vents
-    translate(raspi_center+[power_HDMI_window[0]/2,raspi_board[1]/2-power_HDMI_window[1]/2-3.5,-raspi_board[2]/2+power_HDMI_window[2]/2-1])repeat(delta=[0,power_HDMI_window[1]/14,0],N=15, center= true) cube([100,1.5,power_HDMI_window[2]],center=true);
+    translate([sangaboard_center[0]+50,sangaboard_center[1]+5/2,raspi_center[2]])repeat(delta=[0,(sangaboard[1]-5)/14,0],N=15, center= true) cube([100,1.5,power_HDMI_window[2]],center=true);
 
     //SD card access
-    translate(raspi_center+[0,raspi_board[1]/2,-10])cube([20,20,20], center=true);
+    translate(raspi_center+[0,raspi_board[1]/2+5,-10])cube([20,25,20], center=true);
 
 
     //Sangaboard windows
     // Back window
     translate(sangaboard_center-[0,50,0]) rotate([0,0,90])cube(sangaboard_window, center=true);
 
-    //Side window
-    translate(sangaboard_center+[-sangaboard_window[0]/2,sangaboard[1]/2-sangaboard_window[1],0]) cube(sangaboard_window, center = true);
-
+    //Side windows
+    translate([raspi_center[0]-power_HDMI_window[0]/2,raspi_center[1]+raspi_board[1]/2-power_HDMI_window[1]/2-3.5,sangaboard_center[2]-sangaboard[2]/2+power_HDMI_window[2]/2+3]) cube(power_HDMI_window+[0,0,6], center = true);
+    translate(sangaboard_center+[50,5/2,-sangaboard[2]/2+power_HDMI_window[2]/2+3]) cube([100,sangaboard[1]-5,power_HDMI_window[2]+6],center = true);
     //Reflection gap
     rotate([0,0,-60])translate([0,50,base_height-9])cube([bottom_cutout_w,100,20],center=true);
-
-
-
 }
 
 module pi_supports(){
@@ -127,6 +142,42 @@ module raspi_supports(){
     }
 }
 
+module stage_connection(){
+    // Creates 3 mounting posts to connect to the main body. The top of the post is in line with the top of the base, with the cutout circle 2mm down such that the main body sits 2mm under the top of the base.
+    translate([0,0,base_height+1])
+    {
+        each_base_mounting_point(){
+            difference(){
+                hull(){
+                    translate([0,0,-2*d])repeat([0,0,-10],2){
+                        minkowski(){
+                            cube([10,10,d], center = true);
+                            cylinder(r = 1, h = d, $fn = 50);
+                        }
+                    }
+                    translate([0,nut_y+stage_r-mounting_point,-20]){
+                        difference(){                                
+                            linear_extrude(20){
+                                projection(){
+                                    minkowski(){
+                                        screw_seat_shell(10);
+                                        cylinder(r=wall_thickness,h=d);
+                                    }
+                                }
+                            }
+                        translate([-50,-99,-50])cube([100,100,100]);
+                        }
+                    }
+                }
+                translate([0,0,-2])cylinder(d = 8.5, h = 2, $fn=50);
+                translate([0,0,-8+d])cylinder(d= 3.5, h = 8, $fn=50);
+                translate([0,0,-10-8+d])trylinder_selftap(3, h=20, center=true);
+                hull()repeat([0,100,0],2) translate([0,0,-8]) cylinder(d=6.9,h=2.8,$fn=6); 
+            }
+        }
+    }
+}
+
 // Used to show position of sangaboard
 module sangaboard(){
     translate(sangaboard_center) cube(sangaboard, center =true);
@@ -137,14 +188,21 @@ module raspi(){
     translate(raspi_center)cube(raspi_board, center = true);
 }
 
+module logos(){
+    //The OSHW and OpenFlexure logos (goes on back of the base)
+    rotate(-90)translate([casing_apothem-3.5,8,base_height*0.7])rotate([90,0,-90])scale([0.2,0.2,1])oshw_logo_and_text(version_numstring);
+    mirror([1,0,0])rotate(-90)translate([casing_apothem-3.5,4,base_height*0.8])rotate([90,0,-90])scale([0.2,0.2,1])openflexure_delta_stage_logo();
+}
+
 module base_windowed() {
     union(){
-
         difference() {
             base();
             window_cubes();
-            translate([-(casing_radius+2),0,base_height-3])cube([casing_radius+2,sangaboard_center[1]+sangaboard[1]/2-sangaboard_window[1]/2,10]); // cutout at top for the base to pass under the mircoscope (side)
-            translate(raspi_center+[0,-(raspi_board[1]+2),base_height-3-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //cutout at top for the base to pass under the mircoscope (back)
+            translate([-(casing_radius+2),0,base_height-5])cube([casing_radius+2,sangaboard_center[1]+sangaboard[1]/2-sangaboard_window[1]/2,10]); // cutout at top for the base to pass under the mircoscope (side)
+            translate([0,sangaboard_center[1]-sangaboard[1]/2,base_height-5])cube([100,sangaboard[1]/2,10]); // cutout at top for the base to pass under the mircoscope (side)
+            translate(raspi_center+[0,-(raspi_board[1]+2),base_height-5-raspi_standoff])cube(raspi_board+[10,0,0],center=true); //cutout at top for the base to pass under the mircoscope (back)
+            logos();
         }
         raspi_supports();
     }

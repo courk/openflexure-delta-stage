@@ -34,6 +34,8 @@ These instructions show you how to add transmission illumination and optics modu
 [3.2mm heat shrink]: models/3_2mm_heat_shrink.md "{cat:part}"
 [4.8mm heat shrink]: models/4_8mm_heat_shrink.md "{cat:part}"
 [main body]: models/delta_stage_main_body.md "{cat:3DPrinted}"
+[2.5mm hex screwdriver]: "{cat:tool}"
+[1.5mm hex screwdriver]: "{cat:tool}"
 ## Illumination
 
 ### Wire the LED {pagestep}
@@ -130,7 +132,7 @@ Insert two [M3 nut]{qty:2}s into the nut slots on the condenser mount.
 
 ![](images/transmission_illumination/dovetail_nuts.jpg)
 
-Screw the [illumination dovetail] onto the [main body].
+Screw the [illumination dovetail] onto the [main body] using a [2.5mm hex screwdriver]{qty:1}.
 
 ![](images/transmission_illumination/dovetail_attach1.jpg)
 ![](images/transmission_illumination/dovetail_attach2.jpg)
@@ -152,7 +154,7 @@ After printing the [transmission optics module casing]{qty:1} there may be strin
 
 ### Attach the objective screw {pagestep}
 
-Slide a [M3 nut]{qty:1} into the slot at the top of the [transmission optics module casing] and screw a [M3x8mm screw]{qty:1} into it.
+Slide a [M3 nut]{qty:1} into the slot at the top of the [transmission optics module casing] and screw a [M3x8mm screw]{qty:1} into it using a [2.5mm hex screwdriver]{qty:1}.
 
 ![](images/transmission_illumination/objective_screw.jpg)
 
@@ -193,7 +195,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ### Attach the camera to the optics tube {pagestep}
 
-Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screws]{qty:2}.
+Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screws]{qty:2} using a [1.5mm hex screwdriver]{qty:1}.
 
 ![](images/transmission_illumination/camera_parts.jpg)
 ![](images/transmission_illumination/camera_in_place.jpg)

@@ -1,5 +1,9 @@
 # OpenFlexure Delta Stage
 
+![](images/index/complete_microscope1.jpg)
+![](images/index/complete_microscope2.jpg)
+![](images/index/complete_microscope3.jpg)
+
 The delta stage is a 3D printed x-y-z translation stage. As the optics do not move it is particularly suited to more complex imaging (phase, reflection, fluorescence microscopy).  There are two standard ways to build it, with either transmission illumination or reflection illumination.  The motorised translation stage, which forms the main body of the microscope, is the same for both, and so swapping between the two configurations is possible by replacing the optics module.  There are also some optional components linked at the bottom of the page.
 
 ## Printing guidance
@@ -19,7 +23,7 @@ There are two versions of the instructions:
 * [Petri dish holder](petri_dish.md): A holder for a 35mm Petri dish.
 
 
-![](images/index/complete_microscopes.jpg)
+
 
 
 ### Software
