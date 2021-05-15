@@ -236,16 +236,19 @@ module casing(){
                 cylinder(h = 999, r = casing_radius-wall_t, $fn = 6);
             }
             // make the objective mount by not hollowing it out
-            rotate(60){
-                union(){
-                    objective_mount();
-                    translate([-stage_r/2,casing_apothem-17.5,0])cube([stage_r,17.5,casing_height]);
+            if (optics_module_mount){
+                rotate(60){
+                    union(){
+                        objective_mount();
+                        translate([-stage_r/2,casing_apothem-17.5,0])cube([stage_r,17.5,casing_height]);
+                    }
                 }
             }
-            
         }
         // bolt slot access slot
-        objective_bolt_access();
+        if (optics_module_mount){
+            objective_bolt_access();
+        }
 
         if (reflection_illumination){
             fl_cube_cutout();

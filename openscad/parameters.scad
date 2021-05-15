@@ -31,6 +31,9 @@ reflection_illumination = false;
 // Stage connectors - the mounts to connect the stage to the base
 stage_connectors = false;
 
+//Objective mount - the dovetail for attaching the optics module
+optics_module_mount = true;
+
 // Flexure dimensions - good for PLA and ~0.5mm nozzle
 zflex = [6, 1.5, 0.75]; //dimensions of flexure
 flex_a = 0.1; //angle through which flexures are bent, radians
