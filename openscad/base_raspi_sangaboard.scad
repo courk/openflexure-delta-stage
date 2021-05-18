@@ -70,13 +70,13 @@ module foot_stands(cutout_tolerance=1) {
                 intersection(){ 
                     hull(){
                         difference(){
-                            linear_extrude(d){
-                                minkowski(){
+                            minkowski(){
+                                linear_extrude(d){
                                     projection(){
                                         screw_seat_shell(10);
                                     }
-                                    cylinder(r=cutout_tolerance,h=d);
                                 }
+                                cylinder(r=cutout_tolerance,h=d);
                             }
                             translate([0,-52.5,0])cube([100,100,100],center = true);
                         }
