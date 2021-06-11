@@ -31,6 +31,7 @@ openscad -o builds/reflection_illuminator_LED_star.stl openflexure-microscope/op
 
 #optional parts
 openscad -o builds/35mm_petri_dish_holder.stl openscad/35mm_petri_dish_holder.scad
+openscad -o builds/10mm_riser.stl openscad/10mm_riser.scad
 openscad -o builds/LED_array_holder.stl openflexure-microscope/openscad/LED_array_holder.scad
 
 
