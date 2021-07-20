@@ -105,7 +105,7 @@ licensor:
 
 # Documentation
 
-documentation-home: https://openflexure.gitlab.io/openflexure-delta-stage/
+documentation-home: https://build.openflexure.org/openflexure-delta-stage/v1.1.0/
 
 #archive-download: [value]                 # Absolute or relative path
 
@@ -122,7 +122,7 @@ design-files:                             # recommended
 # tool-list: [value]                        # recommended | absolute or relative path | Direct the maker to a list of tools required to make the thing
 
 making-instructions:                        # recommended
-  - path: https://openflexure.gitlab.io/openflexure-delta-stage/                         # Absolute or relative path
+  - path: https://build.openflexure.org/openflexure-delta-stage/v1.1.0/                         # Absolute or relative path
     title: OpenFlexure Delta Stage          # text
 # 
 # manufacturing-files:                      # recommended where applicable
