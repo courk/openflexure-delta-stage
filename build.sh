@@ -16,7 +16,7 @@ openscad -o builds/optics_picamera2_rms_f50d13_beamsplitter_delta.stl -D 'optics
 
 # common parts
 openscad -o builds/base_raspi_sangaboard.stl openscad/base_raspi_sangaboard.scad
-openscad -o builds/base.stl openscad/base.scad
+openscad -o builds/simple_base.stl openscad/simple_base.scad
 openscad -o builds/feet.stl openscad/feet.scad
 openscad -o builds/actuator_assembly_tools.stl openflexure-microscope/openscad/actuator_assembly_tools.scad
 openscad -o builds/lens_tool.stl openflexure-microscope/openscad/lens_tool.scad
