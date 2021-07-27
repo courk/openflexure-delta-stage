@@ -143,6 +143,11 @@ module each_stage_mounting_hole_without_center(z_translate =0){
     each_lever() translate([0,-zflex[0]/2,z_translate]) repeat([leg_strut_l,0,0],2,center=true) children();
 }
 
+module each_stage_mounting_hole_just_center(z_translate =0){
+    //Only the center mounting hold (1 per leg)
+    each_lever() translate([0,-zflex[0]/2,z_translate]) children();
+}
+
 module each_base_mounting_point(){
     // The locations of the mounting points to the base.
     for(a = [0,120,240]){

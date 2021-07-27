@@ -20,7 +20,7 @@ There are two versions of the instructions:
 
 * [LED Grid illumination](LED_grid_illumination.md): For more complex illumination.
 * [Simple base](simple_base.md):  Short base; matches the footprint of the OpenFlexure Delta stage.
-* [Petri dish holder](petri_dish.md): A holder for a 35mm Petri dish.
+* [Stage adapters](stage_adapters.md): Adapters for the stage to holder different components.
 
 
 
