@@ -36,7 +36,7 @@ openscad -o builds/10mm_riser.stl openscad/10mm_riser.scad
 
 # Bases
 openscad -o builds/base_raspi_sangaboard.stl openscad/base_raspi_sangaboard.scad
-openscad -o builds/base.stl openscad/base.scad
+openscad -o builds/simple_base.stl openscad/simple_base.scad
 
 # Tools
 openscad -o builds/actuator_assembly_tools.stl openflexure-microscope/openscad/actuator_assembly_tools.scad
