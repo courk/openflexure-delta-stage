@@ -1,13 +1,11 @@
 # Reflection Illumination
 
-[reflection illumination]: ../models/reflection_illuminator_LED_star.stl
-
 Both these parts are in the same file.
 
 ## Condenser
 
-[reflection illumination]
+[reflection illumination](../models/reflection_illuminator_LED_star.stl){previewpage}
 
 ## Holder
 
-[reflection illumination]
+[reflection illumination](../models/reflection_illuminator_LED_star.stl){previewpage}
