@@ -62,9 +62,9 @@ module base_hollow(cutout_tolerance=1) {
     }
 }
 
-module foot_stands(cutout_tolerance=1) {
+module foot_stands(height=base_height, cutout_tolerance=1) {
     // Creates 3 ledges approximately half the foot size such that the main body of the microscope will start 2mm below the height of the base.
-    translate([0,0,base_height-foot_height+1]){
+    translate([0,0,height-foot_height+1]){
         each_lever(){
             translate([0, nut_y, 0]){
                 intersection(){ 
@@ -142,9 +142,9 @@ module raspi_supports(){
     }
 }
 
-module stage_connection(){
+module stage_connection(height=base_height){
     // Creates 3 mounting posts to connect to the main body. The top of the post is in line with the top of the base, with the cutout circle 2mm down such that the main body sits 2mm under the top of the base.
-    translate([0,0,base_height+1])
+    translate([0,0,height+1])
     {
         each_base_mounting_point(){
             difference(){
