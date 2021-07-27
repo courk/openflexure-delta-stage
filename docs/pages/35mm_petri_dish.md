@@ -1,4 +1,4 @@
-# Petri dish holder
+# 35mm Petri dish holder
 
 This holds a 35mm Petri dish firmly on top of the stage for the OpenFlexure Delta Stage
 
