@@ -1,4 +1,4 @@
-## Main body
+# Main body
 
 [Delta Stage main body]: ./delta_stage_both.md "{cat:3DPrinted}"
 [Delta Stage Microscope main body]: ./delta_stage_microscope_both.md "{cat: 3DPrinted}"

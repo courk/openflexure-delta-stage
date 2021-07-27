@@ -1,7 +1,7 @@
 # Delta Stage main body
 
-[Delta Stage]: delta_stage.stl
-[Delta Stage smart brim]: delta_stage_smart_brim.stl
+[Delta Stage]: ../models/delta_stage.stl
+[Delta Stage smart brim]: ../models/delta_stage_smart_brim.stl
 
 This is just the stage, without the reflection illumination hole and transmission illumination condenser mount.
 
@@ -9,8 +9,8 @@ This is just the stage, without the reflection illumination hole and transmissio
 
 ## Delta Stage
 
-[Delta Stage]
+[Delta Stage]{previewpage}
 
 ## Delta Stage smart brim
 
-[Delta Stage smart brim]
+[Delta Stage smart brim]{previewpage}

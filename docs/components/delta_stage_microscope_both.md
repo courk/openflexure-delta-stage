@@ -1,7 +1,7 @@
 # Delta Stage microscope main body
 
-[Delta Stage Microscope]: delta_stage_microscope.stl
-[Delta Stage Microscope smart brim]: delta_stage_microscope_smart_brim.stl
+[Delta Stage Microscope]: ../models/delta_stage_microscope.stl
+[Delta Stage Microscope smart brim]: ../models/delta_stage_microscope_smart_brim.stl
 
 This is the body for the complete microscope, with the reflection illumination hole and transmission illumination condenser mount.
 
