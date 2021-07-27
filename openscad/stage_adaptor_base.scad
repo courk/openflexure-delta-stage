@@ -3,7 +3,9 @@
 use <./delta_stage.scad>;
 
 
-module stage_adaptor_base(height = 10){
+module stage_adaptor_base(height = 10, screws_center = false){
+    //height: the height of the riser
+    //screws_centre: whether there should be two mounting screw points per leg (leaving the centre one for sample clip) (false, default) or one mounting point in the center (true)
 difference(){
     union(){
         // Fill in the stage
@@ -19,6 +21,12 @@ difference(){
         }
     }
     stage_mounting_holes(z_translate = 0); // mounting holes
-    each_stage_mounting_hole_without_center(z_translate = 5){cylinder(r=5.7, h=999);} //space for head of screw, middle holes are left incase you want to use sample clips
+    if (screws_center==true){
+        each_stage_mounting_hole_just_center(z_translate = 5){cylinder(r=5.7, h=999);} //space for head of screw, only middle hole is used for screw so others can be used for sample clips
+    }else{
+        each_stage_mounting_hole_without_center(z_translate = 5){cylinder(r=5.7, h=999);} //space for head of screw, middle holes are left incase you want to use sample clips
+    }
+    
+    
     }
 }
