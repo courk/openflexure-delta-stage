@@ -7,6 +7,7 @@ This is just the stage, without the reflection illumination hole and transmissio
 ## Delta Stage
 
 ![Delta Stage](../models/delta_stage.stl)
+
 ## Delta Stage smart brim
 
 ![Delta Stage smart brim](../models/delta_stage_smart_brim.stl)
