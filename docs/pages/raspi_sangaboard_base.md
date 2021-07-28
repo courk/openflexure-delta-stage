@@ -11,6 +11,7 @@ This base fits both the Raspberry Pi (Models B+, 2, 3B, 3B+, 4B) and the Sangabo
 [M2.5x20mm standoff]: ../components/20mm_standoffs.md "{cat:part}"
 [M2.5x8mm screw]: "{cat:part}"
 [M3x12mm screw]: "{cat:part}"
+[M3 nut]: "{cat:part}"
 [Raspberry Pi]: ../components/raspberry_pi.md "{cat:part}"
 [Sangaboard]: ../components/sangaboard.md "{cat:part}"
 [USB cable]: ../components/sangaboard_USB_cable.md "{cat:part}"
