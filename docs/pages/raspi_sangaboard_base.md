@@ -92,7 +92,7 @@ The microscope [main body] fits tightly into the [Raspberry Pi & Sangaboard base
 
 ![](../images/raspi_sangaboard_base/microscope_in_base.jpg)
 
-### Secure the microscope to the base
+### Secure the microscope to the base {pagestep}
 
 Insert one [M3 nut]{qty:3} into the nut trap in the base.  It may be necessary to clear out the hole of printing artefacts.  
 
