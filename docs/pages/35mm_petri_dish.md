@@ -19,6 +19,7 @@ Screw the [35mm petri dish holder]{qty:1} to the [main body] with three [M3x6mm 
 ![](../images/35mm_petri_dish_holder/attach2.jpg)
 ![](../images/35mm_petri_dish_holder/attach3.jpg)
 ![](../images/35mm_petri_dish_holder/attach4.jpg)
+![](../images/35mm_petri_dish_holder/attach5.jpg)
 
 ### Push in the petri dish {pagestep}
 
@@ -26,4 +27,3 @@ The petri dish has a tight fit, and its lid can also be put on.
 
 ![](../images/35mm_petri_dish_holder/petri1.jpg)
 ![](../images/35mm_petri_dish_holder/petri2.jpg)
-![](../images/35mm_petri_dish_holder/petri3.jpg)
