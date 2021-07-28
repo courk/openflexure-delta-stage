@@ -5,7 +5,7 @@ This holds a 35mm Petri dish firmly on top of the stage for the OpenFlexure Delt
 {{BOM}}
 
 [35mm petri dish holder]: ../models/35mm_petri_dish_holder.stl "{cat:3DPrinted}"
-[M3x8mm screw]: "{cat:part}"
+[M3x6mm screw]: "{cat:part}"
 [main body]: ../components/delta_stage_main_body.md "{cat:3DPrinted}"
 [2.5mm hex screwdriver]: "{cat:tool}"
 
