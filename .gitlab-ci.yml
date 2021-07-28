@@ -50,6 +50,7 @@ build-docs:
 
     script:
       - cd docs
+      - mkdir models
       - cp -r ../builds/* models/
       - gitbuilding build-html
       - cd ..
