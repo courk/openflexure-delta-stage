@@ -2,6 +2,7 @@ include <parameters.scad> //Delta-stage params
 use <../openflexure-microscope/openscad/utilities.scad>;
 use <../openflexure-microscope/openscad/compact_nut_seat.scad>;
 use <delta_stage.scad>
+use <base_raspi_sangaboard.scad>;
 
 module base_projection(){
     projection(cut=true) union(){
@@ -35,9 +36,12 @@ module base_extrusion() {
 module base_hollow(wall_thickness=2, cutout_tolerance=1) {
     difference(){
         // Base extrusion, but with an outer wall wall_thickness thick
-        minkowski(){
-            base_extrusion();
-            cylinder(r=wall_thickness+cutout_tolerance,h=1);
+        union(){
+            minkowski(){
+                base_extrusion();
+                cylinder(r=wall_thickness+cutout_tolerance,h=1);
+            }
+            stage_connection(height=simple_base_height);
         }
 
         // Base extrusion, but with an outer wall cutout_tolerance thick
@@ -50,7 +54,7 @@ module base_hollow(wall_thickness=2, cutout_tolerance=1) {
 
 }
 
-module foot_stands(cutout_tolerance=1) {
+/* module foot_stands(cutout_tolerance=1) {
     minkowski() {
         // Extrusion of the feet projection
         linear_extrude(height=simple_base_height-foot_height) {
@@ -60,11 +64,11 @@ module foot_stands(cutout_tolerance=1) {
         // Outer wall cutout_tolerance thick
         cylinder(r=cutout_tolerance,h=1);
     }
-}
+} */
 
 module base() {
     union(){
-        foot_stands(cutout_tolerance=base_cutout_tolerance);
+        foot_stands(height=simple_base_height, cutout_tolerance=base_cutout_tolerance);
         base_hollow(cutout_tolerance=base_cutout_tolerance);
     }
 }

@@ -79,7 +79,7 @@ bottom_cutout_w = illuminator_width() + 4;
 
 // Base
 wall_thickness = 2;
-simple_base_height = 30;
+simple_base_height = 35;
 base_height = 80;
 base_cutout_tolerance = 0.5;
 raspi_board = [56,85,16]; // The actual size of the RPi
