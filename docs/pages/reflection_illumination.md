@@ -34,14 +34,12 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [2.5mm hex screwdriver]: "{cat:tool}"
 [2mm hex screwdriver]: "{cat:tool}"
 [1.5mm hex screwdriver]: "{cat:tool}"
-
-
 [oil glass cutter]: "{cat:tool}"
 [soldering iron]: "{cat:tool}"
 
-## Method
+# Method
 
-### Wire the star LED {pagestep}
+## Wire the star LED {pagestep}
 
 Solder the [red 0.5A instrument wire]{qty:40cm} and the [black 0.5A instrument wire]{qty:40cm} to the [star LED]{qty:1}, following the manufacturer's instructions for which pad to solder to, using a [soldering iron]{qty:1} and some [solder]{qty:some}. Be careful to keep the solder joint as small as possible.  At the other end, attach connectors for connecting to your [power supply]{qty:1}.  In this example, we use [banana plug]{qty:2}.
 
@@ -49,7 +47,7 @@ Solder the [red 0.5A instrument wire]{qty:40cm} and the [black 0.5A instrument w
 ![](../images/reflection_illumination/star_LED_solder.jpg)
 ![](../images/reflection_illumination/star_LED_wires.jpg)
 
-### Insert the condenser lens {pagestep}
+## Insert the condenser lens {pagestep}
 
 Put the [condenser lens]{qty:1} on the [lens tool]{qty:1} with the convex side face down.
 ![](../images/reflection_illumination/condenser_lens.jpg)
@@ -59,20 +57,20 @@ Push the [reflection illumination condenser]{qty:1} down onto the lens.  Check i
 ![](../images/reflection_illumination/push_condenser.jpg)
 ![](../images/reflection_illumination/condenser_in_place.jpg)
 
-### Attach the LED {pagestep}
+## Attach the LED {pagestep}
 
 Attach the [star LED] to the back of the [reflection illumination condenser] with two [M3x8mm screw]{qty:2} using a [2.5mm hex screwdriver]{qty:1}.  Make sure the wires come out from near the bottom.
 
 ![](../images/reflection_illumination/attach_led.jpg)
 
-### Insert the slip plate screws {pagestep}
+## Insert the slip plate screws {pagestep}
 
 Push the [M2.5 nut]{qty:2} into the slots on the top of the [reflection illumination condenser].
 
 ![](../images/reflection_illumination/condenser_nut1.jpg)
 ![](../images/reflection_illumination/condenser_nut2.jpg)
 
-### Cut the glass filters {pagestep}
+## Cut the glass filters {pagestep}
 
 Cut the [excitation filter]{qty:1}, [emission filter]{qty:1} and [beamsplitter filter]{qty:1} (it's easiest with an [oil glass cutter]{qty:1}). Currently there are only `.stl`s for 1.5mm thickness glass filters, although it possible to change this in the `.scad`.
 
@@ -82,7 +80,7 @@ Cut the [excitation filter]{qty:1}, [emission filter]{qty:1} and [beamsplitter f
 |Emission | 12 | 15 |
 |Beamsplitter | 12 | 18 |
 
-### Slot the filters into the filter cube {pagestep}
+## Slot the filters into the filter cube {pagestep}
 
 Push the [emission filter] into the bottom of the [filter cube]{qty:1}.  It should be tight but be careful not to break the glass filter. You might need to file down the slot if there are printing errors.
 
@@ -92,15 +90,14 @@ Push the [beamsplitter filter] into the 45° slot. Again it might be tight, and 
 ![](../images/reflection_illumination/filter_cube2.jpg)
 ![](../images/reflection_illumination/filter_cube3.jpg)
 
-
-### Clean the optics module casing {pagestep}
+## Clean the optics module casing {pagestep}
 
 After printing the [reflection optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
 
 ![](../images/reflection_illumination/clean_optics1.jpg)
 ![](../images/reflection_illumination/clean_optics2.jpg)
 
-### Attach the objective screw {pagestep}
+## Attach the objective screw {pagestep}
 
 Slide a [M3 nut]{qty:1} into the slot at the top of the [reflection optics module casing] and screw a [M3x8mm screw]{qty:1} into it using a [2.5mm hex screwdriver]{qty:1}.
 
@@ -108,7 +105,7 @@ Slide a [M3 nut]{qty:1} into the slot at the top of the [reflection optics modul
 ![](../images/reflection_illumination/objective_screw2.jpg)
 ![](../images/reflection_illumination/objective_screw3.jpg)
 
-### Insert the tube lens {pagestep}
+## Insert the tube lens {pagestep}
 
 Put the [tube lens]{qty:1} onto the [lens tool]{qty:1}, with the more convex side down.
 
@@ -119,14 +116,14 @@ Push the [reflection optics module casing] down on top of the lens until it is f
 ![](../images/reflection_illumination/tube_lens2.jpg)
 ![](../images/reflection_illumination/tube_lens3.jpg)
 
-### Attach the objective lens {pagestep}
+## Attach the objective lens {pagestep}
 
 Screw the [objective lens]{qty:1} into the top of the [reflection optics module casing].  Be careful to screw it in straight, to avoid cross-threading.
 
 ![](../images/reflection_illumination/objective_lens1.jpg)
 ![](../images/reflection_illumination/objective_lens2.jpg)
 
-### Attach the filter cube to the reflection illumination holder {pagestep}
+## Attach the filter cube to the reflection illumination holder {pagestep}
 
 Slide the [filter cube] into the dovetail of the [reflection illumination holder]{qty:1}.
 
@@ -134,14 +131,14 @@ Slide the [filter cube] into the dovetail of the [reflection illumination holder
 ![](../images/reflection_illumination/filter_cube_in_holder2.jpg)
 ![](../images/reflection_illumination/filter_cube_in_holder3.jpg)
 
-### Insert the excitation filter {pagestep}
+## Insert the excitation filter {pagestep}
 
 The [excitation filter] slides into the slot on top of the [reflection illumination holder].
 
 ![](../images/reflection_illumination/excitation1.jpg)
 ![](../images/reflection_illumination/excitation2.jpg)
 
-### Attach the reflection illumination holder to the optics module {pagestep}
+## Attach the reflection illumination holder to the optics module {pagestep}
 
 Slide the [filter cube] into the slot in the side of the [reflection optics module casing].
 
@@ -156,14 +153,14 @@ Screw the [reflection illumination holder] to the [reflection optics module casi
 ![](../images/reflection_illumination/holder_screws3.jpg)
 ![](../images/reflection_illumination/holder_screws4.jpg)
 
-### Secure the excitation filter
+## Secure the excitation filter
 
 Put some [electrical tape]{qty:some} over the excitation filter slot to keep the excitation filter in place.
 
 ![](../images/reflection_illumination/excitation_tape1.jpg)
 ![](../images/reflection_illumination/excitation_tape2.jpg)
 
-### Attach the reflection illumination holder
+## Attach the reflection illumination holder
 
 Put two [M2.5 washer]{qty:2}s onto two [M2.5x8mm screw]{qty:2}s.  Screw through the slip plate on the [reflection illumination holder] into the [M2.5 nut] in the [reflection illumination condenser] using a [2mm hex screwdriver]{qty:1}.  
 
@@ -171,7 +168,7 @@ Put two [M2.5 washer]{qty:2}s onto two [M2.5x8mm screw]{qty:2}s.  Screw through 
 ![](../images/reflection_illumination/slip_plate_screws2.jpg)
 ![](../images/reflection_illumination/slip_plate_screws3.jpg)
 
-### Remove the camera lens {pagestep}
+## Remove the camera lens {pagestep}
 
 Remove the plastic film from the lens of the [Raspberry Pi camera v2]{qty:1}.
 
@@ -185,7 +182,7 @@ Unscrew the camera lens using the camera lens tool supplied with the camera.
 
 Once you've removed the lens, keep the camera face down or put some tape over the lens holder to stop dust settling on the sensor (which is difficult to clean!).
 
-### Attach the camera to the optics tube {pagestep}
+## Attach the camera to the optics tube {pagestep}
 
 Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screw]{qty:2}s using a [1.5mm hex screwdriver]{qty:1}.
 
@@ -194,7 +191,7 @@ Attach the [Raspberry Pi camera v2] to the bottom of the [reflection optics modu
 ![](../images/reflection_illumination/camera_cover_screw1.jpg)
 ![](../images/reflection_illumination/camera_cover_screw2.jpg)
 
-### Attach the optics module to the Delta Stage {pagestep}
+## Attach the optics module to the Delta Stage {pagestep}
 
 Slot the objective screw into the mount inside the [main body].
 

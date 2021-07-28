@@ -9,9 +9,9 @@ This holds a 35mm Petri dish firmly on top of the stage for the OpenFlexure Delt
 [main body]: ../components/delta_stage_main_body.md "{cat:3DPrinted}"
 [2.5mm hex screwdriver]: "{cat:tool}"
 
-## Method
+# Method
 
-### Attach the petri dish holder to the stage {pagestep}
+## Attach the petri dish holder to the stage {pagestep}
 
 Screw the [35mm petri dish holder]{qty:1} to the [main body] with three [M3x6mm screw]{qty:3}s using a [2.5mm hex screwdriver]{qty:1}.  
 
@@ -21,7 +21,7 @@ Screw the [35mm petri dish holder]{qty:1} to the [main body] with three [M3x6mm 
 ![](../images/35mm_petri_dish_holder/attach4.jpg)
 ![](../images/35mm_petri_dish_holder/attach5.jpg)
 
-### Push in the petri dish {pagestep}
+## Push in the petri dish {pagestep}
 
 The petri dish has a tight fit, and its lid can also be put on.
 

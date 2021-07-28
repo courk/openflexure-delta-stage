@@ -13,7 +13,7 @@ If you want your stage to be automated, these instructions will show you how to 
 ![](../images/attaching_the_motors/non_printed_parts.jpg)
 ![](../images/attaching_the_motors/printed_parts.jpg)
 
-## Method
+# Method
 
 ## Insert the motor into the small gear {pagestep}
 Put the [small gear]{qty:3} with its circular side down. Put one [28BYJ-48 micro geared stepper motor]{qty:3} through the hole of the gear.  The hole isn't circular so the motor shaft will need to be lined up correctly.  

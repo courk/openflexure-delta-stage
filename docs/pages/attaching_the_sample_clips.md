@@ -11,7 +11,7 @@ To securely hold a microscope slide on the stage, you can attach the sample clip
 
 [2.5mm hex screwdriver]: "{cat:tool}"
 
-## Method
+# Method
 
 ## Insert the screws into the clips {pagestep}
 

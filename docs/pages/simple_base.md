@@ -6,9 +6,9 @@
 [M3 nut]: "{cat:part}"
 [2.5mm hex screwdriver]: "{cat:tool}"
 [main body]: ../components/delta_stage_main_body.md "{cat:3DPrinted}"
-## Method
+# Method
 
-### Put microscope into base {pagestep}
+## Put microscope into base {pagestep}
 
 The microscope [main body] fits tightly into the [simple base].
 
@@ -16,7 +16,7 @@ The microscope [main body] fits tightly into the [simple base].
 ![](../images/simple_base/microscope_in_base2.jpg)
 ![](../images/simple_base/microscope_in_base3.jpg)
 
-### Secure the microscope to the base {pagestep}
+## Secure the microscope to the base {pagestep}
 
 Insert one [M3 nut]{qty:3} into the nut trap in the base.  It may be necessary to clear out the hole of printing artefacts.  
 

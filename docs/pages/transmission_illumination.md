@@ -37,9 +37,9 @@ These instructions show you how to add transmission illumination and optics modu
 [2.5mm hex screwdriver]: "{cat:tool}"
 [1.5mm hex screwdriver]: "{cat:tool}"
 
-## Illumination
+# Illumination
 
-### Wire the LED {pagestep}
+## Wire the LED {pagestep}
 
 Snip the longer (positive) leg of the [LED]{qty:1} using [wire cutters]{qty:1}.
 
@@ -101,7 +101,7 @@ You have now made a wired LED.
 
 ![](../images/transmission_illumination/finished_led.jpg)
 
-### Insert the Condenser Lens {pagestep}
+## Insert the Condenser Lens {pagestep}
 
 Take a [condenser lens]{qty:1} and place it on top of the [lens tool]{qty:1} with its flat side down.
 
@@ -112,14 +112,14 @@ Push the [condenser housing]{qty:1} down vertically on top of the lens. make sur
 ![](../images/transmission_illumination/push_condenser.jpg)
 ![](../images/transmission_illumination/finished_condenser_lens.jpg)
 
-### Insert the LED {pagestep}
+## Insert the LED {pagestep}
 
 Push the LED into the top of the [condenser housing]. If it is loose, secure it in place with some [electrical tape]{qty:some}.
 
 ![](../images/transmission_illumination/led_in_condenser.jpg)
 ![](../images/transmission_illumination/condenser_tape.jpg)
 
-### Attach the illumination dovetail
+## Attach the illumination dovetail
 
 Put the [illumination dovetail]{qty:1} on the condenser mount of the [main body].
 
@@ -138,28 +138,28 @@ Screw the [illumination dovetail] onto the [main body] using a [2.5mm hex screwd
 ![](../images/transmission_illumination/dovetail_attach1.jpg)
 ![](../images/transmission_illumination/dovetail_attach2.jpg)
 
-### Attach the condenser on to the dovetail
+## Attach the condenser on to the dovetail
 
 Slide the [condenser housing] down the dovetail.  You can adjust its position up and down by sliding it on the dovetail.  You can move it back and forward by loosening the dovetail and and tightening it when it is the correct position.
 
 ![](../images/transmission_illumination/dovetail_condenser1.jpg)
 ![](../images/transmission_illumination/dovetail_condenser2.jpg)
 
-## Optics Module
+# Optics Module
 
-### Clean the optics module casing {pagestep}
+## Clean the optics module casing {pagestep}
 
 After printing the [transmission optics module casing]{qty:1} there may be strings or dust.  Clean these out so they won't block the light or fall onto the camera sensor.
 
 ![](../images/transmission_illumination/optics_clean.jpg)
 
-### Attach the objective screw {pagestep}
+## Attach the objective screw {pagestep}
 
 Slide a [M3 nut]{qty:1} into the slot at the top of the [transmission optics module casing] and screw a [M3x8mm screw]{qty:1} into it using a [2.5mm hex screwdriver]{qty:1}.
 
 ![](../images/transmission_illumination/objective_screw.jpg)
 
-### Insert the tube lens {pagestep}
+## Insert the tube lens {pagestep}
 
 Put the [tube lens]{qty:1} onto the [lens tool]{qty:1}, with the more convex side down.
 
@@ -170,7 +170,7 @@ Push the [transmission optics module casing] down on top of the lens until it is
 ![](../images/transmission_illumination/push_objective_tube.jpg)
 ![](../images/transmission_illumination/tube_lens_in_objective.jpg)
 
-### Attach the objective lens {pagestep}
+## Attach the objective lens {pagestep}
 
 Screw the [objective lens]{qty:1} into the top of the [transmission optics module casing].  Be careful to screw it in straight, to avoid cross-threading.
 
@@ -178,7 +178,7 @@ Screw the [objective lens]{qty:1} into the top of the [transmission optics modul
 ![](../images/transmission_illumination/objective2.jpg)
 ![](../images/transmission_illumination/objective3.jpg)
 
-### Remove the camera lens {pagestep}
+## Remove the camera lens {pagestep}
 
 Remove the plastic film from the lens of the [Raspberry Pi camera v2]{qty:1}.
 
@@ -194,7 +194,7 @@ Once you've removed the lens, keep the camera face down or put some tape over th
 
 ![](../images/transmission_illumination/camera_upside_down.jpg)
 
-### Attach the camera to the optics tube {pagestep}
+## Attach the camera to the optics tube {pagestep}
 
 Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics module casing]. Put the [camera cover]{qty:1} over the top.  Secure everything in place with two [M2x6mm screws]{qty:2} using a [1.5mm hex screwdriver]{qty:1}.
 
@@ -202,7 +202,7 @@ Attach the [Raspberry Pi camera v2] to the bottom of the [transmission optics mo
 ![](../images/transmission_illumination/camera_in_place.jpg)
 ![](../images/transmission_illumination/camera_screw.jpg)
 
-### Attach the optics module to the Delta Stage {pagestep}
+## Attach the optics module to the Delta Stage {pagestep}
 
 Slot the objective screw into the mount inside the [main body].
 

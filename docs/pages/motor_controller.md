@@ -15,14 +15,13 @@ The stage can be powered by a Raspberry Pi and a motor controller.
 [heat gun]: "{cat:tool}"
 [wire cutters]: "{cat:tool}"
 
+# Method
 
-## Method
-
-### The Sangaboard {pagestep}
+## The Sangaboard {pagestep}
 
 [These instructions](https://build.openflexure.org/openflexure-microscope/latest/docs/#/6_motor_controllers) show the different ways of controlling the motors. The base currently works with the Sangaboard v0.2 and v0.3.
 
-### Powering the motors for Sangaboard v0.2 {pagestep}
+## Powering the motors for Sangaboard v0.2 {pagestep}
 
 Do not power the motors from the pins on the Raspberry Pi.  Instead split the [Raspberry Pi power supply] cable.  
 
@@ -52,7 +51,6 @@ Carefully separate the two cables using a [craft knife]{qty:1} on the longer end
 
 ![](../images/motor_controller/USB_wire_with_heatshrink.jpg)
 
-
 Wrap the negative wire from the longer cable with the already soldered negative wire from the USB end.  Solder in place with a [soldering iron]{qty:1} and [solder]{qty:some}.
 
 ![](../images/motor_controller/solder_third.jpg)
@@ -75,6 +73,6 @@ You can then attach the connector of your choice to connect to the Sangaboard v0
 
 ![](../images/motor_controller/connector.jpg)
 
-### Powering the motors for Sangaboard v0.3 {pagestep}
+## Powering the motors for Sangaboard v0.3 {pagestep}
 
 The Sangaboard v0.3 is powered by micro USB.  It should not be powered from a USB port on the Raspberry Pi, but by a separate power source.

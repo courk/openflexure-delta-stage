@@ -18,7 +18,6 @@ Using a LED grid for illumination opens up new imaging modalities, such as darkf
 [M2.5x12mm standoffs]: ../components/12mm_standoffs.md "{cat:part}"
  [2mm hex screwdriver]: "{cat:tool}"
 
-
 # Hardware
 
 ## Solder the parts {pagestep}
@@ -76,4 +75,3 @@ You may need to [enable SPI](https://www.raspberrypi-spy.co.uk/2014/08/enabling-
 ## Download the extensions
 
 You will need to download our extensions to your microscope to control the LED using the microscope's software.  The instructions to do this can be found on the [GitLab repository](https://gitlab.com/openflexure/microscope-extensions/led-grid-illumination-extension/-/tree/master).
-

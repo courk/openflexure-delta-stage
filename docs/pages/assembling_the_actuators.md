@@ -16,7 +16,7 @@ These instructions show you how to assemble the actuators, to drive the motion o
 [craft knife]: "{cat:tool}"
 [main body]: ../components/delta_stage_main_body.md "{cat:3DPrinted}"
 
-## Method
+# Method
 
 ## Cut the ties {pagestep}
 
@@ -51,7 +51,6 @@ Insert a [brass M3 nut]{qty:3} into the slot of one of the actuators, using the 
 Screw the gear through the hole in the top of the actuator, through the nut that you just inserted.  Apply a small amount of [light oil]{qty:small amount} to the screw thread before it is fully tightened.
 ![](../images/assembling_the_actuators/gear_in_top_hole.jpg)
 ![](../images/assembling_the_actuators/screwing_gear.jpg)
-
 
 Looking through the hole that the nut was pushed into, rotate the gear until you can see the hole inside align with the outside hole.  Push the [nut tool]{qty:1} into the hole so the column can't move.
 ![](../images/assembling_the_actuators/gear_screwed.jpg)
