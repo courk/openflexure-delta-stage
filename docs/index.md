@@ -18,9 +18,9 @@ There are two versions of the instructions:
 
 ### Optional components
 
-* [LED Grid illumination](pages/LED_grid_illumination.md): For more complex illumination.
 * [Simple base](pages/simple_base.md):  Short base; matches the footprint of the OpenFlexure Delta stage.
 * [Stage adapters](pages/stage_adapters.md): Adapters for the stage to holder different components.
+* [LED Grid illumination](pages/LED_grid_illumination.md): For more complex illumination.
 
 ### Software
 
