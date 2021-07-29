@@ -20,12 +20,7 @@ difference(){
             }
         }
     }
-    stage_mounting_holes(z_translate = 0); // mounting holes
-    if (screws_center==true){
-        each_stage_mounting_hole_just_center(z_translate = 5){cylinder(r=5.7, h=999);} //space for head of screw, only middle hole is used for screw so others can be used for sample clips
-    }else{
-        each_stage_mounting_hole_without_center(z_translate = 5){cylinder(r=5.7, h=999);} //space for head of screw, middle holes are left incase you want to use sample clips
-    }
+/*  */
     
     
     }
