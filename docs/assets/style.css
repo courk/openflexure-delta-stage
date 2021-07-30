@@ -1,0 +1,21 @@
+nav
+
+.nav-list a.navhome{
+    background-color: #c5247f;
+    color: white;
+  }
+
+.sub-nav-list a.navhome{
+    background-color: #c5247f;
+    color: white;
+  }
+  
+@media screen {
+
+}
+
+.gallery-thumb img:hover {
+    border: 4px solid #c5247f;
+    cursor:pointer;
+  }
+  

@@ -13,18 +13,14 @@ We normally print with PLA using a 0.15 layer height and ~18% infill. You should
 ## Building the Delta Stage
 There are two versions of the instructions:
 
-* [Delta stage microscope with transmission illumination](index_transmission.md)
-* [Delta stage microscope with reflection illumination](index_reflection.md)
+* [Delta stage microscope with transmission illumination](pages/index_transmission.md)
+* [Delta stage microscope with reflection illumination](pages/index_reflection.md)
 
 ### Optional components
 
-* [LED Grid illumination](LED_grid_illumination.md): For more complex illumination.
-* [Simple base](simple_base.md):  Short base; matches the footprint of the OpenFlexure Delta stage.
-* [Stage adapters](stage_adapters.md): Adapters for the stage to holder different components.
-
-
-
-
+* [Simple base](pages/simple_base.md):  Short base; matches the footprint of the OpenFlexure Delta stage.
+* [Stage adapters](pages/stage_adapters.md): Adapters for the stage to holder different components.
+* [LED Grid illumination](pages/LED_grid_illumination.md): For more complex illumination.
 
 ### Software
 
