@@ -10,7 +10,7 @@
 
 ## Put microscope into base {pagestep}
 
-The microscope [main body] fits tightly into the [simple base].
+The microscope [main body] fits tightly into the [simple base]{qty:1}.
 
 ![](../images/simple_base/microscope_in_base1.jpg)
 ![](../images/simple_base/microscope_in_base2.jpg)
