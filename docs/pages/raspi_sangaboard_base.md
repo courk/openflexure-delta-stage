@@ -105,6 +105,7 @@ Repeat for the other two base connectors.
 ![](../images/raspi_sangaboard_base/base_secured1.jpg)
 ![](../images/raspi_sangaboard_base/base_secured1.jpg)
 ![](../images/raspi_sangaboard_base/base_secured3.jpg)
+
 ## Connect the Sangaboard {pagestep}
 
 The Sangaboard connects to the Raspberry Pi from the Arduino USB port by [USB cable]{qty:1}. There is a special window for the USB cable to pass through.
@@ -119,6 +120,7 @@ The Sangaboard connects to the Raspberry Pi from the Arduino USB port by [USB ca
 ![](../images/raspi_sangaboard_base/sangaboard_v0_3_USB1.jpg)
 ![](../images/raspi_sangaboard_base/sangaboard_v0_3_USB2.jpg)
 ![](../images/raspi_sangaboard_base/sangaboard_v0_3_USB3.jpg)
+
 ## Attach external components {pagestep}
 
 There are windows around base to connect external components.  On the side there is space for USB power to the Raspberry Pi and Sangaboard v0.2 and HDMI.
