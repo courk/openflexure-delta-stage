@@ -11,6 +11,7 @@ The delta stage is a 3D printed x-y-z translation stage. As the optics do not mo
 We normally print with PLA using a 0.15 layer height and ~18% infill. You should not need to print any of the parts with adhesion settings (brim etc.) or supports.  Take note of the optics parts we recommend you print with black PLA, to reduce stray light.
 
 ## Building the Delta Stage
+
 There are two versions of the instructions:
 
 * [Delta stage microscope with transmission illumination](pages/index_transmission.md)
@@ -18,8 +19,9 @@ There are two versions of the instructions:
 
 ### Optional components
 
-* [Simple base](pages/simple_base.md):  Short base; matches the footprint of the OpenFlexure Delta stage.
-* [Stage adapters](pages/stage_adapters.md): Adapters for the stage to holder different components.
+* [Simple base](pages/simple_base.md):  Base with nothing inside; matches the footprint of the OpenFlexure Delta stage exactly.
+* [Infinity corrected optics module casing](models/optics_picamera2_rms_infinity_f50d13_delta.stl): If you have infinity corrected objective lenses, you will need to use this version of the optics module casing.  
+* [Stage adapters](pages/stage_adapters.md): Adapters for the stage to hold different components.
 * [LED Grid illumination](pages/LED_grid_illumination.md): For more complex illumination.
 
 ### Software
@@ -30,5 +32,3 @@ You can control your microscope using the [OpenFlexure software](https://openfle
 2. Under `MICROSCOPE SETTINGS`, click `Stage`.
 3. Change the `Stage geometry` dropdown to `SangaStage (Delta)`.
 4. Click `CHANGE STAGE GEOMETRY`.
-
-
