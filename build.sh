@@ -14,6 +14,7 @@ openscad -o builds/delta_stage_microscope_smart_brim.stl -D 'brim_radius = 5' -D
 ## Optics modules
 openscad -o builds/optics_picamera2_rms_f50d13_delta.stl -D 'optics = "rms_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' -D 'beamsplitter = false' openflexure-microscope/openscad/optics.scad
 openscad -o builds/optics_picamera2_rms_f50d13_beamsplitter_delta.stl -D 'optics = "rms_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' -D 'beamsplitter = true' openflexure-microscope/openscad/optics.scad
+openscad -o builds/optics_picamera2_rms_infinity_f50d13_delta.stl -D 'optics = "rms_infinity_f50d13"' -D 'camera = "picamera_2"' -D 'delta_stage = true' -D 'beamsplitter = false' openflexure-microscope/openscad/optics.scad
 ## Transmission illumination
 openscad -o builds/condenser.stl openflexure-microscope/openscad/condenser.scad
 openscad -o builds/illumination_dovetail.stl openflexure-microscope/openscad/illumination_dovetail.scad

@@ -1,6 +1,6 @@
 # LED grid illumination
 
-Using a LED grid for illumination opens up new imaging modalities, such as darkfield, Rheinberg and phase imaging.  These instructions, behaving as an add on for the standard build, show you how to use a LED grid with the OpenFlexure Delta Stage. 
+Using a LED grid for illumination opens up new imaging modalities, such as darkfield, Rheinberg and phase imaging.  These instructions, behaving as an add on for the standard build, show you how to use a LED grid with the OpenFlexure Delta Stage.
 
 >This module is still under test, and requires some electronics experience, so please proceed with caution.  
 
@@ -22,7 +22,7 @@ Using a LED grid for illumination opens up new imaging modalities, such as darkf
 
 ## Solder the parts {pagestep}
 
-Solder the [Adafruit 3444 LED grid]{qty:1} to the [perma-proto board]{qty:1} with the [74AHCT125]{qty:1} chip using a [soldering iron]{qty:1} and [solder]{qty:some}.  You will need to power the LED grid, we recommend using a [USB cable]{qty:1} with a high power (2A) [USB plug]{qty:1} for convenience. 
+Solder the [Adafruit 3444 LED grid]{qty:1} to the [perma-proto board]{qty:1} with the [74AHCT125]{qty:1} chip using a [soldering iron]{qty:1} and [solder]{qty:some}.  You will need to power the LED grid, we recommend using a [USB cable]{qty:1} with a high power (2A) [USB plug]{qty:1} for convenience.
 
 ![](../fritzing/LED_grid_bb.png)
 

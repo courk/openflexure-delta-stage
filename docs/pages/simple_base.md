@@ -6,6 +6,7 @@
 [M3 nut]: "{cat:part}"
 [2.5mm hex screwdriver]: "{cat:tool}"
 [main body]: ../components/delta_stage_main_body.md "{cat:3DPrinted}"
+
 # Method
 
 ## Put microscope into base {pagestep}

@@ -1,4 +1,5 @@
 # Attaching the motors
+
 If you want your stage to be automated, these instructions will show you how to attach the motors to the stage.
 
 {{BOM}}

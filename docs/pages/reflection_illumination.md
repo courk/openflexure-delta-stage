@@ -23,7 +23,7 @@ One of the best uses of the OpenFlexure Delta Stage is as a reflection illuminat
 [black 0.5A instrument wire]: ../components/0_5A_instrument_wire.md#black "{cat:part}"
 [solder]: "{cat:part}"
 [power supply]: ../components/power_supply.md "{cat:part}"
-[banana plug]: ../components/banana_plugs.md "{cat:part}" 
+[banana plug]: ../components/banana_plugs.md "{cat:part}"
 [condenser lens]: ../components/condenser_lens.md "{cat:part}"
 [excitation filter]: ../components/glass_filters.md#excitation "{cat:part}"
 [emission filter]: ../components/glass_filters.md#emission "{cat:part}"
@@ -84,7 +84,7 @@ Cut the [excitation filter]{qty:1}, [emission filter]{qty:1} and [beamsplitter f
 
 Push the [emission filter] into the bottom of the [filter cube]{qty:1}.  It should be tight but be careful not to break the glass filter. You might need to file down the slot if there are printing errors.
 
-Push the [beamsplitter filter] into the 45° slot. Again it might be tight, and you might need to use a file to ensure you can fit it in. 
+Push the [beamsplitter filter] into the 45° slot. Again it might be tight, and you might need to use a file to ensure you can fit it in.
 
 ![](../images/reflection_illumination/filter_cube1.jpg)
 ![](../images/reflection_illumination/filter_cube2.jpg)
