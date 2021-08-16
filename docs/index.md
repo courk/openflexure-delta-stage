@@ -20,7 +20,7 @@ There are two versions of the instructions:
 ### Optional components
 
 * [Simple base](pages/simple_base.md):  Base with nothing inside; matches the footprint of the OpenFlexure Delta stage exactly.
-* [Infinity corrected optics module casing](models/optics_picamera2_rms_infinity_f50d13_delta.stl): If you have infinity corrected objective lenses, you will need to use this version of the optics module casing.  
+* [Infinity corrected transmission optics module casing](models/optics_picamera2_rms_infinity_f50d13_delta.stl){previewpage}: If you are using infinity corrected objective lenses, you will need to use this version of the optics module casing.  
 * [Stage adapters](pages/stage_adapters.md): Adapters for the stage to hold different components.
 * [LED Grid illumination](pages/LED_grid_illumination.md): For more complex illumination.
 
