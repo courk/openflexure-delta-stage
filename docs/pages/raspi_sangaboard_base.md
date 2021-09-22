@@ -54,7 +54,7 @@ Screw the [M2.5x8mm screw]{qty:4}s using a [2mm hex screwdriver]{qty:1} through 
 
 ### Sangaboard v0.3
 
-You can attach this Sangaboard to the two standoffs closest to the GPIO with two [M2.5x8mm screw]s using a [2mm hex head screwdriver]{qty:1}.  It will sit (but not secured) on the other two standoffs.
+You can attach this Sangaboard to the two standoffs closest to the GPIO with two [M2.5x8mm screw]s using a [2mm hex screwdriver]{qty:1}.  It will sit (but not secured) on the other two standoffs.
 
 ![](../images/raspi_sangaboard_base/sangaboard_v0_3_screws_closeup2.jpg)
 ![](../images/raspi_sangaboard_base/sangaboard_v0_3_screws_closeup1.jpg)
