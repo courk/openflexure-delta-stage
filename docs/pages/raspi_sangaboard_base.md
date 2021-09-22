@@ -33,9 +33,9 @@ Alternatively, you could sit it on a layer of foam or drill holes in the bottom 
 
 ## Add Raspberry Pi {pagestep}
 
-Connect the camera ribbon cable and LED to the Raspberry Pi. The LED should connect with the positive (red) cable to the 5V pin (number 4) and the ground (black) cable to the Ground pin (number 6) on the [GPIO](https://www.raspberrypi.org/documentation/usage/gpio/).
+Connect the camera ribbon cable and LED to the [Raspberry Pi]{qty:1}. The LED should connect with the positive (red) cable to the 5V pin (number 4) and the ground (black) cable to the Ground pin (number 6) on the [GPIO](https://www.raspberrypi.org/documentation/usage/gpio/).
 
-Place the Raspberry Pi into the bottom of the case.  Screw the four [M2.5x20mm standoff]{qty:4}s through the holes of the Raspberry Pi (hand tight or using [small pliers]{qty:1} or [SW5 nut driver]{qty:1}, being careful not to over-tighten) and into the base.  You may find it easier to tap the holes with M2.5 screws before.
+Place the [Raspberry Pi] into the bottom of the case.  Screw the four [M2.5x20mm standoff]{qty:4}s through the holes of the Raspberry Pi (hand tight or using [small pliers]{qty:1} or [SW5 nut driver]{qty:1}, being careful not to over-tighten) and into the base.  You may find it easier to tap the holes with M2.5 screws before.
 
 ![](../images/raspi_sangaboard_base/raspi_standoffs.jpg)
 ![](../images/raspi_sangaboard_base/raspi_standoffs_closeup1.jpg)
