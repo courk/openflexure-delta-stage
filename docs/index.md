@@ -32,3 +32,7 @@ You can control your microscope using the [OpenFlexure software](https://openfle
 2. Under `MICROSCOPE SETTINGS`, click `Stage`.
 3. Change the `Stage geometry` dropdown to `SangaStage (Delta)`.
 4. Click `CHANGE STAGE GEOMETRY`.
+
+## Design notes
+
+* [Stage geometry](pages/stage_geometry_notes.md)
