@@ -44,5 +44,5 @@ openscad -o builds/actuator_assembly_tools.stl openflexure-microscope/openscad/a
 openscad -o builds/lens_tool.stl openflexure-microscope/openscad/lens_tool.scad
 
 # svg generators
-openscad -o builds/bottom_of_stage.svg openscad/bottom_of_stage.scad
+openscad -o builds/bottom_of_stage.svg openscad/bottom_of_stage.scad -D 'stage_connectors = true'  
 
