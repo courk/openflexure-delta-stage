@@ -11,7 +11,7 @@
 
 date-created: 2020-02-26
 
-date-updated: 2021-07-20
+date-updated: 2022-03-07
 
 manifest-author:
   name: Julian Stirling
@@ -37,7 +37,7 @@ keywords:                                  # At least one keyword is recommended
   - Translation stage
   - 3D printed
 
-project-link: https://gitlab.com/openflexure/openflexure-delta-stage
+project-link: https://openflexure.org/projects/deltastage/
 
 contact:
   name: Richard Bowman
@@ -58,9 +58,7 @@ contributors:                              # recommended
     affiliation: University of Bath
     email: j.stirling@bath.ac.uk
 
-image: https://openflexure.org/assets/DeltaBlender.png
-
-version: 1.0.0                          # text
+image: https://openflexure.org/assets/ds-photos/ds_v1.2.0_wide.jpg
 
 development-stage: stable
 
@@ -105,7 +103,7 @@ licensor:
 
 # Documentation
 
-documentation-home: https://build.openflexure.org/openflexure-delta-stage/v1.1.0/
+documentation-home: https://build.openflexure.org/openflexure-delta-stage/latest/
 
 #archive-download: [value]                 # Absolute or relative path
 
@@ -122,7 +120,7 @@ design-files:                             # recommended
 # tool-list: [value]                        # recommended | absolute or relative path | Direct the maker to a list of tools required to make the thing
 
 making-instructions:                        # recommended
-  - path: https://build.openflexure.org/openflexure-delta-stage/v1.1.0/                         # Absolute or relative path
+  - path: https://build.openflexure.org/openflexure-delta-stage/latest/                       # Absolute or relative path
     title: OpenFlexure Delta Stage          # text
 # 
 # manufacturing-files:                      # recommended where applicable
@@ -156,8 +154,6 @@ making-instructions:                        # recommended
 software:
   - path: https://gitlab.com/openflexure/openflexure-microscope-server
     title: openflexure-microscope-server
-  - path: https://gitlab.com/openflexure/openflexure-microscope-jsclient
-    title: openflexure-ev 
 
 # User defined Fields 
 # Include any custom / extended fields here
