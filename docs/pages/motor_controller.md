@@ -19,7 +19,7 @@ The stage can be powered by a Raspberry Pi and a motor controller.
 
 ## The Sangaboard {pagestep}
 
-[These instructions](https://build.openflexure.org/openflexure-microscope/latest/docs/#/6_motor_controllers) show the different ways of controlling the motors. The base currently works with the Sangaboard v0.2 and v0.3.
+[These instructions](https://build.openflexure.org/openflexure-microscope/v6.1.5/docs/#/6_motor_controllers) show the different ways of controlling the motors. The base currently works with the Sangaboard v0.2 and v0.3.
 
 ## Powering the motors for Sangaboard v0.2 {pagestep}
 
