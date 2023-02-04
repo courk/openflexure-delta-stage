@@ -6,7 +6,9 @@
 
 The delta stage is a 3D printed x-y-z translation stage. As the optics do not move it is particularly suited to more complex imaging (phase, reflection, fluorescence microscopy).  There are two standard ways to build it, with either transmission illumination or reflection illumination.  The motorised translation stage, which forms the main body of the microscope, is the same for both, and so swapping between the two configurations is possible by replacing the optics module.  There are also some optional components linked at the bottom of the page.
 
-We have described the OpenFlexure Delta Stage's design and possible optical configurations in [Optics Express](https://doi.org/10.1364/OE.450211).
+## Publications
+
+We have described the OpenFlexure Delta Stage's design and possible optical configurations in [Optics Express](https://doi.org/10.1364/OE.450211). You can find more related publications and media articles on the [OpenFlexure website](https://openflexure.org/about/media-publications).
 
 ## Printing guidance
 
