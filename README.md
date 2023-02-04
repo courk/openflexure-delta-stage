@@ -2,7 +2,9 @@
 
 A 3D Printable high-precision 3-axis delta-bot translation stage.
 
-This project is a 3D printable design that enables very fine (sub-micron) mechanical positioning of a small moving stage, with surprisingly good mechanical stability.  It follows on from the [OpenFlexure Microscope](https://openflexure.org/projects/microscope/). The main advantage of this design is that the optics remain in a fixed position, allowing more complex and heavier optics modalities, as well as coupling into external optics.
+This project is a 3D printable design that enables very fine (sub-micron) mechanical positioning of a small moving stage, with surprisingly good mechanical stability.  It follows on from the [OpenFlexure Microscope](https://openflexure.org/projects/microscope/). The main advantage of this design is that the optics remain in a fixed position, allowing more complex and heavier optics modalities, as well as coupling into external optics.  
+
+We have described the OpenFlexure Delta Stage's design and possible optical configurations in [Optics Express](https://doi.org/10.1364/OE.450211).
 
 ## Printing and building it
 
