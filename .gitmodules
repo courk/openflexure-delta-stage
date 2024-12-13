@@ -1,3 +1,3 @@
 [submodule "openflexure-microscope"]
 	path = openflexure-microscope
-	url = ../../openflexure/openflexure-microscope.git
+	url = git@github.com:courk/openflexure-microscope.git

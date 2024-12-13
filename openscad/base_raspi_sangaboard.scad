@@ -32,7 +32,7 @@ module feet_projection() {
     projection(cut=true){
         // casing for the actuator
         each_lever() translate([0, nut_y, -49]) screw_seat_shell(h=actuator_h + 99);
-    }  
+    }
 }
 
 module base_extrusion(h) {
@@ -67,7 +67,7 @@ module foot_stands(height=base_height, cutout_tolerance=1) {
     translate([0,0,height-foot_height+1]){
         each_lever(){
             translate([0, nut_y, 0]){
-                intersection(){ 
+                intersection(){
                     hull(){
                         difference(){
                             minkowski(){
@@ -90,7 +90,7 @@ module foot_stands(height=base_height, cutout_tolerance=1) {
                     }
                 }
             }
-        }    
+        }
     }
 }
 
@@ -110,7 +110,7 @@ module window_cubes() {
 
     //Side window
     translate(raspi_center+[-power_HDMI_window[0]/2,raspi_board[1]/2-power_HDMI_window[1]/2-3.5,-raspi_board[2]/2+power_HDMI_window[2]/2-1]) cube(power_HDMI_window,center = true);
-    
+
     //Vents
     translate([sangaboard_center[0]+50,sangaboard_center[1]+5/2,raspi_center[2]])repeat(delta=[0,(sangaboard[1]-5)/14,0],N=15, center= true) cube([100,1.5,power_HDMI_window[2]],center=true);
 
@@ -124,6 +124,7 @@ module window_cubes() {
 
     //Side windows
     translate([raspi_center[0]-power_HDMI_window[0]/2,raspi_center[1]+raspi_board[1]/2-power_HDMI_window[1]/2-3.5,sangaboard_center[2]-sangaboard[2]/2+power_HDMI_window[2]/2+3]) cube(power_HDMI_window+[0,0,6], center = true);
+    translate([raspi_center[0]-power_HDMI_window[0]/2,raspi_center[1]+raspi_board[1]/2-power_HDMI_window[1]/2-3.5,sangaboard_center[2]-sangaboard[2]/2+power_HDMI_window[2]/2+3-10]) cube(power_HDMI_window+[0,0,6], center = true);
     translate(sangaboard_center+[50,5/2,-sangaboard[2]/2+power_HDMI_window[2]/2+3]) cube([100,sangaboard[1]-5,power_HDMI_window[2]+6],center = true);
     //Reflection gap
     rotate([0,0,-60])translate([0,50,base_height-9])cube([bottom_cutout_w,100,20],center=true);
@@ -134,7 +135,7 @@ module pi_supports(){
     translate(raspi_center+[0,raspi_center[1],-raspi_center[2]]) repeat([49,0,0],2, center=true) repeat([0,58,0], 2,center=true) children();
 }
 
-// The four mounting holes underneath the Raspberry Pi.  
+// The four mounting holes underneath the Raspberry Pi.
 module raspi_supports(){
     difference(){
         pi_supports() cylinder(h=raspi_standoff, d=7);
@@ -156,7 +157,7 @@ module stage_connection(height=base_height){
                         }
                     }
                     translate([0,nut_y+stage_r-mounting_point,-20]){
-                        difference(){                                
+                        difference(){
                             linear_extrude(20){
                                 projection(){
                                     minkowski(){
@@ -172,7 +173,7 @@ module stage_connection(height=base_height){
                 translate([0,0,-2])cylinder(d = 8.5, h = 2, $fn=50);
                 translate([0,0,-8+d])cylinder(d= 3.5, h = 8, $fn=50);
                 translate([0,0,-10-8+d])trylinder_selftap(3, h=20, center=true);
-                hull()repeat([0,100,0],2) translate([0,0,-8]) cylinder(d=6.9,h=2.8,$fn=6); 
+                hull()repeat([0,100,0],2) translate([0,0,-8]) cylinder(d=6.9,h=2.8,$fn=6);
             }
         }
     }

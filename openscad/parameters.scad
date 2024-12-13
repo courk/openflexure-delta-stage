@@ -3,7 +3,7 @@
 */
 
 use <../openflexure-microscope/openscad/reflection_illuminator.scad>;
-version_numstring = "1.2.1"; 
+version_numstring = "1.2.1+TI";
 
 // Set the overall geometry
 leg_strut_l = 32; // inner width of the legs
@@ -26,7 +26,7 @@ motor_lugs = true;
 transmission_illumination = false;
 
 // Reflection illumination - The hole cut out the side for the reflection illuminator
-reflection_illumination = false; 
+reflection_illumination = false;
 
 // Stage connectors - the mounts to connect the stage to the base
 stage_connectors = false;
@@ -68,7 +68,7 @@ feet_endstops = false;
 foot_height=feet_endstops?15:15; //the endstops need a bit of extra height (or not)
 endstop_extra_ringheight=feet_endstops?1:0;
 
-//Casing 
+//Casing
 casing_height = actuator_h+actuator_travel + 5; //flex_z2-24; //the maximum height of the lever casing and 'joining together' casing
 casing_radius = nut_y; //the outside radius (to the point) of the hexagon used to join the casing together
 
@@ -80,7 +80,7 @@ bottom_cutout_w = illuminator_width() + 4;
 // Base
 wall_thickness = 2;
 simple_base_height = 35;
-base_height = 80;
+base_height = 80 + 20;
 base_cutout_tolerance = 0.5;
 raspi_board = [56,85,16]; // The actual size of the RPi
 casing_apothem = casing_radius*sqrt(3)/2; // The apothem of the hexagon used to join up the legs

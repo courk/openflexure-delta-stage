@@ -16,6 +16,10 @@ use <../openflexure-microscope/openscad/z_axis.scad>;
 use <../openflexure-microscope/openscad/illumination.scad>;
 use <../openflexure-microscope/openscad/logo.scad>;
 
+transmission_illumination = true;
+reflection_illumination = true;
+stage_connectors = true;
+
 module lever(){
     // The levers go from the centre to the actuator columns
     // We anchor to the y=0 plane.
@@ -23,7 +27,7 @@ module lever(){
 
     // Flexures that join the lever to the leg
     reflect([1,0,0]) translate([-w/2, lever_l-d, dz]) cube(zflex + [0,2*d,0]);
-    
+
     // This is the main horizontal lever
     difference(){
         hull(){
@@ -36,11 +40,11 @@ module lever(){
         // cut out a hole for the strut that joins the outer parts of the leg
         translate([-99, lever_l-zflex[0]-1.5, -1]) cube([999, zflex[0]+1.5+zflex[1], 6.5]);
     }
-    
+
     // This part connects to the actuator column
     difference(){
         cbr = column_base_radius(); // from compact_nut_seat.scad
-        translate([-cbr, lever_l+zflex[1], 0]) 
+        translate([-cbr, lever_l+zflex[1], 0])
             cube([cbr*2, nut_y+zflex[1]/2+d - lever_l-zflex[1], 6]);
         translate([0,nut_y,0]) actuator_end_cutout();
     }
@@ -64,14 +68,14 @@ module leg(){
     w = leg_strut_l; // width of strut part
     iw = w + 2*zflex[1]; // distance between outer parts of leg
     ow = w + 2*leg_t; // outside width of whole leg
-    
+
     // Start with the bridges between the sides, at top and bottom
-    for(p=[[-d, zflex[1], flex_z2], 
+    for(p=[[-d, zflex[1], flex_z2],
             [-d, lever_l-zflex[0], 0]]) reflect([1,0,0]) translate(p){
         cube([w/2+d, zflex[0], 4]); //strut
         cube([iw/2+2*d, zflex[0], zflex[2]]); //flexure
     }
-    
+
     // Now make the sides
     reflect([1,0,0]) hull(){
         translate([w/2+zflex[1], lever_l-zflex[0], 0]) cube([d, zflex[0], 4]); //bottom flexure
@@ -79,7 +83,7 @@ module leg(){
         translate([iw/2+leg_t/2, 15, 0]) cylinder(d=leg_t, h=4); //bottom corner near centre
         translate([iw/2, zflex[1], flex_z2]) cube([leg_t, zflex[0], 4]); //top
     }
-    
+
     // Tie the outer bits together - some of these ties may need to be snipped later.
     translate([0,15,4]) cube([ow, 2, dz], center=true);
     for(p=[0.25,0.5,0.75]) translate([0, zflex[0]/2 + (1-p)*(lever_l-zflex[0]), flex_z2*p]) cube([ow, 2, dz], center=true);
@@ -108,19 +112,19 @@ module each_lever(){
     // Repeat 3 times, each time starting at the base of a lever.
     for(a=[0,120,240]){
         rotate(a) translate([0,stage_r,0]) children();
-        
+
     }
 }
 module each_mounting_hole(){
     // Repeat 3 times, in between the levers (i.e. 60 degrees out).
     for(a=[0,120,240]){
         rotate(a+60) translate([0,mounting_hole_r,0]) children();
-        
+
     }
 }
-    
 
-module stage_edges(h=5-2*dz, z=flex_z2+2*dz){
+
+module stage_edges(h=6-2*dz, z=flex_z2+2*dz){
     // The edges of the moving stage
     w = leg_strut_l+zflex[0]*2*tan(60); // width
     each_lever(){
@@ -130,7 +134,7 @@ module stage_edges(h=5-2*dz, z=flex_z2+2*dz){
 
 module stage_mounting_holes(z_translate=0){
     //Generate all the mounting holes for the stage
-    each_stage_mounting_hole(z_translate) trylinder_selftap(3,h=999);
+    each_stage_mounting_hole(z_translate) cylinder(r=3.1/2,h=999, $fn=16);
 }
 
 module each_stage_mounting_hole(z_translate =0){
@@ -161,7 +165,7 @@ module moving_stage(){
     difference(){
         union(){
             stage_flexures();
-    
+
             // start to join the flexure bridges together
             intersection(){
                 hull() stage_flexures(h=999);
@@ -226,11 +230,11 @@ module casing(){
             // add the base mounting points
             if(stage_connectors) {
                 base_mounting_points();
-            } 
+            }
         }
         // hollow out space for the levers and legs and actuators
         each_lever() leg_and_lever_clearance(); //hole for the leg&lever
-        each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);        
+        each_lever() translate([0,nut_y,0]) nut_seat_void(h=actuator_h+actuator_travel);
         // clearance for gears and motors
         each_lever() motor_and_small_gear_clearance();
 
@@ -268,7 +272,7 @@ module casing(){
             trylinder_selftap(nominal_d=3, h=40, center=true);
             translate([15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
             translate([-15, 5, 0]) trylinder_selftap(nominal_d=3, h=40, center=true);
-        }       
+        }
     }
 }
 module objective_bolt_access(){
@@ -286,8 +290,7 @@ module condenser_mount(){
         }
         // holes for mounting illumination arm
         rotate(60) translate([0,0,7])reflect([1,0,0]) right_illumination_arm_screw(){
-            trylinder_selftap(3, h=16, center=true); 
-            hull() rotate(110) repeat([100,0,0],2) translate([0,0,-6]) cylinder(d=6.9,h=2.8,$fn=6);
+            cylinder(r=3.1/2, h=5 * 2, center=true);
         }
         objective_bolt_access();
     }
@@ -305,7 +308,7 @@ module legs(){
         lever_flexures();
         lever();
         translate([0,nut_y,0]) actuator_column(actuator_h);
-    } 
+    }
 }
 
 module base_mounting_points(){
@@ -336,15 +339,98 @@ module main_body(){
 
 brim_radius = 0;
 
-exterior_brim(r=brim_radius) {
+/*exterior_brim(r=brim_radius) {
     main_body();
-}
+}*/
 
 module thick_section(h, z=0, center=false){
     linear_extrude(h, center=center) projection(cut=true){
         translate([0,0,-z]) children();
     }
-} 
+}
+
+
+module pcb_cutout()
+{
+    minkowski()
+    {
+        linear_extrude(height=1.6)
+        {
+            hull() projection(cut=true) translate([0, 0, -65]) condenser_mount();
+            hull() projection(cut=true) translate([0, 0, -75]) moving_stage();
+        };
+        cylinder(r=0.4,h=1);
+    }
+}
+
+module pcb_hole_cutout()
+{
+    linear_extrude(height=999, center=true)
+    {
+        offset(r=-3) hull() projection(cut=true) translate([0, 0, -65]) condenser_mount();
+        offset(r=-3) hull() projection(cut=true) translate([0, 0, -75]) moving_stage();
+    }
+}
+
+
+module pcb_bonding_holder()
+{
+     difference()
+        {
+            minkowski() {
+                cube([90, 60, 2], center=true);
+                cylinder(r=4, h=0.1);
+            }
+            translate([20, 0, 0]) rotate([0, 0, 30])
+            {
+               pcb_cutout();
+               pcb_hole_cutout();
+            }
+    }
+}
+
+module pcb_stands()
+{
+    difference()
+    {
+        translate([0, 0, -67])
+        {
+            condenser_mount();
+            moving_stage();
+        }
+        translate([0, 0, -50]) cube([200, 200, 100], center=true);
+    }
+
+    linear_extrude(height=4)
+    {
+        projection()
+        {
+            translate([0, 0, -64])
+            {
+                moving_stage();
+            }
+        }
+    }
+}
+
+
+module soldering_helper()
+{
+    union()
+    {
+        rotate([0, 0, 30])
+        {
+            union()
+            {
+                linear_extrude(height=0.2) hull() projection() pcb_stands();
+                pcb_stands();
+
+            }
+        }
+        translate([-40, -2.5, 0]) cube([15, 5, 3]);
+    }
+}
+
 
 // Best to put echo statements here, so they only happen once...
 //echo("Radius of mounting holes is", mounting_hole_r);
